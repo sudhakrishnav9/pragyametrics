@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Pragyametrics</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1a1e23;
+            color: #e0e0e0;
+            line-height: 1.6;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* Header & Navigation */
+        header {
+            background-color: #1a1e23;
+            padding: 15px 0;
+            border-bottom: 1px solid #333;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo img {
+            height: 50px;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        nav ul li {
+            margin: 0 15px;
+        }
+        
+        nav ul li a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: #4CAF50;
+        }
+        
+        .login-btn {
+            background: transparent;
+            border: none;
+            color: #e0e0e0;
+            cursor: pointer;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+        
+        .login-btn:hover {
+            color: #4CAF50;
+        }
+        
+        /* Blog Section */
+        .blog {
+            padding: 60px 0;
+        }
+        
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+            gap: 30px;
+        }
+        
+        .blog-post {
+            margin-bottom: 30px;
+        }
+        
+        .blog-post .date {
+            font-size: 0.9rem;
+            color: #999;
+            margin-bottom: 10px;
+        }
+        
+        .blog-post h2 {
+            font-size: 1.8rem;
+            margin: 10px 0;
+            color: #fff;
+        }
+        
+        .blog-post p {
+            margin-bottom: 15px;
+        }
+        
+        .read-more {
+            display: inline-block;
+            color: #4CAF50;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        
+        .read-more:hover {
+            color: #5cb860;
+            text-decoration: underline;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #f5f5f5;
+            color: #333;
+            padding: 20px 0;
+            margin-top: 60px;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        
+        .footer-content .company-info h3 {
+            color: #4CAF50;
+            margin-bottom: 15px;
+        }
+        
+        .footer-content .company-info p {
+            margin: 5px 0;
+        }
+        
+        .footer-content .contact-info p {
+            margin: 5px 0;
+            display: flex;
+            align-items: center;
+        }
+        
+        .footer-content .contact-info p img {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="Pragyametrics Logo">
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="methodology.html">Methodology</a></li>
+                    <li><a href="engagement-models.html">Engagement Models</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            <button class="login-btn">Login</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="blog container">
+            <div class="blog-grid">
+                <div class="blog-post">
+                    <div class="date">3/11/19</div>
+                    <h2>Blog Post One</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Amet aliquam id diam maecenas ultricies mi eget mauris.</p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+                
+                <div class="blog-post">
+                    <div class="date">3/11/19</div>
+                    <h2>Blog Post Two</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Amet aliquam id diam maecenas ultricies mi eget mauris.</p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+                
+                <div class="blog-post">
+                    <div class="date">3/11/19</div>
+                    <h2>Blog Post Three</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Amet aliquam id diam maecenas ultricies mi eget mauris.</p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+                
+                <div class="blog-post">
+                    <div class="date">3/11/19</div>
+                    <h2>Blog Post Four</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Amet aliquam id diam maecenas ultricies mi eget mauris.</p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="company-info">
+                <h3>Pragyametrics</h3>
+                <p>8B, Phase-1, Manjri Greens,</p>
+                <p>Hadapsar, Pune, Maharashtra,</p>
+                <p>India - 412307</p>
+            </div>
+            <div class="contact-info">
+                <p>📧 Email: pragyametrics@outlook.com</p>
+                <p>📱 Phone: (+91) 77090 50817</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

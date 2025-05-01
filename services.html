@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Pragyametrics</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1a1e23;
+            color: #e0e0e0;
+            line-height: 1.6;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* Header & Navigation */
+        header {
+            background-color: #1a1e23;
+            padding: 15px 0;
+            border-bottom: 1px solid #333;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo img {
+            height: 50px;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        nav ul li {
+            margin: 0 15px;
+        }
+        
+        nav ul li a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: #4CAF50;
+        }
+        
+        .login-btn {
+            background: transparent;
+            border: none;
+            color: #e0e0e0;
+            cursor: pointer;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+        
+        .login-btn:hover {
+            color: #4CAF50;
+        }
+        
+        /* Services Section */
+        .services {
+            padding: 60px 0;
+        }
+        
+        .services h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+        
+        .services p {
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin-bottom: 30px;
+        }
+        
+        .service-item {
+            margin-bottom: 60px;
+        }
+        
+        .service-item h2 {
+            color: #fff;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .service-item h2 .service-icon {
+            color: #03A9F4;
+            margin-right: 15px;
+        }
+        
+        .service-item ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .service-item ul li {
+            margin-bottom: 10px;
+        }
+        
+        .service-item ul li strong {
+            color: #fff;
+            margin-right: 8px;
+        }
+        
+        .deliverable {
+            margin-top: 15px;
+            font-style: italic;
+            color: #aaa;
+        }
+        
+        .deliverable span {
+            margin-right: 10px;
+            color: #03A9F4;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #f5f5f5;
+            color: #333;
+            padding: 20px 0;
+            margin-top: 60px;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        
+        .footer-content .company-info h3 {
+            color: #4CAF50;
+            margin-bottom: 15px;
+        }
+        
+        .footer-content .company-info p {
+            margin: 5px 0;
+        }
+        
+        .footer-content .contact-info p {
+            margin: 5px 0;
+            display: flex;
+            align-items: center;
+        }
+        
+        .footer-content .contact-info p img {
+            margin-right: 10px;
+        }
+        
+        /* Icons */
+        .diamond {
+            color: #03A9F4;
+        }
+        
+        .document {
+            color: #aaa;
+        }
+        
+        .globe {
+            color: #03A9F4;
+        }
+        
+        .rocket {
+            color: #FF5722;
+        }
+        
+        .settings {
+            color: #03A9F4;
+        }
+        
+        .industry {
+            color: #FF5722;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="Pragyametrics Logo">
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="methodology.html">Methodology</a></li>
+                    <li><a href="engagement-models.html">Engagement Models</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            <button class="login-btn">Login</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="services container">
+            <h1>Our Services</h1>
+            <p>At Pragyametrics, we deliver end-to-end AI services designed specifically for Indian enterprises. Whether you're exploring AI for the first time or scaling complex deployments, our offerings ensure measurable value and contextual alignment.</p>
+
+            <div class="service-item">
+                <h2><span class="service-icon diamond">◆</span> 1. AI Strategy Advisory</h2>
+                <p>We help organizations assess their AI readiness and define a clear roadmap for AI adoption.</p>
+                <ul>
+                    <li><strong>AI Readiness Assessment:</strong> Evaluate your infrastructure, skills, processes, and culture.</li>
+                    <li><strong>Technology Roadmap:</strong> Build a phased implementation plan aligned with business goals.</li>
+                    <li><strong>Investment Planning:</strong> Create ROI models, cost framework, and prioritization matrices.</li>
+                </ul>
+                <p class="deliverable"><span class="document">📄</span> Deliverables: Readiness scorecards, visual roadmaps, investment plans.</p>
+            </div>
+
+            <div class="service-item">
+                <h2><span class="service-icon diamond">◆</span> 2. LLM Vendor Selection</h2>
+                <p>Navigate the fast-evolving landscape of Large Language Models with structured guidance.</p>
+                <ul>
+                    <li><strong>Requirements Analysis:</strong> Define performance, integration, and compliance criteria.</li>
+                    <li><strong>Vendor Evaluation:</strong> Run real-world benchmark tests and compare leading providers.</li>
+                    <li><strong>Total Cost Assessment:</strong> Project full cost of ownership and optimize pricing models.</li>
+                </ul>
+                <p class="deliverable"><span class="document">📄</span> Deliverables: Evaluation matrices, cost projections, PoC support documentation.</p>
+            </div>
+
+            <div class="service-item">
+                <h2><span class="service-icon diamond">◆</span> 3. Use Case Development</h2>
+                <p>We help you identify, define, and justify high-value AI applications for your business.</p>
+                <ul>
+                    <li><strong>Business Case Creation:</strong> Translate problems into compelling AI opportunities.</li>
+                    <li><strong>ROI Calculation:</strong> Estimate financial benefits and time-to-value.</li>
+                    <li><strong>Opportunity Identification:</strong> Discover automation and innovation possibilities.</li>
+                </ul>
+                <p class="deliverable"><span class="rocket">🚀</span> Deliverables: Use case briefs, financial models, opportunity maps.</p>
+            </div>
+
+            <div class="service-item">
+                <h2><span class="service-icon diamond">◆</span> 4. Implementation Support</h2>
+                <p>We ensure seamless deployment of AI solutions with hands-on technical support.</p>
+                <ul>
+                    <li><strong>POC Development:</strong> Build rapid prototypes to validate ideas.</li>
+                    <li><strong>Integration Assistance:</strong> Connect AI tools to your existing systems and data flows.</li>
+                    <li><strong>Technical Troubleshooting:</strong> Resolve performance, security, or scalability issues.</li>
+                </ul>
+                <p class="deliverable"><span class="settings">🔧</span> Deliverables: Prototypes, integration interfaces, system documentation.</p>
+            </div>
+
+            <div class="service-item">
+                <h2><span class="service-icon diamond">◆</span> 5. Indian Market Adaptation</h2>
+                <p>We localize your AI solutions for India's linguistic, cultural, and regulatory diversity.</p>
+                <ul>
+                    <li><strong>Multilingual Support:</strong> Enable major Indian languages, dialects, and scripts.</li>
+                    <li><strong>Cultural Context:</strong> Adapt AI responses for regional sensitivities and user norms.</li>
+                    <li><strong>Regional Optimization:</strong> Tailor solutions by geography, compliance, and market dynamics.</li>
+                </ul>
+                <p class="deliverable"><span class="globe">🌐</span> Deliverables: Language-tuned models, culturally adapted UX, regional playbooks.</p>
+            </div>
+
+            <div class="service-item">
+                <h2><span class="service-icon diamond">◆</span> 6. Industry Solutions</h2>
+                <p>Tailored AI offerings for India's top industries:</p>
+                <ul>
+                    <li><strong>BFSI:</strong> Fraud detection, risk scoring, compliance automation</li>
+                    <li><strong>Healthcare:</strong> Diagnostic AI, patient engagement, clinical analytics</li>
+                    <li><strong>Retail:</strong> Personalization engines, demand forecasting, visual search</li>
+                </ul>
+                <p class="deliverable"><span class="industry">🏭</span> Deliverables: Industry-specific prototypes, integration blueprints, compliance support.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="company-info">
+                <h3>Pragyametrics</h3>
+                <p>8B, Phase-1, Manjri Greens,</p>
+                <p>Hadapsar, Pune, Maharashtra,</p>
+                <p>India - 412307</p>
+            </div>
+            <div class="contact-info">
+                <p>📧 Email: pragyametrics@outlook.com</p>
+                <p>📱 Phone: (+91) 77090 50817</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
