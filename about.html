@@ -96,62 +96,97 @@
             margin-bottom: 30px;
         }
         
-        /* Team Section */
-        .team {
+        /* Expertise Section */
+        .expertise {
             padding: 40px 0;
         }
         
-        .team h2 {
+        .expertise h2 {
             font-size: 2rem;
             margin-bottom: 30px;
             color: #fff;
         }
         
-        .team-grid {
+        .expertise-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 30px;
         }
         
-        .team-member {
+        .expertise-area {
             background-color: #2a2e33;
             border-radius: 8px;
-            overflow: hidden;
+            padding: 25px;
             transition: transform 0.3s;
         }
         
-        .team-member:hover {
+        .expertise-area:hover {
             transform: translateY(-5px);
         }
         
-        .team-member .photo {
-            height: 200px;
+        .expertise-area h3 {
+            margin-top: 0;
+            margin-bottom: 15px;
+            color: #fff;
+        }
+        
+        .expertise-area .icon {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: #4CAF50;
+        }
+        
+        .expertise-area p {
+            font-size: 0.95rem;
+            margin-bottom: 0;
+        }
+        
+        /* About Founder Section */
+        .founder {
+            padding: 40px 0;
+            background-color: #252a30;
+            border-radius: 8px;
+            margin: 40px 0;
+        }
+        
+        .founder-container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 40px;
+        }
+        
+        .founder-image {
+            flex: 0 0 250px;
+            height: 250px;
             background-color: #333;
+            border-radius: 50%;
+            overflow: hidden;
             display: flex;
             justify-content: center;
             align-items: center;
             color: #666;
         }
         
-        .team-member .info {
-            padding: 20px;
+        .founder-content {
+            flex: 1;
+            min-width: 300px;
         }
         
-        .team-member h3 {
-            margin-top: 0;
-            margin-bottom: 5px;
+        .founder h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
             color: #fff;
         }
         
-        .team-member .position {
+        .founder h3 {
             color: #4CAF50;
-            font-weight: bold;
-            margin-bottom: 10px;
+            margin-top: 0;
+            margin-bottom: 15px;
         }
         
-        .team-member p {
-            font-size: 0.9rem;
-            margin-bottom: 0;
+        .founder p {
+            margin-bottom: 20px;
         }
         
         /* Values Section */
@@ -179,6 +214,43 @@
         .values ul li span {
             margin-right: 10px;
             color: #4CAF50;
+        }
+        
+        /* CTA Section */
+        .cta {
+            background-color: #2a2e33;
+            padding: 50px 0;
+            text-align: center;
+            border-radius: 8px;
+            margin: 40px 0;
+        }
+        
+        .cta h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+        
+        .cta p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+        
+        .cta-btn {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 12px 25px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        
+        .cta-btn:hover {
+            background-color: #45a049;
+            text-decoration: none;
         }
         
         /* Footer */
@@ -283,48 +355,60 @@
             
             <p>Founded with the vision to bridge the gap between cutting-edge AI capabilities and real-world business needs, Pragyametrics focuses exclusively on the Indian market. We understand that successful AI adoption in India requires more than just technology—it demands cultural sensitivity, multilingual adaptability, cost-effective solutions, and industry-specific expertise.</p>
             
-            <p>We combine deep domain knowledge with hands-on technical skill to deliver AI solutions that are practical, scalable, and measurable. From AI readiness assessments to full-scale implementation support, our team ensures you are guided at every step—from idea to execution.</p>
+            <p>We combine deep domain knowledge with hands-on technical skill to deliver AI solutions that are practical, scalable, and measurable. From AI readiness assessments to full-scale implementation support, we ensure you are guided at every step—from idea to execution.</p>
             
             <p>Our independent, vendor-neutral approach guarantees that our recommendations are aligned with <span class="highlight">your</span> goals—not third-party partnerships. Whether you're just beginning your AI journey or scaling enterprise-wide adoption, Pragyametrics is your trusted partner for driving value through intelligent transformation.</p>
         </section>
 
-        <section class="team container">
-            <h2>Our Leadership Team</h2>
-            <div class="team-grid">
-                <div class="team-member">
-                    <div class="photo">[Team Member Photo]</div>
-                    <div class="info">
-                        <h3>Rajesh Sharma</h3>
-                        <div class="position">Founder & CEO</div>
-                        <p>15+ years in AI and enterprise technology, with deep expertise in applying AI to Indian market challenges.</p>
-                    </div>
+        <section class="founder container">
+            <h2>About the Founder</h2>
+            <div class="founder-container">
+                <div class="founder-image">[Founder Photo]</div>
+                <div class="founder-content">
+                    <h3>Rajesh Sharma</h3>
+                    <p>With over 15 years of experience in AI and enterprise technology, Rajesh founded Pragyametrics with a singular mission: to make cutting-edge AI solutions accessible and relevant to Indian businesses. His deep expertise in applying AI to address the unique challenges of the Indian market has helped numerous organizations across sectors like BFSI, healthcare, retail, and manufacturing.</p>
+                    <p>Combining technical knowledge with strategic insight, Rajesh works directly with clients to understand their business needs and deliver tailored AI solutions that drive measurable results. His vendor-neutral, India-first approach ensures that every recommendation is practical, implementable, and aligned with the specific context of Indian enterprises.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="expertise container">
+            <h2>Our Areas of Expertise</h2>
+            <div class="expertise-grid">
+                <div class="expertise-area">
+                    <div class="icon">📊</div>
+                    <h3>AI Strategy & Roadmap</h3>
+                    <p>Custom AI adoption frameworks and implementation plans tailored to your business goals and market context.</p>
                 </div>
                 
-                <div class="team-member">
-                    <div class="photo">[Team Member Photo]</div>
-                    <div class="info">
-                        <h3>Priya Desai</h3>
-                        <div class="position">CTO</div>
-                        <p>ML engineer and architect who has led AI implementation for multiple Fortune 500 companies in India.</p>
-                    </div>
+                <div class="expertise-area">
+                    <div class="icon">🔍</div>
+                    <h3>AI Readiness Assessment</h3>
+                    <p>Comprehensive evaluation of your technical infrastructure, data capabilities, and organizational readiness.</p>
                 </div>
                 
-                <div class="team-member">
-                    <div class="photo">[Team Member Photo]</div>
-                    <div class="info">
-                        <h3>Anand Patel</h3>
-                        <div class="position">Head of Strategy</div>
-                        <p>Former management consultant specializing in digital transformation and technology adoption.</p>
-                    </div>
+                <div class="expertise-area">
+                    <div class="icon">⚙️</div>
+                    <h3>Solution Architecture</h3>
+                    <p>Design scalable, secure, and efficient AI systems that integrate seamlessly with your existing technology.</p>
                 </div>
                 
-                <div class="team-member">
-                    <div class="photo">[Team Member Photo]</div>
-                    <div class="info">
-                        <h3>Meera Krishnan</h3>
-                        <div class="position">Head of Industry Solutions</div>
-                        <p>Domain expert with background in BFSI, healthcare, and retail AI applications in Indian market.</p>
-                    </div>
+                <div class="expertise-area">
+                    <div class="icon">💼</div>
+                    <h3>Industry-Specific Applications</h3>
+                    <p>Specialized AI solutions for BFSI, healthcare, retail, and manufacturing sectors in India.</p>
+                </div>
+                
+                <div class="expertise-area">
+                    <div class="icon">🚀</div>
+                    <h3>Implementation Support</h3>
+                    <p>End-to-end guidance from proof-of-concept to full-scale deployment and optimization.</p>
+                </div>
+                
+                <div class="expertise-area">
+                    <div class="icon">📈</div>
+                    <h3>ROI Measurement</h3>
+                    <p>Frameworks to track, measure, and maximize the business impact of your AI investments.</p>
                 </div>
             </div>
         </section>
@@ -338,6 +422,12 @@
                 <li><span class="icon-yellow">💡</span> <span class="value-point">Practical Execution:</span> Strategy paired with real-world implementation</li>
                 <li><span class="icon-orange">🤝</span> <span class="value-point">End-to-End Partnership:</span> Support from strategy to optimization</li>
             </ul>
+        </section>
+        
+        <section class="cta container">
+            <h2>Ready to Transform Your Business with AI?</h2>
+            <p>Schedule a free consultation to discuss how Pragyametrics can help you navigate your AI journey with confidence.</p>
+            <a href="contact.html" class="cta-btn">Get Started</a>
         </section>
     </main>
 
