@@ -316,7 +316,9 @@
                             <label for="message">Your Message</label>
                             <textarea id="message" name="message" required></textarea>
                         </div>
-                        
+                        <!-- Add these hidden fields near the end, just before the submit button -->
+                        <input type="hidden" name="_subject" value="New message from Pragyametrics Website">
+                        <input type="hidden" name="_next" value="https://yourpmjay.org/thank-you.html">
                         <button type="submit" class="submit-btn">Send Message</button>
                     </form>
                 </div>
