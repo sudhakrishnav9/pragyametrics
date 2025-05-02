@@ -3,40 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pragyametrics - AI-Powered Intelligence, Delivered Locally and Globally</title>
-    
-    <!-- External CSS Libraries -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Pragyametrics - Where Knowledge Meets Intelligence</title>
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Header & Navigation -->
+    <!-- Navigation -->
     <header>
-        <div class="header-container container">
-            <div class="logo">
-                <img src="images/logo.png" alt="Pragyametrics Logo" class="logo">
-                <div class="logo-text">Pragya<span>metrics</span></div>
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="images/logo.png" alt="Pragyametrics Logo">
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html" class="active">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
             </div>
-            <nav>
-                <ul>
-                    <li class="nav-active"><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="methodology.html">Methodology</a></li>
-                    <li><a href="engagement-models.html">Engagement Models</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-            <button class="login-btn">Login</button>
-            <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
         </div>
     </header>
 
@@ -44,48 +43,47 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <div class="hero-tagline">AI-Powered Intelligence Platform</div>
                 <h1>Where Knowledge Meets Intelligence</h1>
-                <p class="hero-subheading">Leverage our advanced AI capabilities to transform data into actionable insights, empowering your decision-making locally and globally.</p>
+                <p>Leverage our advanced AI capabilities to transform data into actionable insights, empowering your decision-making locally and globally.</p>
                 <div class="cta-buttons">
-                    <button class="cta-btn cta-btn-primary">Get Started</button>
-                    <button class="cta-btn cta-btn-secondary">Learn More</button>
+                    <a href="contact.html" class="btn btn-primary">Get Started</a>
+                    <a href="services.html" class="btn btn-secondary">Learn More</a>
                 </div>
             </div>
-        </div>
-        <div class="hero-visual">
-            <!-- Brain Logo Animation (replacing the globe) -->
-            <div class="brain-container">
-                <!-- Brain Logo SVG -->
-                <svg class="brain-logo" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
-                    <!-- Left hemisphere - blue -->
-                    <path d="M130,130 C100,160 90,210 100,250 C110,290 120,330 150,360 C180,390 220,400 245,400" 
-                          fill="none" stroke="#03A9F4" stroke-width="15" stroke-linecap="round"/>
+            <div class="hero-visual">
+                <!-- Brain Logo Animation -->
+                <div class="brain-container">
+                    <!-- Brain Logo SVG -->
+                    <svg class="brain-logo" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Left hemisphere - blue -->
+                        <path d="M130,130 C100,160 90,210 100,250 C110,290 120,330 150,360 C180,390 220,400 245,400" 
+                              fill="none" stroke="#03A9F4" stroke-width="15" stroke-linecap="round"/>
+                        
+                        <!-- Connection dots - left -->
+                        <circle cx="150" cy="180" r="12" fill="#03A9F4"/>
+                        <circle cx="120" cy="240" r="12" fill="#03A9F4"/>
+                        <circle cx="150" cy="300" r="12" fill="#03A9F4"/>
+                        
+                        <!-- Right hemisphere - green -->
+                        <path d="M370,130 C400,160 410,210 400,250 C390,290 380,330 350,360 C320,390 280,400 255,400" 
+                              fill="none" stroke="#4CAF50" stroke-width="15" stroke-linecap="round"/>
+                        
+                        <!-- Connection dots - right -->
+                        <circle cx="350" cy="180" r="12" fill="#4CAF50"/>
+                        <circle cx="380" cy="240" r="12" fill="#4CAF50"/>
+                        <circle cx="350" cy="300" r="12" fill="#4CAF50"/>
+                        <circle cx="330" cy="240" r="10" fill="#4CAF50"/>
+                    </svg>
                     
-                    <!-- Connection dots - left -->
-                    <circle cx="150" cy="180" r="12" fill="#03A9F4"/>
-                    <circle cx="120" cy="240" r="12" fill="#03A9F4"/>
-                    <circle cx="150" cy="300" r="12" fill="#03A9F4"/>
-                    
-                    <!-- Right hemisphere - green -->
-                    <path d="M370,130 C400,160 410,210 400,250 C390,290 380,330 350,360 C320,390 280,400 255,400" 
-                          fill="none" stroke="#4CAF50" stroke-width="15" stroke-linecap="round"/>
-                    
-                    <!-- Connection dots - right -->
-                    <circle cx="350" cy="180" r="12" fill="#4CAF50"/>
-                    <circle cx="380" cy="240" r="12" fill="#4CAF50"/>
-                    <circle cx="350" cy="300" r="12" fill="#4CAF50"/>
-                    <circle cx="330" cy="240" r="10" fill="#4CAF50"/>
-                </svg>
-                
-                <!-- Neuron animations -->
-                <div class="neuron-path">
-                    <div class="neuron blue path1"></div>
-                    <div class="neuron blue path2"></div>
-                    <div class="neuron blue path3"></div>
-                    <div class="neuron green path4"></div>
-                    <div class="neuron green path5"></div>
-                    <div class="neuron green path6"></div>
+                    <!-- Neuron animations -->
+                    <div class="neuron-path">
+                        <div class="neuron blue path1"></div>
+                        <div class="neuron blue path2"></div>
+                        <div class="neuron blue path3"></div>
+                        <div class="neuron green path4"></div>
+                        <div class="neuron green path5"></div>
+                        <div class="neuron green path6"></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -94,144 +92,58 @@
     <!-- About Section -->
     <section class="about">
         <div class="container">
-            <div class="section-header">
-                <h2>About Pragyametrics</h2>
-                <p>Pioneering the frontier where artificial intelligence meets real-world business challenges</p>
-            </div>
-            <div class="about-content">
-                <p>At Pragyametrics, we combine cutting-edge AI technologies with deep domain expertise to deliver intelligent solutions that transform how businesses operate. Our platform leverages advanced machine learning algorithms, natural language processing, and data analytics to extract actionable insights from complex datasets.</p>
-                
-                <p>Founded by a team of AI researchers and industry veterans, Pragyametrics was born from the vision of making artificial intelligence accessible, ethical, and impactful for organizations worldwide. Today, we serve clients across multiple industries, helping them navigate the complexities of the digital landscape with confidence.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Values Section -->
-    <section class="values">
-        <div class="container">
-            <h2>Our Core Values</h2>
-            <div class="values-container">
-                <div class="value-card">
-                    <i class="fas fa-brain value-icon icon-blue"></i>
-                    <h3 class="value-title">Intelligence-Driven</h3>
-                    <p class="value-desc">We leverage cutting-edge AI technologies to deliver solutions that aren't just smart, but adaptively intelligent.</p>
+            <h2>About Pragyametrics</h2>
+            <p>We are a leading AI-powered intelligence platform delivering innovative solutions for businesses worldwide.</p>
+            <div class="features">
+                <div class="feature">
+                    <i class="fas fa-brain"></i>
+                    <h3>Advanced Analytics</h3>
+                    <p>Transform complex data into actionable business intelligence.</p>
                 </div>
-                <div class="value-card">
-                    <i class="fas fa-globe value-icon icon-green"></i>
-                    <h3 class="value-title">Global Perspective</h3>
-                    <p class="value-desc">Our solutions combine local expertise with global insights, delivering relevance at any scale.</p>
+                <div class="feature">
+                    <i class="fas fa-globe"></i>
+                    <h3>Global Reach</h3>
+                    <p>Delivering AI solutions with local expertise worldwide.</p>
                 </div>
-                <div class="value-card">
-                    <i class="fas fa-shield-alt value-icon icon-purple"></i>
-                    <h3 class="value-title">Ethical Excellence</h3>
-                    <p class="value-desc">We maintain the highest standards of data privacy and ethical AI development in everything we do.</p>
-                </div>
-                <div class="value-card">
-                    <i class="fas fa-chart-line value-icon icon-orange"></i>
-                    <h3 class="value-title">Measurable Impact</h3>
-                    <p class="value-desc">Our success is measured by the tangible outcomes and value we create for our clients.</p>
+                <div class="feature">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Secure & Reliable</h3>
+                    <p>Enterprise-grade security with 99.9% uptime guarantee.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Expertise Section -->
-    <section class="expertise">
+    <!-- Services Section -->
+    <section class="services">
         <div class="container">
-            <div class="expertise-content">
-                <div class="expertise-text">
-                    <h2>Our Expertise</h2>
-                    <p>Pragyametrics brings together multidisciplinary expertise to solve complex problems with elegant AI solutions.</p>
-                    <p>We specialize in transforming raw data into strategic assets that drive decision-making and create competitive advantages.</p>
-                    <ul class="expertise-list">
-                        <li><i class="fas fa-check-circle"></i> Natural Language Processing & Understanding</li>
-                        <li><i class="fas fa-check-circle"></i> Predictive Analytics & Forecasting</li>
-                        <li><i class="fas fa-check-circle"></i> Computer Vision & Image Recognition</li>
-                        <li><i class="fas fa-check-circle"></i> Reinforcement Learning Systems</li>
-                        <li><i class="fas fa-check-circle"></i> Explainable AI Solutions</li>
-                    </ul>
+            <h2>Our Services</h2>
+            <div class="service-cards">
+                <div class="service-card">
+                    <h3>Predictive Analytics</h3>
+                    <p>Forecast trends and anticipate market changes with our powerful predictive models.</p>
+                    <a href="services.html" class="btn-link">Learn More</a>
                 </div>
-                <div class="expertise-image">
-                    <img src="images/expertise.jpg" alt="AI Expertise Visualization">
+                <div class="service-card">
+                    <h3>Natural Language Processing</h3>
+                    <p>Extract insights from text data and automate content analysis at scale.</p>
+                    <a href="services.html" class="btn-link">Learn More</a>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Case Studies Section -->
-    <section class="case-studies">
-        <div class="container">
-            <div class="section-header">
-                <h2>Success Stories</h2>
-                <p>See how our AI solutions have transformed businesses across industries</p>
-            </div>
-            <div class="case-carousel">
-                <div class="carousel-container">
-                    <div class="carousel-item">
-                        <div class="carousel-image">
-                            <img src="images/case-study-1.jpg" alt="Manufacturing AI Case Study">
-                        </div>
-                        <div class="carousel-content">
-                            <h3 class="carousel-title">Manufacturing Excellence</h3>
-                            <p class="carousel-desc">How our AI-powered predictive maintenance reduced downtime by 78% for a global manufacturing leader.</p>
-                            <a href="#" class="carousel-link">Read Case Study <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="carousel-image">
-                            <img src="images/case-study-2.jpg" alt="Healthcare AI Case Study">
-                        </div>
-                        <div class="carousel-content">
-                            <h3 class="carousel-title">Healthcare Innovation</h3>
-                            <p class="carousel-desc">Our diagnostic assistance platform helped improve early detection rates by 45% at a leading hospital network.</p>
-                            <a href="#" class="carousel-link">Read Case Study <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="carousel-image">
-                            <img src="images/case-study-3.jpg" alt="Finance AI Case Study">
-                        </div>
-                        <div class="carousel-content">
-                            <h3 class="carousel-title">Financial Intelligence</h3>
-                            <p class="carousel-desc">How our fraud detection system saved a banking client over $12M in potential losses in the first year.</p>
-                            <a href="#" class="carousel-link">Read Case Study <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-controls">
-                    <button class="carousel-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
-                    <button class="carousel-btn next-btn"><i class="fas fa-chevron-right"></i></button>
+                <div class="service-card">
+                    <h3>Computer Vision</h3>
+                    <p>Implement image recognition and video analytics for your business needs.</p>
+                    <a href="services.html" class="btn-link">Learn More</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- World Map Section -->
-    <section class="global-presence">
+    <!-- CTA Section -->
+    <section class="cta">
         <div class="container">
-            <div class="section-header">
-                <h2>Global Presence</h2>
-                <p>Delivering AI solutions with local expertise and global reach</p>
-            </div>
-            <div class="world-map-container">
-                <img src="images/world-map.png" alt="World Map" class="world-map">
-                <div class="map-pin india"></div>
-                <div class="map-pin us"></div>
-                <div class="map-pin uk"></div>
-                <div class="map-pin japan"></div>
-                <div class="map-pin australia"></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Banner -->
-    <section class="cta-banner">
-        <div class="container">
-            <div class="cta-content">
-                <h2>Ready to Transform Your Business with AI?</h2>
-                <p>Get in touch with our team to explore how Pragyametrics can help you leverage the power of artificial intelligence.</p>
-                <button class="cta-btn cta-btn-primary">Contact Us Today</button>
-            </div>
+            <h2>Ready to Get Started?</h2>
+            <p>Contact us today to learn how our AI solutions can transform your business.</p>
+            <a href="contact.html" class="btn btn-primary">Contact Us</a>
         </div>
     </section>
 
@@ -240,104 +152,39 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <img src="images/logo.png" alt="Pragyametrics Logo" class="logo">
-                    <div class="logo-text">Pragya<span>metrics</span></div>
+                    <img src="images/logo.png" alt="Pragyametrics Logo">
+                    <p>PRAGYAMETRICS</p>
+                    <p class="tagline">Where Knowledge Meets Intelligence</p>
                 </div>
                 <div class="footer-links">
-                    <div class="footer-col">
-                        <h4>Company</h4>
-                        <ul>
-                            <li><a href="about.html">About Us</a></li>
-                            <li><a href="team.html">Our Team</a></li>
-                            <li><a href="careers.html">Careers</a></li>
-                            <li><a href="contact.html">Contact</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-col">
-                        <h4>Services</h4>
-                        <ul>
-                            <li><a href="services.html#nlp">Natural Language Processing</a></li>
-                            <li><a href="services.html#analytics">Predictive Analytics</a></li>
-                            <li><a href="services.html#vision">Computer Vision</a></li>
-                            <li><a href="services.html#consulting">AI Consulting</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-col">
-                        <h4>Resources</h4>
-                        <ul>
-                            <li><a href="blog.html">Blog</a></li>
-                            <li><a href="case-studies.html">Case Studies</a></li>
-                            <li><a href="whitepapers.html">Whitepapers</a></li>
-                            <li><a href="faq.html">FAQ</a></li>
-                        </ul>
-                    </div>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
                 </div>
                 <div class="footer-social">
-                    <h4>Connect With Us</h4>
-                    <div class="social-icons">
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
                 </div>
             </div>
-            <div class="footer-bottom">
+            <div class="copyright">
                 <p>&copy; 2025 Pragyametrics. All rights reserved.</p>
-                <div class="footer-legal">
-                    <a href="privacy.html">Privacy Policy</a>
-                    <a href="terms.html">Terms of Service</a>
-                </div>
             </div>
         </div>
     </footer>
 
-    <!-- Scripts -->
+    <!-- JavaScript -->
     <script>
         // Mobile menu toggle
-        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
-            document.querySelector('nav ul').classList.toggle('show');
+        const menuToggle = document.querySelector('.menu-toggle');
+        const nav = document.querySelector('nav');
+        
+        menuToggle.addEventListener('click', () => {
+            nav.classList.toggle('active');
         });
-        
-        // Header scroll effect
-        window.addEventListener('scroll', function() {
-            const header = document.querySelector('header');
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
-        
-        // Case studies carousel
-        const carousel = document.querySelector('.carousel-container');
-        const prevBtn = document.querySelector('.prev-btn');
-        const nextBtn = document.querySelector('.next-btn');
-        const carouselItems = document.querySelectorAll('.carousel-item');
-        let currentIndex = 0;
-        
-        function updateCarousel() {
-            const itemWidth = carouselItems[0].offsetWidth + 20; // Width + margin
-            carousel.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
-        }
-        
-        prevBtn.addEventListener('click', function() {
-            if (currentIndex > 0) {
-                currentIndex--;
-                updateCarousel();
-            }
-        });
-        
-        nextBtn.addEventListener('click', function() {
-            if (currentIndex < carouselItems.length - 1) {
-                currentIndex++;
-                updateCarousel();
-            }
-        });
-        
-        // Initialize carousel
-        window.addEventListener('load', updateCarousel);
-        window.addEventListener('resize', updateCarousel);
     </script>
 </body>
 </html>
