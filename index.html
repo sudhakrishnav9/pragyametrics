@@ -4,12 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pragyametrics - AI-Powered Intelligence, Delivered Locally and Globally</title>
+    
+    <!-- External CSS Libraries -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
     <style>
-        /* Global Styles */
+        /* ===== GLOBAL STYLES ===== */
         :root {
             --primary-color: #4CAF50;
             --secondary-color: #03A9F4;
@@ -56,7 +61,7 @@
             font-size: 16px;
         }
         
-        /* Header & Navigation */
+        /* ===== HEADER & NAVIGATION ===== */
         header {
             background-color: rgba(26, 30, 35, 0.95);
             padding: 20px 0;
@@ -82,11 +87,6 @@
         .logo {
             display: flex;
             align-items: center;
-        }
-        
-        .logo img {
-            height: 45px;
-            transition: all 0.3s ease;
         }
         
         .logo-text {
@@ -176,7 +176,7 @@
             cursor: pointer;
         }
         
-        /* Hero Section */
+        /* ===== HERO SECTION ===== */
         .hero {
             padding: 160px 0 100px;
             background: linear-gradient(135deg, rgba(26, 30, 35, 0.95) 0%, rgba(20, 21, 24, 0.98) 100%);
@@ -231,11 +231,6 @@
             animation: rotate 60s linear infinite;
         }
         
-        @keyframes rotate {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
-        
         .hero-tagline {
             font-size: 1.4rem;
             font-weight: 500;
@@ -269,6 +264,7 @@
             max-width: 650px;
         }
         
+        /* CTA Buttons */
         .cta-buttons {
             display: flex;
             gap: 20px;
@@ -309,7 +305,7 @@
             transform: translateY(-5px);
         }
         
-        /* Animated Globe */
+        /* ===== ANIMATED GLOBE ===== */
         .globe {
             width: 400px;
             height: 400px;
@@ -349,770 +345,6 @@
             border-radius: 50%;
             background-color: rgba(76, 175, 80, 0.3);
             animation: pulse 2s infinite;
-        }
-        
-        .map-pin.india {
-            top: 45%;
-            left: 70%;
-        }
-        
-        .map-pin.us {
-            top: 38%;
-            left: 22%;
-        }
-        
-        .map-pin.uk {
-            top: 30%;
-            left: 45%;
-        }
-        
-        .map-pin.japan {
-            top: 35%;
-            left: 83%;
-        }
-        
-        .map-pin.australia {
-            top: 70%;
-            left: 85%;
-        }
-        
-        /* Enhanced Footer */
-        footer {
-            background-color: #f8f9fa;
-            color: #333;
-            padding: 70px 0 20px;
-            position: relative;
-        }
-        
-        .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 50px;
-        }
-        
-        .footer-logo {
-            margin-bottom: 20px;
-        }
-        
-        .footer-logo img {
-            height: 40px;
-        }
-        
-        .company-info h3 {
-            color: var(--primary-color);
-            margin-bottom: 25px;
-            font-size: 1.5rem;
-        }
-        
-        .company-info p {
-            margin: 8px 0;
-            font-size: 14px;
-            line-height: 1.6;
-        }
-        
-        .contact-info h3 {
-            color: #333;
-            margin-bottom: 25px;
-            font-size: 1.5rem;
-        }
-        
-        .contact-info p {
-            margin: 15px 0;
-            display: flex;
-            align-items: center;
-            font-size: 14px;
-        }
-        
-        .contact-info p i {
-            margin-right: 15px;
-            font-size: 18px;
-            color: var(--primary-color);
-        }
-        
-        .footer-links h3 {
-            color: #333;
-            margin-bottom: 25px;
-            font-size: 1.5rem;
-        }
-        
-        .footer-links ul {
-            list-style: none;
-            padding: 0;
-        }
-        
-        .footer-links ul li {
-            margin-bottom: 12px;
-        }
-        
-        .footer-links ul li a {
-            color: #333;
-            font-size: 14px;
-            transition: all 0.3s ease;
-        }
-        
-        .footer-links ul li a:hover {
-            color: var(--primary-color);
-            padding-left: 5px;
-        }
-        
-        .social-links {
-            display: flex;
-            gap: 15px;
-            margin-top: 20px;
-        }
-        
-        .social-links a {
-            width: 36px;
-            height: 36px;
-            border-radius: 50%;
-            background-color: #e0e0e0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #333;
-            transition: all 0.3s ease;
-        }
-        
-        .social-links a:hover {
-            background-color: var(--primary-color);
-            color: white;
-            transform: translateY(-3px);
-        }
-        
-        .footer-bottom {
-            text-align: center;
-            margin-top: 50px;
-            padding-top: 20px;
-            border-top: 1px solid #e9ecef;
-            font-size: 14px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-        
-        .footer-bottom p {
-            margin: 10px 0;
-        }
-        
-        .trust-badge {
-            display: flex;
-            align-items: center;
-        }
-        
-        .trust-badge img {
-            height: 30px;
-            margin-right: 10px;
-        }
-        
-        .trust-badge span {
-            font-size: 12px;
-            font-weight: 600;
-        }
-        
-        /* Responsive Design - Enhanced */
-        @media (max-width: 1200px) {
-            .hero-visual {
-                width: 40%;
-            }
-            
-            .globe-container {
-                width: 350px;
-                height: 350px;
-            }
-            
-            .expertise-content {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-            
-            .carousel-item {
-                flex: 0 0 calc(50% - 20px);
-            }
-        }
-        
-        @media (max-width: 992px) {
-            nav ul li {
-                margin: 0 10px;
-            }
-            
-            .hero h1 {
-                font-size: 2.8rem;
-            }
-            
-            .hero-visual {
-                display: none;
-            }
-            
-            .hero-content {
-                max-width: 100%;
-                text-align: center;
-            }
-            
-            .hero h1:after {
-                left: 50%;
-                transform: translateX(-50%);
-            }
-            
-            .cta-buttons {
-                justify-content: center;
-            }
-            
-            .carousel-item {
-                flex: 0 0 calc(100% - 20px);
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .header-container {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            nav {
-                margin: 20px 0;
-            }
-            
-            nav ul {
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-            
-            nav ul li {
-                margin: 5px 10px;
-            }
-            
-            .login-btn {
-                margin-top: 10px;
-            }
-            
-            .hero {
-                padding: 150px 0 80px;
-                min-height: 0;
-            }
-            
-            .hero-tagline {
-                font-size: 1.2rem;
-            }
-            
-            .hero h1 {
-                font-size: 2.2rem;
-            }
-            
-            .hero-subheading {
-                font-size: 1.1rem;
-            }
-            
-            .cta-buttons {
-                flex-direction: column;
-                gap: 15px;
-            }
-            
-            .values h2 {
-                text-align: center;
-                display: block;
-            }
-            
-            .values h2:after {
-                left: 50%;
-                transform: translateX(-50%);
-            }
-            
-            .section-header h2 {
-                font-size: 2rem;
-            }
-            
-            /* Mobile menu */
-            .mobile-menu-btn {
-                display: block;
-            }
-            
-            nav {
-                position: fixed;
-                top: 80px;
-                left: -100%;
-                width: 100%;
-                height: calc(100vh - 80px);
-                background-color: var(--darker-bg);
-                transition: all 0.3s ease;
-                z-index: 100;
-            }
-            
-            nav.active {
-                left: 0;
-            }
-            
-            nav ul {
-                flex-direction: column;
-                align-items: center;
-                padding: 40px 0;
-            }
-            
-            nav ul li {
-                margin: 15px 0;
-            }
-            
-            nav ul li a {
-                font-size: 18px;
-            }
-            
-            .footer-bottom {
-                flex-direction: column;
-            }
-            
-            .trust-badge {
-                margin-top: 20px;
-            }
-        }
-        
-        /* Additional Animations */
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-            100% { transform: translateY(0px); }
-        }
-        
-        .animate {
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeIn 0.8s ease forwards;
-        }
-        
-        .float {
-            animation: float 5s ease-in-out infinite;
-        }
-        
-        .delay-1 {
-            animation-delay: 0.2s;
-        }
-        
-        .delay-2 {
-            animation-delay: 0.4s;
-        }
-        
-        .delay-3 {
-            animation-delay: 0.6s;
-        }
-        
-        .delay-4 {
-            animation-delay: 0.8s;
-        }
-    </style>
-</head>
-<body>
-    <header id="header">
-        <div class="container header-container">
-            <div class="logo">
-                <!-- Logo placeholder -->
-                <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="22.5" cy="22.5" r="22.5" fill="#4CAF50" fill-opacity="0.1"/>
-                    <circle cx="22.5" cy="22.5" r="18.5" stroke="#4CAF50" stroke-width="2"/>
-                    <path d="M14 22.5C14 18.9101 16.9101 16 20.5 16H24.5C28.0899 16 31 18.9101 31 22.5C31 26.0899 28.0899 29 24.5 29H20.5C16.9101 29 14 26.0899 14 22.5Z" stroke="#4CAF50" stroke-width="2"/>
-                    <circle cx="22.5" cy="22.5" r="3.5" fill="#4CAF50"/>
-                </svg>
-                <span class="logo-text">Pragya<span>metrics</span></span>
-            </div>
-            <nav id="mainNav">
-                <ul>
-                    <li class="nav-active"><a href="about.html">About</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="methodology.html">Methodology</a></li>
-                    <li><a href="engagement-models.html">Engagement Models</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                </ul>
-            </nav>
-            <button class="login-btn">Login</button>
-            <button class="mobile-menu-btn" id="mobileMenuBtn">
-                <i class="fas fa-bars"></i>
-            </button>
-        </div>
-    </header>
-
-    <main>
-        <section class="hero">
-            <div class="container">
-                <div class="hero-content">
-                    <p class="hero-tagline animate">AI-Powered Intelligence. Delivered Locally and Globally.</p>
-                    <h1 class="animate">About Pragyametrics</h1>
-                    <p class="hero-subheading animate delay-1">Empowering enterprises worldwide through agentic workflows, AI development, and domain-specific ML applications.</p>
-                    
-                    <div class="cta-buttons">
-                        <button class="cta-btn cta-btn-primary animate delay-2">Book a Strategy Session</button>
-                        <button class="cta-btn cta-btn-secondary animate delay-2">Explore AI Use Cases</button>
-                    </div>
-                </div>
-                
-                <div class="hero-visual">
-                    <div class="globe-container float">
-                        <div class="globe rotating-globe">
-                            <div class="pin"></div>
-                            <div class="pin"></div>
-                            <div class="pin"></div>
-                            <div class="pin"></div>
-                            <div class="pin"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="about">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="animate">Who We Are</h2>
-                </div>
-                
-                <p class="animate delay-1">At <span class="highlight">Pragyametrics</span>, we help global enterprises harness the real-world potential of Artificial Intelligence through contextual innovation, agentic workflows, and measurable impact.</p>
-                
-                <p class="animate delay-2">Originally focused on India's AI adoption journey, we now serve a wider global audience while preserving our strength in local market dynamics. Our work spans across industries—especially Telecom, where we have deep expertise in predictive analytics, churn models, network intelligence, and personalized recommendations.</p>
-                
-                <p class="animate delay-2">We specialize in <span class="highlight">agentic workflows</span>—AI systems that not only process and react, but reason, plan, and act autonomously. Our consulting practice goes beyond strategy—we build, scale, and operationalize AI solutions.</p>
-                
-                <p class="animate delay-3">Whether you're an Indian enterprise scaling nationwide or a global firm deploying localized intelligence, Pragyametrics is your trusted partner in AI transformation.</p>
-            </div>
-        </section>
-
-        <section class="values">
-            <div class="container">
-                <h2 class="animate">What We Stand For</h2>
-                
-                <div class="values-container">
-                    <div class="value-card animate delay-1">
-                        <div class="value-icon icon-blue">
-                            <i class="fas fa-globe-asia"></i>
-                        </div>
-                        <h3 class="value-title">Global Reach, Local Depth</h3>
-                        <p class="value-desc">Supporting clients worldwide with hyper-local adaptability. Our models scale across cultures, languages, and infrastructure.</p>
-                    </div>
-                    
-                    <div class="value-card animate delay-1">
-                        <div class="value-icon icon-green">
-                            <i class="fas fa-brain"></i>
-                        </div>
-                        <h3 class="value-title">Applied Intelligence</h3>
-                        <p class="value-desc">AI that drives business value—across telecom, retail, manufacturing, and public services, focusing on practical outcomes that deliver measurable results.</p>
-                    </div>
-                    
-                    <div class="value-card animate delay-2">
-                        <div class="value-icon icon-purple">
-                            <i class="fas fa-robot"></i>
-                        </div>
-                        <h3 class="value-title">Agentic Workflows</h3>
-                        <p class="value-desc">Systems that think, reason, and act autonomously—crafted using state-of-the-art AI planning and reinforcement learning techniques.</p>
-                    </div>
-                    
-                    <div class="value-card animate delay-2">
-                        <div class="value-icon icon-blue">
-                            <i class="fas fa-balance-scale"></i>
-                        </div>
-                        <h3 class="value-title">Vendor Neutrality</h3>
-                        <p class="value-desc">Guidance without bias or commissions, ensuring recommendations align with your business needs, not third-party interests.</p>
-                    </div>
-                    
-                    <div class="value-card animate delay-3">
-                        <div class="value-icon icon-yellow">
-                            <i class="fas fa-lightbulb"></i>
-                        </div>
-                        <h3 class="value-title">Practical Execution</h3>
-                        <p class="value-desc">Strategy paired with real-world implementation, turning innovative ideas into tangible business solutions.</p>
-                    </div>
-                    
-                    <div class="value-card animate delay-3">
-                        <div class="value-icon icon-orange">
-                            <i class="fas fa-handshake"></i>
-                        </div>
-                        <h3 class="value-title">End-to-End Partnership</h3>
-                        <p class="value-desc">Support from strategy to optimization, providing continuous guidance throughout your AI transformation journey.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="expertise">
-            <div class="container">
-                <div class="expertise-content">
-                    <div class="expertise-text">
-                        <div class="expertise-header">
-                            <div class="expertise-icon">
-                                <i class="fas fa-satellite-dish"></i>
-                            </div>
-                            <h2>Telecom ML Expertise</h2>
-                        </div>
-                        <p>With years of hands-on experience in telecom analytics, Pragyametrics delivers cutting-edge ML solutions that transform operations and enhance customer experiences.</p>
-                        
-                        <ul class="expertise-list">
-                            <li><i class="fas fa-check-circle"></i> Customer churn prediction</li>
-                            <li><i class="fas fa-check-circle"></i> Dynamic pricing optimization</li>
-                            <li><i class="fas fa-check-circle"></i> Fraud detection</li>
-                            <li><i class="fas fa-check-circle"></i> Network anomaly detection</li>
-                            <li><i class="fas fa-check-circle"></i> NLP for customer service</li>
-                        </ul>
-                        
-                        <p>Our ML pipelines integrate directly with OSS/BSS systems and are tailored for telco-grade scalability and latency. We help telecom providers unlock the true potential of their data.</p>
-                    </div>
-                    
-                    <div class="expertise-image">
-                        <img src="/api/placeholder/500/400" alt="Telecom AI Solutions" />
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <section class="case-studies">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="animate">AI Case Studies</h2>
-                    <p class="animate delay-1">Explore how our solutions create real business impact across industries</p>
-                </div>
-                
-                <div class="case-carousel">
-                    <div class="carousel-container">
-                        <div class="carousel-item">
-                            <div class="carousel-image">
-                                <img src="/api/placeholder/400/200" alt="Retail Analytics" />
-                            </div>
-                            <div class="carousel-content">
-                                <h3 class="carousel-title">Retail – Demand Forecasting</h3>
-                                <p class="carousel-desc">AI-powered inventory optimization reducing stockouts by 37% while cutting carrying costs.</p>
-                                <a href="#" class="carousel-link">Read Case Study <i class="fas fa-arrow-right"></i></a>
-                            </div>
-                        </div>
-                        
-                        <div class="carousel-item">
-                            <div class="carousel-image">
-                                <img src="/api/placeholder/400/200" alt="Telecom Network Optimization" />
-                            </div>
-                            <div class="carousel-content">
-                                <h3 class="carousel-title">Telecom – Network Optimization</h3>
-                                <p class="carousel-desc">ML algorithms that predict congestion and reroute traffic, improving bandwidth utilization by 28%.</p>
-                                <a href="#" class="carousel-link">Read Case Study <i class="fas fa-arrow-right"></i></a>
-                            </div>
-                        </div>
-                        
-                        <div class="carousel-item">
-                            <div class="carousel-image">
-                                <img src="/api/placeholder/400/200" alt="Manufacturing Predictive Maintenance" />
-                            </div>
-                            <div class="carousel-content">
-                                <h3 class="carousel-title">Manufacturing – Predictive Maintenance</h3>
-                                <p class="carousel-desc">Reducing equipment downtime by 42% with sensor data analysis and anomaly detection.</p>
-                                <a href="#" class="carousel-link">Read Case Study <i class="fas fa-arrow-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="carousel-controls">
-                        <button class="carousel-btn carousel-prev">
-                            <i class="fas fa-chevron-left"></i>
-                        </button>
-                        <button class="carousel-btn carousel-next">
-                            <i class="fas fa-chevron-right"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <div class="world-map-container">
-            <img src="/api/placeholder/1000/500" alt="World Map" class="world-map" />
-            <!-- Map pins positioned absolutely -->
-            <div class="map-pin india"></div>
-            <div class="map-pin us"></div>
-            <div class="map-pin uk"></div>
-            <div class="map-pin japan"></div>
-            <div class="map-pin australia"></div>
-        </div>
-        
-        <section class="cta-banner">
-            <div class="container cta-container">
-                <h2 class="cta-title animate">Let's Transform Your AI Journey</h2>
-                <p class="cta-text animate delay-1">Ready to leverage the power of AI for your business? We're here to guide you every step of the way, from strategy to implementation.</p>
-                <button class="cta-btn cta-btn-primary animate delay-2">Book a Strategy Session</button>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container footer-grid">
-            <div class="company-info">
-                <div class="footer-logo">
-                    <!-- Logo placeholder -->
-                    <svg width="40" height="40" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="22.5" cy="22.5" r="22.5" fill="#4CAF50" fill-opacity="0.1"/>
-                        <circle cx="22.5" cy="22.5" r="18.5" stroke="#4CAF50" stroke-width="2"/>
-                        <path d="M14 22.5C14 18.9101 16.9101 16 20.5 16H24.5C28.0899 16 31 18.9101 31 22.5C31 26.0899 28.0899 29 24.5 29H20.5C16.9101 29 14 26.0899 14 22.5Z" stroke="#4CAF50" stroke-width="2"/>
-                        <circle cx="22.5" cy="22.5" r="3.5" fill="#4CAF50"/>
-                    </svg>
-                </div>
-                <h3>Pragyametrics</h3>
-                <p>8B, Phase-1, Manjri Greens,</p>
-                <p>Hadapsar, Pune, Maharashtra,</p>
-                <p>India - 412307</p>
-                
-                <div class="social-links">
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                </div>
-            </div>
-            
-            <div class="contact-info">
-                <h3>Contact Us</h3>
-                <p><i class="far fa-envelope"></i> pragyametrics@outlook.com</p>
-                <p><i class="fas fa-phone-alt"></i> (+91) 77090 50817</p>
-            </div>
-            
-            <div class="footer-links">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="case-studies.html">Case Studies</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-        
-        <div class="footer-bottom container">
-            <p>&copy; 2025 <strong>Pragyametrics (OPC) Private Limited</strong>. All rights reserved. Empowering Intelligent Systems, Globally.</p>
-            
-            <div class="trust-badge">
-                <img src="/api/placeholder/100/30" alt="DUNS Registered" />
-                <span>D-U-N-S® Registered™</span>
-            </div>
-        </div>
-    </footer>
-    
-    <script>
-        // Mobile Menu Toggle
-        document.addEventListener('DOMContentLoaded', function() {
-            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-            const mainNav = document.getElementById('mainNav');
-            
-            if(mobileMenuBtn) {
-                mobileMenuBtn.addEventListener('click', function() {
-                    mainNav.classList.toggle('active');
-                    const icon = mobileMenuBtn.querySelector('i');
-                    if(icon.classList.contains('fa-bars')) {
-                        icon.classList.remove('fa-bars');
-                        icon.classList.add('fa-times');
-                    } else {
-                        icon.classList.remove('fa-times');
-                        icon.classList.add('fa-bars');
-                    }
-                });
-            }
-        });
-        
-        // Scroll header effect
-        window.addEventListener('scroll', function() {
-            const header = document.getElementById('header');
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
-        
-        // Animation on scroll
-        document.addEventListener('DOMContentLoaded', function() {
-            const animatedElements = document.querySelectorAll('.animate');
-            
-            function checkIfInView() {
-                animatedElements.forEach(element => {
-                    const elementPosition = element.getBoundingClientRect();
-                    const windowHeight = window.innerHeight;
-                    
-                    if (elementPosition.top < windowHeight * 0.9) {
-                        element.style.opacity = '1';
-                        element.style.transform = 'translateY(0)';
-                    }
-                });
-            }
-            
-            // Check on load
-            checkIfInView();
-            
-            // Check on scroll
-            window.addEventListener('scroll', checkIfInView);
-        });
-        
-        // Case Study Carousel
-        document.addEventListener('DOMContentLoaded', function() {
-            const carouselContainer = document.querySelector('.carousel-container');
-            const prevBtn = document.querySelector('.carousel-prev');
-            const nextBtn = document.querySelector('.carousel-next');
-            const items = document.querySelectorAll('.carousel-item');
-            
-            if(carouselContainer && items.length) {
-                let position = 0;
-                const itemWidth = items[0].offsetWidth + 20; // Width + margin
-                const totalItems = items.length;
-                const getVisibleItems = () => {
-                    return window.innerWidth < 768 ? 1 : window.innerWidth < 1200 ? 2 : 3;
-                };
-                
-                let visibleItems = getVisibleItems();
-                let maxPosition = Math.max(0, (totalItems - visibleItems) * itemWidth);
-                
-                // Update carousel position
-                function updateCarousel() {
-                    carouselContainer.style.transform = `translateX(-${position}px)`;
-                }
-                
-                // Event listeners for buttons
-                if(nextBtn) {
-                    nextBtn.addEventListener('click', function() {
-                        if (position < maxPosition) {
-                            position += itemWidth;
-                        } else {
-                            // Loop back to start
-                            position = 0;
-                        }
-                        updateCarousel();
-                    });
-                }
-                
-                if(prevBtn) {
-                    prevBtn.addEventListener('click', function() {
-                        if (position > 0) {
-                            position -= itemWidth;
-                        } else {
-                            // Loop to end
-                            position = maxPosition;
-                        }
-                        updateCarousel();
-                    });
-                }
-                
-                // Update on window resize
-                window.addEventListener('resize', function() {
-                    visibleItems = getVisibleItems();
-                    maxPosition = Math.max(0, (totalItems - visibleItems) * itemWidth);
-                    
-                    // Reset position if it's beyond the new maximum
-                    if (position > maxPosition) {
-                        position = maxPosition;
-                        updateCarousel();
-                    }
-                });
-                
-                // Auto slide
-                setInterval(function() {
-                    if(nextBtn) {
-                        nextBtn.click();
-                    }
-                }, 5000);
-            }
-        });
-    </script>
-</body>
-</html>2s infinite;
             transform: translate(-6px, -6px);
         }
         
@@ -1141,18 +373,7 @@
             left: 60%;
         }
         
-        @keyframes pulse {
-            0% {
-                transform: translate(-6px, -6px) scale(1);
-                opacity: 1;
-            }
-            100% {
-                transform: translate(-6px, -6px) scale(3);
-                opacity: 0;
-            }
-        }
-        
-        /* About Section */
+        /* ===== ABOUT SECTION ===== */
         .about {
             padding: var(--section-padding);
             position: relative;
@@ -1206,7 +427,7 @@
             margin: 0 auto;
         }
         
-        /* What We Stand For Section (Values) - Updated */
+        /* ===== VALUES SECTION ===== */
         .values {
             padding: var(--section-padding);
             background-color: var(--darker-bg);
@@ -1312,7 +533,28 @@
             flex-grow: 1;
         }
         
-        /* Telecom ML Expertise Section */
+        /* Icon colors */
+        .icon-blue {
+            color: var(--secondary-color);
+        }
+        
+        .icon-green {
+            color: var(--primary-color);
+        }
+        
+        .icon-orange {
+            color: #FF5722;
+        }
+        
+        .icon-yellow {
+            color: #FFC107;
+        }
+        
+        .icon-purple {
+            color: var(--accent-color);
+        }
+        
+        /* ===== EXPERTISE SECTION ===== */
         .expertise {
             padding: var(--section-padding);
             background-color: var(--dark-bg);
@@ -1407,7 +649,7 @@
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
         }
         
-        /* Case Studies Section */
+        /* ===== CASE STUDIES SECTION ===== */
         .case-studies {
             padding: var(--section-padding);
             background-color: var(--darker-bg);
@@ -1503,47 +745,7 @@
             color: white;
         }
         
-        /* CTA Banner */
-        .cta-banner {
-            padding: 80px 0;
-            background: linear-gradient(135deg, var(--darker-bg) 0%, #1a1e23 100%);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .cta-banner:before {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQ0MCIgaGVpZ2h0PSI0MDAiIHZpZXdCb3g9IjAgMCAxNDQwIDQwMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMCAwTDE0NDAgMFYyNTBDMTQ0MCAyNTAgOTYwIDQwMCA3MjAgNDAwQzQ4MCA0MDAgMCAyNTAgMCAyNTBWMFoiIGZpbGw9InVybCgjZ3JhZGllbnQpIiBmaWxsLW9wYWNpdHk9IjAuMSIvPjxkZWZzPjxsaW5lYXJHcmFkaWVudCBpZD0iZ3JhZGllbnQiIHgxPSI3MjAiIHkxPSIwIiB4Mj0iNzIwIiB5Mj0iNDAwIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHN0b3Agc3RvcC1jb2xvcj0iIzRDQUY1MCIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzAzQTlGNCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjwvc3ZnPg==');
-            background-size: cover;
-            background-position: center;
-            opacity: 0.2;
-            z-index: 0;
-        }
-        
-        .cta-container {
-            position: relative;
-            z-index: 1;
-            text-align: center;
-        }
-        
-        .cta-title {
-            font-size: 2.5rem;
-            color: var(--highlight-text);
-            margin-bottom: 25px;
-        }
-        
-        .cta-text {
-            font-size: 1.2rem;
-            max-width: 700px;
-            margin: 0 auto 40px;
-        }
-        
-        /* World Map */
+        /* ===== WORLD MAP SECTION ===== */
         .world-map-container {
             margin: 50px auto;
             max-width: 1000px;
@@ -1566,4 +768,63 @@
             transform: translate(-50%, -50%);
             z-index: 2;
             box-shadow: 0 0 0 5px rgba(76, 175, 80, 0.3);
-            animation: pulse
+            animation: pulse 2s infinite;
+        }
+        
+        .map-pin.india {
+            top: 45%;
+            left: 70%;
+        }
+        
+        .map-pin.us {
+            top: 38%;
+            left: 22%;
+        }
+        
+        .map-pin.uk {
+            top: 30%;
+            left: 45%;
+        }
+        
+        .map-pin.japan {
+            top: 35%;
+            left: 83%;
+        }
+        
+        .map-pin.australia {
+            top: 70%;
+            left: 85%;
+        }
+        
+        /* ===== CTA BANNER ===== */
+        .cta-banner {
+            padding: 80px 0;
+            background: linear-gradient(135deg, var(--darker-bg) 0%, #1a1e23 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-banner:before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQ0MCIgaGVpZ2h0PSI0MDAiIHZpZXdCb3g9IjAgMCAxNDQwIDQwMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMCAwTDE0NDAgMFYyNTBDMTQ0MCAyNTAgOTYwIDQwMCA3MjAgNDAwQzQ4MCA0MDAgMCAyNTAgMCAyNTBWMFoiIGZpbGw9InVybCgjZ3JhZGllbnQpIiBmaWxsLW9wYWNpdHk9IjAuMSIvPjxkZWZzPjxsaW5lYXJHcmFkaWVudCBpZD0iZ3JhZGllbnQiIHgxPSI3MjAiIHkxPSIwIiB4Mj0iNzIwIiB5Mj0iNDAwIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHN0b3Agc3RvcC1jb2xvcj0iIzRDQUY1MCIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzAzQTlGNCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjwvc3ZnPg==');
+            background-size: cover;
+            background-position: center;
+            opacity:<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pragyametrics - AI-Powered Intelligence, Delivered Locally and Globally</title>
+    
+    <!-- External CSS Libraries -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=
