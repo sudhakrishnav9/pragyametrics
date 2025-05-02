@@ -1,5 +1,17 @@
 // Wait for DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', function() {
+    // Mobile menu functionality
+    const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    if (mobileMenuToggle && mobileMenu) {
+        mobileMenuToggle.addEventListener('click', function() {
+            this.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+            document.body.classList.toggle('menu-open');
+        });
+    }
+
     // Add data flow elements to the brain
     const brainWrapper = document.querySelector('.brain-wrapper');
     if (brainWrapper) {
@@ -15,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Add scroll indicator to hero section
     const heroSection = document.querySelector('.hero');
-    if (heroSection) {
+    if (heroSection && !document.querySelector('.scroll-indicator')) {
         const scrollIndicator = document.createElement('div');
         scrollIndicator.className = 'scroll-indicator';
         heroSection.appendChild(scrollIndicator);
@@ -77,6 +89,13 @@ document.addEventListener('DOMContentLoaded', function() {
                         top: targetElement.offsetTop - 100,
                         behavior: 'smooth'
                     });
+                    
+                    // Close mobile menu if open
+                    if (mobileMenu && mobileMenu.classList.contains('active')) {
+                        mobileMenuToggle.classList.remove('active');
+                        mobileMenu.classList.remove('active');
+                        document.body.classList.remove('menu-open');
+                    }
                 }
             }
         });
