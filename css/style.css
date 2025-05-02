@@ -34,3 +34,162 @@ footer {
 .logo {
     height: 80px;
 }
+<!-- Replace the globe container in the hero section with this code -->
+<div class="brain-container">
+    <!-- Brain Logo SVG -->
+    <svg class="brain-logo" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+        <!-- Left hemisphere - blue -->
+        <path d="M130,130 C100,160 90,210 100,250 C110,290 120,330 150,360 C180,390 220,400 245,400" 
+              fill="none" stroke="#03A9F4" stroke-width="15" stroke-linecap="round"/>
+        
+        <!-- Connection dots - left -->
+        <circle cx="150" cy="180" r="12" fill="#03A9F4"/>
+        <circle cx="120" cy="240" r="12" fill="#03A9F4"/>
+        <circle cx="150" cy="300" r="12" fill="#03A9F4"/>
+        
+        <!-- Right hemisphere - green -->
+        <path d="M370,130 C400,160 410,210 400,250 C390,290 380,330 350,360 C320,390 280,400 255,400" 
+              fill="none" stroke="#4CAF50" stroke-width="15" stroke-linecap="round"/>
+        
+        <!-- Connection dots - right -->
+        <circle cx="350" cy="180" r="12" fill="#4CAF50"/>
+        <circle cx="380" cy="240" r="12" fill="#4CAF50"/>
+        <circle cx="350" cy="300" r="12" fill="#4CAF50"/>
+        <circle cx="330" cy="240" r="10" fill="#4CAF50"/>
+    </svg>
+    
+    <!-- Neuron animations -->
+    <div class="neuron-path">
+        <div class="neuron blue path1"></div>
+        <div class="neuron blue path2"></div>
+        <div class="neuron blue path3"></div>
+        <div class="neuron green path4"></div>
+        <div class="neuron green path5"></div>
+        <div class="neuron green path6"></div>
+    </div>
+</div>
+
+<!-- Add these CSS styles to the existing styles section -->
+<style>
+/* ===== BRAIN ANIMATION STYLES ===== */
+.brain-container {
+    position: relative;
+    width: 400px;
+    height: 400px;
+}
+
+.brain-logo {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    animation: pulse 3s infinite alternate;
+}
+
+/* Path for neuron animation */
+.neuron-path {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: visible;
+}
+
+/* Animated neurons */
+.neuron {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: white;
+    filter: drop-shadow(0 0 3px var(--secondary-color));
+    opacity: 0;
+    animation: moveNeuron var(--duration, 3s) var(--delay, 0s) infinite;
+}
+
+.neuron.blue {
+    background-color: var(--secondary-color);
+    filter: drop-shadow(0 0 3px var(--secondary-color));
+}
+
+.neuron.green {
+    background-color: var(--primary-color);
+    filter: drop-shadow(0 0 3px var(--primary-color));
+}
+
+/* Left side neurons */
+.neuron.path1 {
+    top: 30%;
+    left: 25%;
+    --duration: 4s;
+    --delay: 0.3s;
+}
+
+.neuron.path2 {
+    top: 45%;
+    left: 25%;
+    --duration: 3.5s;
+    --delay: 1.5s;
+}
+
+.neuron.path3 {
+    top: 65%;
+    left: 30%;
+    --duration: 4.2s;
+    --delay: 0.8s;
+}
+
+/* Right side neurons */
+.neuron.path4 {
+    top: 25%;
+    right: 20%;
+    --duration: 3.8s;
+    --delay: 1.2s;
+}
+
+.neuron.path5 {
+    top: 50%;
+    right: 25%;
+    --duration: 4.5s;
+    --delay: 0.5s;
+}
+
+.neuron.path6 {
+    top: 70%;
+    right: 30%;
+    --duration: 3.2s;
+    --delay: 1.8s;
+}
+
+/* Animation for the brain logo pulsing */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        filter: drop-shadow(0 0 10px rgba(76, 175, 80, 0.3)) drop-shadow(0 0 20px rgba(3, 169, 244, 0.2));
+    }
+    100% {
+        transform: scale(1.05);
+        filter: drop-shadow(0 0 15px rgba(76, 175, 80, 0.5)) drop-shadow(0 0 30px rgba(3, 169, 244, 0.3));
+    }
+}
+
+/* Animation for the neuron particles */
+@keyframes moveNeuron {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    20% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+    80% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+}
+</style>
