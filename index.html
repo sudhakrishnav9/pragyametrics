@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pragyametrics - Where Knowledge Meets Intelligence</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,16 +13,12 @@
 <body>
     <header id="header">
         <div class="container header-container">
-            <div class="logo">
-                <!-- Logo SVG -->
-                <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="22.5" cy="22.5" r="22.5" fill="#4CAF50" fill-opacity="0.1"/>
-                    <circle cx="22.5" cy="22.5" r="18.5" stroke="#4CAF50" stroke-width="2"/>
-                    <path d="M14 22.5C14 18.9101 16.9101 16 20.5 16H24.5C28.0899 16 31 18.9101 31 22.5C31 26.0899 28.0899 29 24.5 29H20.5C16.9101 29 14 26.0899 14 22.5Z" stroke="#4CAF50" stroke-width="2"/>
-                    <circle cx="22.5" cy="22.5" r="3.5" fill="#4CAF50"/>
-                </svg>
-                <span class="logo-text">Pragya<span>metrics</span></span>
+            <div class="logo-container">
+                <!-- Logo -->
+                <img src="images/logo.png" alt="Pragyametrics Logo" class="logo">
+                <span class="logo-text">Pragya<span class="highlight">metrics</span></span>
             </div>
+            
             <nav>
                 <ul>
                     <li class="nav-active"><a href="index.html">Home</a></li>
@@ -47,6 +43,11 @@
                 <p class="animate delay-2">Our solutions are tailored specifically for the Indian market - addressing local challenges with global expertise, ensuring cultural sensitivity, and delivering cost-effective AI implementations that drive measurable business outcomes.</p>
                 
                 <p class="animate delay-3">Whether you're starting your AI journey or scaling enterprise-wide adoption, our independent, vendor-neutral approach guarantees recommendations aligned with <span class="highlight">your</span> goals—not third-party interests.</p>
+                
+                <div class="cta-buttons animate delay-3">
+                    <a href="services.html" class="btn btn-primary">Our Services</a>
+                    <a href="contact.html" class="btn btn-secondary">Contact Us</a>
+                </div>
             </div>
         </section>
 
@@ -97,33 +98,116 @@
                 </div>
             </div>
         </section>
+        
+        <section class="services-preview">
+            <div class="container">
+                <h2 class="animate">Our Services</h2>
+                <div class="services-grid">
+                    <div class="service-item animate delay-1">
+                        <div class="service-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>AI Strategy Development</h3>
+                        <p>Tailored roadmaps for AI implementation aligned with your business goals and market position.</p>
+                        <a href="services.html#strategy" class="read-more">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    
+                    <div class="service-item animate delay-1">
+                        <div class="service-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h3>AI Implementation</h3>
+                        <p>End-to-end development and deployment of AI solutions with ongoing optimization.</p>
+                        <a href="services.html#implementation" class="read-more">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    
+                    <div class="service-item animate delay-2">
+                        <div class="service-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3>AI Training & Adoption</h3>
+                        <p>Custom training programs to ensure your team gets the most from AI investments.</p>
+                        <a href="services.html#training" class="read-more">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="services-cta animate delay-3">
+                    <a href="services.html" class="btn btn-primary">View All Services</a>
+                </div>
+            </div>
+        </section>
+        
+        <section class="testimonials">
+            <div class="container">
+                <h2 class="animate">What Our Clients Say</h2>
+                <div class="testimonial-container">
+                    <div class="testimonial animate delay-1">
+                        <div class="testimonial-content">
+                            <p>"Pragyametrics helped us transform our customer service with AI, reducing response times by 65% while improving satisfaction metrics."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-info">
+                                <h4>Rajesh Sharma</h4>
+                                <p>CTO, TechSolutions India</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial animate delay-2">
+                        <div class="testimonial-content">
+                            <p>"The AI strategy Pragyametrics developed was perfectly aligned with our Indian market needs, addressing multilingual challenges we couldn't solve before."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-info">
+                                <h4>Priya Mehta</h4>
+                                <p>COO, Retail Innovations</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
         <div class="container footer-content">
-            <div class="company-info">
+            <div class="footer-col">
                 <div class="footer-logo">
-                    <!-- Logo SVG -->
-                    <svg width="40" height="40" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="22.5" cy="22.5" r="22.5" fill="#4CAF50" fill-opacity="0.1"/>
-                        <circle cx="22.5" cy="22.5" r="18.5" stroke="#4CAF50" stroke-width="2"/>
-                        <path d="M14 22.5C14 18.9101 16.9101 16 20.5 16H24.5C28.0899 16 31 18.9101 31 22.5C31 26.0899 28.0899 29 24.5 29H20.5C16.9101 29 14 26.0899 14 22.5Z" stroke="#4CAF50" stroke-width="2"/>
-                        <circle cx="22.5" cy="22.5" r="3.5" fill="#4CAF50"/>
-                    </svg>
+                    <img src="images/logo.png" alt="Pragyametrics Logo" class="logo">
                 </div>
                 <h3>Pragyametrics</h3>
                 <p>8B, Phase-1, Manjri Greens,</p>
                 <p>Hadapsar, Pune, Maharashtra,</p>
                 <p>India - 412307</p>
             </div>
-            <div class="contact-info">
+            
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="methodology.html">Methodology</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
                 <h3>Contact Us</h3>
                 <p><i class="far fa-envelope"></i> pragyametrics@outlook.com</p>
                 <p><i class="fas fa-phone-alt"></i> (+91) 77090 50817</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                </div>
             </div>
         </div>
         <div class="footer-bottom container">
             <p>&copy; 2025 Pragyametrics. All rights reserved.</p>
+            <ul class="footer-bottom-links">
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="thank-you.html">Acknowledgements</a></li>
+            </ul>
         </div>
     </footer>
     
