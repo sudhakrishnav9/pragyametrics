@@ -20,6 +20,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Poppins', Arial, sans-serif;
     background-color: var(--dark-bg);
@@ -28,6 +32,9 @@ body {
     padding: 0;
     line-height: 1.7;
     overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 a {
@@ -56,6 +63,14 @@ p {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 1rem;
+}
+
+main {
+    margin-top: 0;
+    padding: 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Header Styles */
@@ -128,12 +143,13 @@ main {
 /* Hero Section */
 .hero {
     position: relative;
-    min-height: 90vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
     padding: 8rem 2rem;
+    margin-top: 0;
 }
 
 .hero-bg {
@@ -161,8 +177,7 @@ main {
     display: flex;
     align-items: center;
     gap: 5rem;
-    max-width: 1200px;
-    margin: 0 auto;
+    width: 100%;
 }
 
 .brain-wrapper {
@@ -174,6 +189,7 @@ main {
 
 .brain-image {
     max-width: 400px;
+    height: auto;
     filter: drop-shadow(0 0 20px rgba(3, 169, 244, 0.4));
     animation: floatAnimation 6s ease-in-out infinite;
     z-index: 2;
@@ -254,9 +270,12 @@ main {
 
 /* About Section */
 .about {
-    padding: 6rem 10%;
+    padding: 6rem 0;
     background-color: var(--darker-bg);
     position: relative;
+    min-height: 40vh;
+    display: flex;
+    align-items: center;
 }
 
 .about::before {
@@ -287,6 +306,11 @@ main {
     background-color: var(--primary-color);
 }
 
+.about-content {
+    position: relative;
+    z-index: 1;
+}
+
 .about p {
     font-size: 1.1rem;
     line-height: 1.8;
@@ -302,9 +326,12 @@ main {
 
 /* Pillars (What We Stand For) Section */
 .pillars {
-    padding: 6rem 10%;
+    padding: 6rem 0;
     background-color: var(--dark-bg);
     position: relative;
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
 }
 
 .pillars::before {
@@ -403,11 +430,15 @@ main {
 
 /* CTA Banner */
 .cta-banner {
-    padding: 4rem 10%;
+    padding: 4rem 0;
     background: linear-gradient(45deg, rgba(76, 175, 80, 0.1), rgba(3, 169, 244, 0.1));
     text-align: center;
     position: relative;
     overflow: hidden;
+    min-height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .cta-banner::before {
@@ -445,7 +476,7 @@ main {
 footer {
     background-color: var(--section-bg);
     color: var(--light-text);
-    padding: 4rem 10% 2rem;
+    padding: 4rem 0 2rem;
     position: relative;
     width: 100%;
 }
@@ -521,7 +552,6 @@ footer {
 /* Responsive Design */
 @media (max-width: 1200px) {
     .hero-content {
-        padding: 0 5%;
         gap: 3rem;
     }
     
@@ -562,29 +592,14 @@ footer {
         justify-content: center;
     }
     
-    .about, .pillars {
+    .about, .pillars, .about-content {
         text-align: center;
     }
 }
 
 @media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        padding: 1rem 5%;
-    }
-    
-    nav {
-        margin-top: 1rem;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    
-    nav a {
-        margin: 0.5rem;
-    }
-    
     .hero {
-        padding: 6rem 1rem;
+        padding: 8rem 1rem 6rem;
     }
     
     .brain-image {
@@ -600,7 +615,7 @@ footer {
     }
     
     .about, .pillars {
-        padding: 4rem 5%;
+        padding: 4rem 0;
     }
     
     .about h2, .pillars h2 {
@@ -618,10 +633,6 @@ footer {
 }
 
 @media (max-width: 480px) {
-    nav {
-        gap: 1rem;
-    }
-    
     .hero-text h1 {
         font-size: 1.8rem;
     }
