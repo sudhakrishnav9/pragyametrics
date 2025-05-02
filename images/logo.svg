@@ -1,0 +1,57 @@
+<svg width="500" height="500" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle with dark gradient -->
+  <circle cx="250" cy="250" r="250" fill="#0e1611"/>
+  
+  <!-- Outer glow -->
+  <circle cx="250" cy="250" r="240" fill="url(#glow)" fill-opacity="0.3"/>
+  
+  <!-- Brain outline with gradient -->
+  <path d="M136.5,174.2c-14.8,14.8-23.2,34.9-23.2,55.8c0,20.9,8.4,41,23.2,55.8c6.2,6.2,13.2,11.2,20.8,15 M363.5,174.2
+    c14.8,14.8,23.2,34.9,23.2,55.8c0,20.9-8.4,41-23.2,55.8c-6.2,6.2-13.2,11.2-20.8,15 M157.3,324.8c17.8,17.8,41.7,27.7,66.7,27.7
+    s48.9-9.9,66.7-27.7 M157.3,174.2c17.8-17.8,41.7-27.7,66.7-27.7s48.9,9.9,66.7,27.7" 
+    stroke="url(#brain-stroke)" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Left hemisphere circuit lines -->
+  <path d="M187,180 L187,320" stroke="#3498db" stroke-width="7" stroke-linecap="round"/>
+  <path d="M187,220 L137,220" stroke="#3498db" stroke-width="7" stroke-linecap="round"/>
+  <path d="M187,280 L137,280" stroke="#3498db" stroke-width="7" stroke-linecap="round"/>
+  
+  <!-- Right hemisphere circuit lines -->
+  <path d="M313,180 L313,320" stroke="#4CAF50" stroke-width="7" stroke-linecap="round"/>
+  <path d="M313,220 L363,220" stroke="#4CAF50" stroke-width="7" stroke-linecap="round"/>
+  <path d="M313,280 L363,280" stroke="#4CAF50" stroke-width="7" stroke-linecap="round"/>
+  
+  <!-- Connection points (nodes) -->
+  <circle cx="187" cy="220" r="10" fill="#3498db"/>
+  <circle cx="187" cy="280" r="10" fill="#3498db"/>
+  <circle cx="137" cy="220" r="10" fill="#3498db"/>
+  <circle cx="137" cy="280" r="10" fill="#3498db"/>
+  
+  <circle cx="313" cy="220" r="10" fill="#4CAF50"/>
+  <circle cx="313" cy="280" r="10" fill="#4CAF50"/>
+  <circle cx="363" cy="220" r="10" fill="#4CAF50"/>
+  <circle cx="363" cy="280" r="10" fill="#4CAF50"/>
+  
+  <!-- Connecting line between hemispheres -->
+  <path d="M250,146 L250,354" stroke="url(#center-line)" stroke-width="5" stroke-linecap="round" stroke-dasharray="8 8"/>
+  
+  <!-- Definitions for gradients -->
+  <defs>
+    <linearGradient id="brain-stroke" x1="136.5" y1="250" x2="363.5" y2="250" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#3498db"/>
+      <stop offset="1" stop-color="#4CAF50"/>
+    </linearGradient>
+    
+    <linearGradient id="center-line" x1="250" y1="146" x2="250" y2="354" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#4CAF50"/>
+      <stop offset="0.5" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#3498db"/>
+    </linearGradient>
+    
+    <radialGradient id="glow" cx="250" cy="250" r="240" gradientUnits="userSpaceOnUse">
+      <stop offset="0.7" stop-color="#3498db" stop-opacity="0.3"/>
+      <stop offset="0.85" stop-color="#4CAF50" stop-opacity="0.2"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+</svg>
