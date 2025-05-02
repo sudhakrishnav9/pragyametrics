@@ -7,12 +7,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/header.css">
+    <script src="js/script.js" defer></script>
 </head>
 <body>
-    <header>
+    <header id="header">
         <div class="logo-container">
             <img src="images/brain.png" alt="Pragyametrics Logo" class="logo">
-            <h1>Pragyametrics</h1>
+            <span class="logo-text">Pragya<span class="highlight">metrics</span></span>
         </div>
         <nav>
             <a href="about.html">About</a>
@@ -22,101 +24,133 @@
             <a href="blog.html">Blog</a>
             <a href="contact.html">Contact Us</a>
         </nav>
+        
+        <!-- Mobile Menu Toggle -->
+        <div class="mobile-menu-toggle" id="mobile-menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </header>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <nav>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="methodology.html">Methodology</a>
+            <a href="engagement-models.html">Engagement Models</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+    </div>
 
-    <main>
+    <main id="main-content">
         <!-- Hero Section with Brain Image and Effects -->
-        <section class="hero">
+        <section class="hero" id="hero">
             <div class="hero-bg"></div>
-            <div class="hero-content">
-                <div class="brain-wrapper">
-                    <img src="images/brain.png" alt="AI Brain Diagram" class="brain-image" />
-                    <div class="brain-glow"></div>
-                </div>
-                <div class="hero-text">
-                    <h1 class="animate-fadein">AI Solutions That Think, Act, and Deliver</h1>
-                    <p class="animate-slidein">From agentic workflows to contextual machine learning systems, we engineer intelligence to scale globally—without complexity.</p>
-                    <div class="hero-buttons">
-                        <a href="contact.html" class="cta-button">Request a Free Consultation</a>
-                        <a href="services.html" class="secondary-button">View Our Services</a>
+            <div class="container">
+                <div class="hero-content">
+                    <div class="brain-wrapper">
+                        <img src="images/brain.png" alt="AI Brain Diagram" class="brain-image" />
+                        <div class="brain-glow"></div>
                     </div>
+                    <div class="hero-text">
+                        <h1 class="animate-fadein">AI Solutions That Think, Act, and Deliver</h1>
+                        <p class="animate-slidein">From agentic workflows to contextual machine learning systems, we engineer intelligence to scale globally—without complexity.</p>
+                        <div class="hero-buttons">
+                            <a href="contact.html" class="cta-button">Request a Free Consultation</a>
+                            <a href="services.html" class="secondary-button">View Our Services</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-indicator"></div>
+        </section>
+
+        <!-- About Pragyametrics Section -->
+        <section class="about" id="about">
+            <div class="container">
+                <h2>About Pragyametrics</h2>
+                <div class="about-content">
+                    <p><strong>At <span class="highlight">Pragyametrics</span></strong>, we empower Indian enterprises to harness the true potential of Artificial Intelligence through actionable strategy, expert implementation, and contextual innovation.</p>
+                    <p>Founded with the vision to bridge the gap between cutting-edge AI capabilities and real-world business needs, Pragyametrics focuses exclusively on the Indian market. We understand that successful AI adoption in India requires more than just technology—it demands cultural sensitivity, multilingual adaptability, cost-effective solutions, and industry-specific expertise.</p>
+                    <p>We combine deep domain knowledge with hands-on technical skill to deliver AI solutions that are practical, scalable, and measurable. From AI readiness assessments to full-scale implementation support, our team ensures you are guided at every step—from idea to execution.</p>
+                    <p>Our independent, vendor-neutral approach guarantees that our recommendations are aligned with your goals—not third-party partnerships. Whether you're just beginning your AI journey or scaling enterprise-wide adoption, Pragyametrics is your trusted partner for driving value through intelligent transformation.</p>
                 </div>
             </div>
         </section>
 
-        <!-- About Pragyametrics Section -->
-        <section class="about">
-            <h2>About Pragyametrics</h2>
-            <p><strong>At <span class="highlight">Pragyametrics</span></strong>, we empower Indian enterprises to harness the true potential of Artificial Intelligence through actionable strategy, expert implementation, and contextual innovation.</p>
-            <p>Founded with the vision to bridge the gap between cutting-edge AI capabilities and real-world business needs, Pragyametrics focuses exclusively on the Indian market. We understand that successful AI adoption in India requires more than just technology—it demands cultural sensitivity, multilingual adaptability, cost-effective solutions, and industry-specific expertise.</p>
-            <p>We combine deep domain knowledge with hands-on technical skill to deliver AI solutions that are practical, scalable, and measurable. From AI readiness assessments to full-scale implementation support, our team ensures you are guided at every step—from idea to execution.</p>
-            <p>Our independent, vendor-neutral approach guarantees that our recommendations are aligned with your goals—not third-party partnerships. Whether you're just beginning your AI journey or scaling enterprise-wide adoption, Pragyametrics is your trusted partner for driving value through intelligent transformation.</p>
-        </section>
-
         <!-- What We Stand For Section with Card Grid -->
-        <section class="pillars">
-            <h2>What We Stand For</h2>
-            <div class="pillar-grid">
-                <div class="pillar">
-                    <div class="pillar-icon">
-                        <i class="icon-flag"></i>
+        <section class="pillars" id="pillars">
+            <div class="container">
+                <h2>What We Stand For</h2>
+                <div class="pillar-grid">
+                    <div class="pillar">
+                        <div class="pillar-icon">
+                            <i class="icon-flag"></i>
+                        </div>
+                        <h3>India-First Focus</h3>
+                        <p>Solutions tailored for India's unique market dynamics, addressing local challenges with global expertise.</p>
                     </div>
-                    <h3>India-First Focus</h3>
-                    <p>Solutions tailored for India's unique market dynamics, addressing local challenges with global expertise.</p>
-                </div>
-                <div class="pillar">
-                    <div class="pillar-icon">
-                        <i class="icon-brain"></i>
+                    <div class="pillar">
+                        <div class="pillar-icon">
+                            <i class="icon-brain"></i>
+                        </div>
+                        <h3>Applied Intelligence</h3>
+                        <p>AI grounded in business impact, focusing on practical outcomes that deliver measurable results.</p>
                     </div>
-                    <h3>Applied Intelligence</h3>
-                    <p>AI grounded in business impact, focusing on practical outcomes that deliver measurable results.</p>
-                </div>
-                <div class="pillar">
-                    <div class="pillar-icon">
-                        <i class="icon-balance"></i>
+                    <div class="pillar">
+                        <div class="pillar-icon">
+                            <i class="icon-balance"></i>
+                        </div>
+                        <h3>Vendor Neutrality</h3>
+                        <p>Guidance without bias or commissions, ensuring recommendations align with your business needs.</p>
                     </div>
-                    <h3>Vendor Neutrality</h3>
-                    <p>Guidance without bias or commissions, ensuring recommendations align with your business needs.</p>
-                </div>
-                <div class="pillar">
-                    <div class="pillar-icon">
-                        <i class="icon-lightbulb"></i>
+                    <div class="pillar">
+                        <div class="pillar-icon">
+                            <i class="icon-lightbulb"></i>
+                        </div>
+                        <h3>Practical Execution</h3>
+                        <p>Strategy paired with real-world implementation, turning innovative ideas into tangible business solutions.</p>
                     </div>
-                    <h3>Practical Execution</h3>
-                    <p>Strategy paired with real-world implementation, turning innovative ideas into tangible business solutions.</p>
-                </div>
-                <div class="pillar">
-                    <div class="pillar-icon">
-                        <i class="icon-handshake"></i>
+                    <div class="pillar">
+                        <div class="pillar-icon">
+                            <i class="icon-handshake"></i>
+                        </div>
+                        <h3>End-to-End Partnership</h3>
+                        <p>Support from strategy to optimization, providing continuous guidance throughout your AI transformation journey.</p>
                     </div>
-                    <h3>End-to-End Partnership</h3>
-                    <p>Support from strategy to optimization, providing continuous guidance throughout your AI transformation journey.</p>
                 </div>
             </div>
         </section>
 
         <!-- Call-to-Action Banner -->
-        <section class="cta-banner">
-            <h2>Ready to Build With Intelligence?</h2>
-            <p>Let's discuss your first AI project—no jargon, just clarity.</p>
-            <a href="contact.html" class="cta-button">Talk to Us</a>
+        <section class="cta-banner" id="cta">
+            <div class="container">
+                <h2>Ready to Build With Intelligence?</h2>
+                <p>Let's discuss your first AI project—no jargon, just clarity.</p>
+                <a href="contact.html" class="cta-button">Talk to Us</a>
+            </div>
         </section>
     </main>
 
     <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <div class="company-info">
-                <h3>Pragyametrics</h3>
-                <p>88, Phase-1, Manjri Greens,<br>Hadapsar, Pune, Maharashtra<br>India - 412307</p>
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="company-info">
+                    <h3>Pragyametrics</h3>
+                    <p>88, Phase-1, Manjri Greens,<br>Hadapsar, Pune, Maharashtra<br>India - 412307</p>
+                </div>
+                <div class="contact-info">
+                    <h4>Contact Us</h4>
+                    <p>📧 pragyametrics@outlook.com</p>
+                    <p>📞 +91 77090 50817</p>
+                </div>
             </div>
-            <div class="contact-info">
-                <h4>Contact Us</h4>
-                <p>📧 pragyametrics@outlook.com</p>
-                <p>📞 +91 77090 50817</p>
-            </div>
+            <p class="copyright">© 2025 Pragyametrics (OPC) Private Limited. All rights reserved.</p>
         </div>
-        <p class="copyright">© 2025 Pragyametrics (OPC) Private Limited. All rights reserved.</p>
     </footer>
 </body>
 </html>
