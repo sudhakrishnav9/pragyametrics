@@ -229,7 +229,7 @@
                     
                     <div class="contact-form">
                         <h3>Send Us a Message</h3>
-                        <form id="contactForm" action="https://formspree.io/f/xeogajkz" method="POST">
+                        <form id="contactForm">
                             <div class="form-group">
                                 <label for="name">Your Name</label>
                                 <input type="text" id="name" name="name" required>
@@ -275,7 +275,6 @@
                             
                             <!-- Hidden fields for Formspree -->
                             <input type="hidden" name="_subject" value="New message from Pragyametrics Website">
-                            <input type="hidden" name="_next" value="https://yourpmjay.org/thank-you.html">
                             
                             <button type="submit" class="submit-btn">Send Message</button>
                         </form>
@@ -403,8 +402,10 @@
             }
         });
         
-        // Form submission handler with validation
+        // Form submission with AJAX
         form.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the form from submitting normally
+            
             // Get form elements
             const nameInput = document.getElementById('name');
             const emailInput = document.getElementById('email');
@@ -436,13 +437,63 @@
             
             // If any validation fails, stop form submission
             if (!isValid) {
-                event.preventDefault();
                 return false;
             }
             
-            // If validation passes, form submits normally to Formspree
-            // Formspree handles the actual form submission and redirect
-            return true;
+            // Change button state
+            submitButton.disabled = true;
+            submitButton.textContent = 'Sending...';
+            
+            // Clear previous status
+            formStatus.style.display = 'none';
+            formStatus.className = 'form-status';
+            
+            // Get form data
+            const formData = new FormData(form);
+            
+            // Send form data to Formspree using AJAX
+            fetch("https://formspree.io/f/xeogajkz", {
+                method: "POST",
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    // Success! Show success message and then redirect
+                    formStatus.textContent = 'Your message has been sent successfully!';
+                    formStatus.className = 'form-status success';
+                    formStatus.style.display = 'block';
+                    
+                    // Clear form fields
+                    form.reset();
+                    
+                    // Redirect to thank you page after a brief delay
+                    setTimeout(function() {
+                        window.location.href = "thank-you.html";
+                    }, 1500);
+                } else {
+                    // Show error message
+                    formStatus.textContent = 'Oops! There was a problem submitting your form. Please try again.';
+                    formStatus.className = 'form-status error';
+                    formStatus.style.display = 'block';
+                    
+                    // Reset button
+                    submitButton.disabled = false;
+                    submitButton.textContent = 'Send Message';
+                }
+            })
+            .catch(error => {
+                // Show error message
+                formStatus.textContent = 'Network error. Please check your connection and try again.';
+                formStatus.className = 'form-status error';
+                formStatus.style.display = 'block';
+                
+                // Reset button
+                submitButton.disabled = false;
+                submitButton.textContent = 'Send Message';
+            });
         });
     </script>
 </body>
