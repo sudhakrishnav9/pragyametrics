@@ -643,3 +643,120 @@ footer {
         margin-bottom: 1rem;
     }
 }
+/* Services Page Styles */
+.services-page {
+    padding: 2rem;
+    background-color: #0a0f2c;
+    color: #ffffff;
+    margin-top: 100px;
+}
+
+.services-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+}
+
+.services-intro h1 {
+    color: #ffffff;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    display: inline-block;
+}
+
+.services-intro h1::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: var(--primary-color);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.service-card {
+    background: #111842;
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.3);
+}
+
+.service-card h2 {
+    color: #00ffff;
+    margin-bottom: 0.5rem;
+    font-size: 1.4rem;
+}
+
+.service-card p {
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.service-card ul {
+    list-style: disc;
+    margin-left: 1.2rem;
+    margin-bottom: 1rem;
+    flex-grow: 1;
+}
+
+.service-card li {
+    margin-bottom: 0.8rem;
+    line-height: 1.4;
+}
+
+.deliverables {
+    margin-top: 1rem;
+    font-style: italic;
+    color: #aaffff;
+    margin-bottom: 0.5rem;
+}
+
+/* Responsive adjustments for services page */
+@media (max-width: 992px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .services-intro h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .services-page {
+        padding: 2rem 1rem;
+    }
+    
+    .services-intro h1 {
+        font-size: 1.8rem;
+    }
+    
+    .service-card {
+        padding: 1.2rem;
+    }
+}
