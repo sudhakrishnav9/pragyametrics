@@ -1346,7 +1346,78 @@ footer {
 @media (max-width: 768px) {
     #methodology {
         padding-top: 6rem;
+    }/* Engagement Models Page Specific Styles */
+#engagement-models {
+    padding-top: 8rem; /* Add extra top padding to account for fixed header */
+}
+
+.engagement-models .pillar-icon i {
+    font-size: 2rem;
+    color: var(--accent-color);
+}
+
+.icon-strategic::before, 
+.icon-tactical::before, 
+.icon-retainer::before,
+.icon-acceleration::before {
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+/* Add to existing pillar styles from services.css */
+.engagement-models .pillar {
+    margin-bottom: 2rem;
+}
+
+/* Custom model section */
+.custom-model {
+    margin-top: 3rem;
+    padding: 2rem;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.05);
+    text-align: center;
+    border: 1px solid var(--accent-color);
+}
+
+.custom-model h3 {
+    color: var(--highlight-text);
+    margin-bottom: 1rem;
+}
+
+.custom-model p {
+    margin-bottom: 1.5rem;
+}
+
+.custom-model .cta-button {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: var(--dark-bg);
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.custom-model .cta-button:hover {
+    background-color: var(--primary-color);
+}
+
+/* Responsive adjustments for engagement models */
+@media (max-width: 768px) {
+    #engagement-models {
+        padding-top: 6rem;
     }
+    
+    .engagement-models .pillar {
+        margin-bottom: 3rem;
+    }
+    
+    .custom-model {
+        padding: 1.5rem;
+        margin-top: 2rem;
+    }
+}
     
     .methodology .pillar {
         margin-bottom: 3rem;
