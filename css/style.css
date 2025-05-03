@@ -760,3 +760,105 @@ footer {
         padding: 1.2rem;
     }
 }
+/* Services Page Specific Styles */
+.services {
+    padding: 6rem 0;
+    background-color: var(--dark-bg);
+    position: relative;
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+}
+
+.services::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(3, 169, 244, 0.1) 0%, rgba(3, 169, 244, 0.05) 50%, transparent 70%);
+    z-index: 0;
+}
+
+.services h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    display: inline-block;
+}
+
+.services h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 80px;
+    height: 3px;
+    background-color: var(--secondary-color);
+}
+
+.services-intro {
+    max-width: 800px;
+    margin-bottom: 3rem;
+}
+
+.services-intro p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.service-card ul {
+    list-style: disc;
+    padding-left: 1.2rem;
+    margin: 1rem 0;
+}
+
+.service-card li {
+    margin-bottom: 0.8rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.service-card .deliverables {
+    font-style: italic;
+    margin-top: 1rem;
+    color: var(--accent-color);
+    font-size: 0.95rem;
+}
+
+/* Icon styles for services */
+.icon-strategy::before,
+.icon-vendor::before, 
+.icon-usecase::before,
+.icon-implementation::before,
+.icon-adaptation::before,
+.icon-industry::before {
+    font-size: 1.8rem;
+}
+
+@media (max-width: 992px) {
+    .services h2 {
+        text-align: center;
+        display: block;
+    }
+    
+    .services h2::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .services-intro {
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .services {
+        padding: 4rem 0;
+    }
+    
+    .services h2 {
+        font-size: 2rem;
+    }
+}
