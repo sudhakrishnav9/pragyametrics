@@ -1319,3 +1319,36 @@ footer {
 .icon-industry::before {
     font-size: 2rem;
 }
+/* Methodology Page Specific Styles */
+#methodology {
+    padding-top: 8rem; /* Add extra top padding to account for fixed header */
+}
+
+.methodology .pillar-icon i {
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+.icon-discovery::before, 
+.icon-planning::before, 
+.icon-execution::before,
+.icon-evaluation::before {
+    font-size: 2rem;
+    color: var(--accent-color);
+}
+
+/* Add to existing pillar styles from services.css */
+.methodology .pillar {
+    margin-bottom: 2rem;
+}
+
+/* Responsive adjustments for methodology */
+@media (max-width: 768px) {
+    #methodology {
+        padding-top: 6rem;
+    }
+    
+    .methodology .pillar {
+        margin-bottom: 3rem;
+    }
+}
