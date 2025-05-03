@@ -4,289 +4,148 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Methodology - Pragyametrics</title>
-    <style>
-        /* Global Styles */
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #1a1e23;
-            color: #e0e0e0;
-            line-height: 1.6;
-        }
-        
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 15px;
-        }
-        
-        /* Header & Navigation */
-        header {
-            background-color: #1a1e23;
-            padding: 15px 0;
-            border-bottom: 1px solid #333;
-        }
-        
-        .header-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo {
-            display: flex;
-            align-items: center;
-        }
-        
-        .logo img {
-            height: 50px;
-        }
-        
-        nav ul {
-            display: flex;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-        
-        nav ul li {
-            margin: 0 15px;
-        }
-        
-        nav ul li a {
-            color: #e0e0e0;
-            text-decoration: none;
-            font-size: 16px;
-            transition: color 0.3s;
-        }
-        
-        nav ul li a:hover {
-            color: #4CAF50;
-        }
-        
-        .login-btn {
-            background: transparent;
-            border: none;
-            color: #e0e0e0;
-            cursor: pointer;
-            font-size: 16px;
-            transition: color 0.3s;
-        }
-        
-        .login-btn:hover {
-            color: #4CAF50;
-        }
-        
-        /* Methodology Section */
-        .methodology {
-            padding: 60px 0;
-        }
-        
-        .methodology h1 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            color: #fff;
-        }
-        
-        .methodology p {
-            font-size: 1.1rem;
-            max-width: 800px;
-            margin-bottom: 30px;
-        }
-        
-        .phase {
-            margin-bottom: 50px;
-        }
-        
-        .phase h2 {
-            color: #fff;
-            font-size: 1.8rem;
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-        }
-        
-        .phase h2 .phase-icon {
-            color: #03A9F4;
-            margin-right: 15px;
-        }
-        
-        .phase p {
-            margin-bottom: 20px;
-        }
-        
-        .phase ul {
-            list-style: none;
-            padding: 0;
-        }
-        
-        .phase ul li {
-            margin-bottom: 10px;
-        }
-        
-        .phase ul li strong {
-            color: #fff;
-            margin-right: 8px;
-        }
-        
-        .outcome {
-            margin-top: 15px;
-            padding: 10px;
-            border-left: 3px solid #03A9F4;
-            background-color: rgba(3, 169, 244, 0.1);
-        }
-        
-        .outcome span {
-            margin-right: 10px;
-            color: #FFC107;
-        }
-        
-        /* Footer */
-        footer {
-            background-color: #f5f5f5;
-            color: #333;
-            padding: 20px 0;
-            margin-top: 60px;
-        }
-        
-        .footer-content {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-        }
-        
-        .footer-content .company-info h3 {
-            color: #4CAF50;
-            margin-bottom: 15px;
-        }
-        
-        .footer-content .company-info p {
-            margin: 5px 0;
-        }
-        
-        .footer-content .contact-info p {
-            margin: 5px 0;
-            display: flex;
-            align-items: center;
-        }
-        
-        .footer-content .contact-info p img {
-            margin-right: 10px;
-        }
-        
-        /* Icons */
-        .diamond {
-            color: #03A9F4;
-        }
-        
-        .target {
-            color: #FFC107;
-        }
-        
-        .check {
-            color: #4CAF50;
-        }
-        
-        .chart {
-            color: #9C27B0;
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/header.css">
+    <script src="js/script.js" defer></script>
 </head>
 <body>
-    <header>
-        <div class="container header-container">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="images/logo.png" alt="Pragyametrics Logo">
-                </a>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="methodology.html">Methodology</a></li>
-                    <li><a href="engagement-models.html">Engagement Models</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                </ul>
-            </nav>
-            <button class="login-btn">Login</button>
+    <header id="header">
+        <div class="logo-container">
+            <img src="images/brain.png" alt="Pragyametrics Logo" class="logo">
+            <span class="logo-text">Pragya<span class="highlight">metrics</span></span>
+        </div>
+        <nav>
+            <a href="index.html#about">About</a>
+            <a href="services.html">Services</a>
+            <a href="methodology.html">Methodology</a>
+            <a href="engagement-models.html">Engagement Models</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+        
+        <!-- Mobile Menu Toggle -->
+        <div class="mobile-menu-toggle" id="mobile-menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
     </header>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <nav>
+            <a href="index.html#about">About</a>
+            <a href="services.html">Services</a>
+            <a href="methodology.html">Methodology</a>
+            <a href="engagement-models.html">Engagement Models</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+    </div>
 
-    <main>
-        <section class="methodology container">
-            <h1>Our Implementation Methodology</h1>
-            <p>At Pragyametrics, we follow a structured, transparent, and business-aligned methodology to ensure the success of every AI initiative. Our process blends strategic insight with technical precision, enabling scalable outcomes from day one.</p>
+    <main id="main-content">
+        <section class="methodology" id="methodology">
+            <div class="container">
+                <h2>Our Implementation Methodology</h2>
+                <div class="about-content">
+                    <p>At Pragyametrics, we follow a structured, transparent, and business-aligned methodology to ensure the success of every AI initiative. Our process blends strategic insight with technical precision, enabling scalable outcomes from day one.</p>
+                </div>
+                
+                <div class="pillar-grid">
+                    <div class="pillar">
+                        <div class="pillar-icon">
+                            <i class="icon-discovery">◆</i>
+                        </div>
+                        <h3>1. Discovery Phase</h3>
+                        <p>We begin by understanding your business goals, current capabilities, and key challenges to uncover meaningful AI opportunities.</p>
+                        <ul>
+                            <li><strong>Business Objective Alignment:</strong> Clarifying your strategic priorities</li>
+                            <li><strong>Current State Assessment:</strong> Analyzing existing systems, workflows, and pain points</li>
+                            <li><strong>Stakeholder Interviews:</strong> Gathering cross-functional insights</li>
+                            <li><strong>Data Inventory:</strong> Auditing data quality, accessibility, and readiness</li>
+                            <li><strong>Opportunity Identification:</strong> Highlighting high-impact AI use cases</li>
+                        </ul>
+                        <p class="deliverables">📊 Outcome: Clear alignment on what AI can solve—and where to begin.</p>
+                    </div>
 
-            <div class="phase">
-                <h2><span class="phase-icon diamond">◆</span> 1. Discovery Phase</h2>
-                <p>We begin by understanding your business goals, current capabilities, and key challenges to uncover meaningful AI opportunities.</p>
-                <ul>
-                    <li><strong>Business Objective Alignment:</strong> Clarifying your strategic priorities</li>
-                    <li><strong>Current State Assessment:</strong> Analyzing existing systems, workflows, and pain points</li>
-                    <li><strong>Stakeholder Interviews:</strong> Gathering cross-functional insights</li>
-                    <li><strong>Data Inventory:</strong> Auditing data quality, accessibility, and readiness</li>
-                    <li><strong>Opportunity Identification:</strong> Highlighting high-impact AI use cases</li>
-                </ul>
-                <p class="outcome"><span class="target">⊙</span> Outcome: Clear alignment on what AI can solve—and where to begin.</p>
+                    <div class="pillar">
+                        <div class="pillar-icon">
+                            <i class="icon-planning">◆</i>
+                        </div>
+                        <h3>2. Planning Phase</h3>
+                        <p>We design practical AI solutions tailored to your organization's structure, constraints, and ambitions.</p>
+                        <ul>
+                            <li><strong>Solution Design:</strong> Creating detailed functional and technical specs</li>
+                            <li><strong>Resource Planning:</strong> Mapping out required skills, tools, and teams</li>
+                            <li><strong>Timeline Development:</strong> Defining realistic delivery milestones</li>
+                            <li><strong>Risk Assessment:</strong> Identifying potential obstacles and contingencies</li>
+                            <li><strong>Success Metrics Definition:</strong> Establishing what success will look like</li>
+                        </ul>
+                        <p class="deliverables">🗂️ Outcome: A ready-to-execute, risk-aware AI project plan.</p>
+                    </div>
+
+                    <div class="pillar">
+                        <div class="pillar-icon">
+                            <i class="icon-execution">◆</i>
+                        </div>
+                        <h3>3. Execution Phase</h3>
+                        <p>We bring your AI initiative to life through agile, collaborative development and rapid prototyping.</p>
+                        <ul>
+                            <li><strong>Agile Implementation:</strong> Delivering value iteratively and incrementally</li>
+                            <li><strong>Regular Checkpoints:</strong> Ensuring continuous stakeholder alignment</li>
+                            <li><strong>Knowledge Transfer:</strong> Enabling your team with hands-on support</li>
+                            <li><strong>Quality Assurance:</strong> Rigorously testing models and integrations</li>
+                            <li><strong>Documentation:</strong> Creating technical and user-friendly guides</li>
+                        </ul>
+                        <p class="deliverables">⚡ Outcome: Functional, validated AI systems ready for production.</p>
+                    </div>
+
+                    <div class="pillar">
+                        <div class="pillar-icon">
+                            <i class="icon-evaluation">◆</i>
+                        </div>
+                        <h3>4. Evaluation & Optimization</h3>
+                        <p>Post-deployment, we assess real-world performance and fine-tune for continuous improvement.</p>
+                        <ul>
+                            <li><strong>Performance Measurement:</strong> Evaluating KPIs and success metrics</li>
+                            <li><strong>User Feedback Collection:</strong> Capturing insights from actual users</li>
+                            <li><strong>Refinement Cycles:</strong> Iterating to improve accuracy, speed, and relevance</li>
+                            <li><strong>Scaling Planning:</strong> Extending successful solutions across the organization</li>
+                            <li><strong>Continuous Improvement:</strong> Establishing a framework for AI evolution</li>
+                        </ul>
+                        <p class="deliverables">📈 Outcome: A scalable, future-proof AI implementation with measurable ROI.</p>
+                    </div>
+                </div>
             </div>
+        </section>
 
-            <div class="phase">
-                <h2><span class="phase-icon diamond">◆</span> 2. Planning Phase</h2>
-                <p>We design practical AI solutions tailored to your organization's structure, constraints, and ambitions.</p>
-                <ul>
-                    <li><strong>Solution Design:</strong> Creating detailed functional and technical specs</li>
-                    <li><strong>Resource Planning:</strong> Mapping out required skills, tools, and teams</li>
-                    <li><strong>Timeline Development:</strong> Defining realistic delivery milestones</li>
-                    <li><strong>Risk Assessment:</strong> Identifying potential obstacles and contingencies</li>
-                    <li><strong>Success Metrics Definition:</strong> Establishing what success will look like</li>
-                </ul>
-                <p class="outcome"><span class="target">🟦</span> Outcome: A ready-to-execute, risk-aware AI project plan.</p>
-            </div>
-
-            <div class="phase">
-                <h2><span class="phase-icon diamond">◆</span> 3. Execution Phase</h2>
-                <p>We bring your AI initiative to life through agile, collaborative development and rapid prototyping.</p>
-                <ul>
-                    <li><strong>Agile Implementation:</strong> Delivering value iteratively and incrementally</li>
-                    <li><strong>Regular Checkpoints:</strong> Ensuring continuous stakeholder alignment</li>
-                    <li><strong>Knowledge Transfer:</strong> Enabling your team with hands-on support</li>
-                    <li><strong>Quality Assurance:</strong> Rigorously testing models and integrations</li>
-                    <li><strong>Documentation:</strong> Creating technical and user-friendly guides</li>
-                </ul>
-                <p class="outcome"><span class="check">⚡</span> Outcome: Functional, validated AI systems ready for production.</p>
-            </div>
-
-            <div class="phase">
-                <h2><span class="phase-icon diamond">◆</span> 4. Evaluation & Optimization</h2>
-                <p>Post-deployment, we assess real-world performance and fine-tune for continuous improvement.</p>
-                <ul>
-                    <li><strong>Performance Measurement:</strong> Evaluating KPIs and success metrics</li>
-                    <li><strong>User Feedback Collection:</strong> Capturing insights from actual users</li>
-                    <li><strong>Refinement Cycles:</strong> Iterating to improve accuracy, speed, and relevance</li>
-                    <li><strong>Scaling Planning:</strong> Extending successful solutions across the organization</li>
-                    <li><strong>Continuous Improvement:</strong> Establishing a framework for AI evolution</li>
-                </ul>
-                <p class="outcome"><span class="chart">⬛</span> Outcome: A scalable, future-proof AI implementation with measurable ROI.</p>
+        <!-- Call-to-Action Banner -->
+        <section class="cta-banner" id="cta">
+            <div class="container">
+                <h2>Ready to Implement AI with a Proven Methodology?</h2>
+                <p>Schedule a free consultation to discuss your AI journey.</p>
+                <a href="contact.html" class="cta-button">Contact Us</a>
             </div>
         </section>
     </main>
 
-    <footer>
-        <div class="container footer-content">
-            <div class="company-info">
-                <h3>Pragyametrics</h3>
-                <p>8B, Phase-1, Manjri Greens,</p>
-                <p>Hadapsar, Pune, Maharashtra,</p>
-                <p>India - 412307</p>
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="company-info">
+                    <h3>Pragyametrics</h3>
+                    <p>88, Phase-1, Manjri Greens,<br>Hadapsar, Pune, Maharashtra<br>India - 412307</p>
+                </div>
+                <div class="contact-info">
+                    <h4>Contact Us</h4>
+                    <p>📧 pragyametrics@outlook.com</p>
+                    <p>📞 +91 77090 50817</p>
+                </div>
             </div>
-            <div class="contact-info">
-                <p>📧 Email: pragyametrics@outlook.com</p>
-                <p>📱 Phone: (+91) 77090 50817</p>
-            </div>
+            <p class="copyright">© 2025 Pragyametrics (OPC) Private Limited. All rights reserved.</p>
         </div>
     </footer>
 </body>
