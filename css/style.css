@@ -1422,4 +1422,208 @@ footer {
     .methodology .pillar {
         margin-bottom: 3rem;
     }
+/* Contact Page Specific Styles */
+#contact {
+    padding-top: 8rem; /* Add extra top padding to account for fixed header */
+}
+
+.contact h2 {
+    margin-bottom: 1.5rem;
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin: 3rem 0;
+}
+
+.contact-info h3,
+.contact-form h3,
+.map h3 {
+    font-size: 1.5rem;
+    color: var(--highlight-text);
+    margin-bottom: 1.5rem;
+}
+
+.contact-info .address {
+    margin-bottom: 2rem;
+}
+
+.contact-info p {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: flex-start;
+    line-height: 1.6;
+}
+
+.contact-info .icon {
+    margin-right: 0.75rem;
+    color: var(--accent-color);
+    min-width: 1.5rem;
+    display: inline-block;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--light-text);
+    font-weight: 500;
+}
+
+.form-group .required {
+    color: var(--accent-color);
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.05);
+    color: var(--light-text);
+    border-radius: 4px;
+    font-family: 'Poppins', sans-serif;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 2px rgba(var(--accent-color-rgb), 0.2);
+}
+
+.form-group input.error,
+.form-group textarea.error,
+.form-group select.error {
+    border-color: var(--error-color);
+}
+
+.form-group textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.error-message {
+    color: var(--error-color);
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
+    display: none;
+}
+
+.submit-btn {
+    padding: 0.75rem 1.75rem;
+    background-color: var(--accent-color);
+    color: var(--dark-bg);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: var(--primary-color);
+}
+
+.submit-btn:disabled {
+    background-color: rgba(var(--accent-color-rgb), 0.5);
+    cursor: not-allowed;
+}
+
+/* Form status messages */
+.form-status {
+    padding: 1rem;
+    margin-top: 1.5rem;
+    border-radius: 4px;
+    display: none;
+}
+
+.form-status.success {
+    background-color: rgba(var(--success-color-rgb), 0.1);
+    border: 1px solid var(--success-color);
+    color: var(--success-color);
+}
+
+.form-status.error {
+    background-color: rgba(var(--error-color-rgb), 0.1);
+    border: 1px solid var(--error-color);
+    color: var(--error-color);
+}
+
+/* Map Section */
+.map {
+    margin-top: 3rem;
+}
+
+.map-container {
+    border-radius: 8px;
+    overflow: hidden;
+    height: 400px;
+}
+
+.map-container iframe {
+    border: none;
+    width: 100%;
+    height: 100%;
+}
+
+/* Responsive Styling */
+@media (max-width: 992px) {
+    .contact-container {
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    #contact {
+        padding-top: 6rem;
+    }
+    
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-form {
+        order: -1;
+    }
+    
+    .map-container {
+        height: 300px;
+    }
+}
+/* CSS Variables to add to your style.css file */
+
+:root {
+    /* Main colors */
+    --primary-color: #4CAF50;
+    --primary-color-rgb: 76, 175, 80;
+    --accent-color: #03A9F4;
+    --accent-color-rgb: 3, 169, 244;
+    --highlight-text: #ffffff;
+    --light-text: #e0e0e0;
+    --dark-bg: #1a1e23;
+    
+    /* Status colors */
+    --success-color: #4CAF50;
+    --success-color-rgb: 76, 175, 80;
+    --error-color: #F44336;
+    --error-color-rgb: 244, 67, 54;
+    --warning-color: #FFC107;
+    --warning-color-rgb: 255, 193, 7;
+    
+    /* Font settings */
+    --body-font: 'Poppins', sans-serif;
+    --heading-font: 'Poppins', sans-serif;
+}    
 }
