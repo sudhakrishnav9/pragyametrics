@@ -4,384 +4,291 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - Pragyametrics</title>
-    <style>
-        /* Global Styles */
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #1a1e23;
-            color: #e0e0e0;
-            line-height: 1.6;
-        }
-        
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 15px;
-        }
-        
-        /* Header & Navigation */
-        header {
-            background-color: #1a1e23;
-            padding: 15px 0;
-            border-bottom: 1px solid #333;
-        }
-        
-        .header-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo {
-            display: flex;
-            align-items: center;
-        }
-        
-        .logo img {
-            height: 50px;
-        }
-        
-        nav ul {
-            display: flex;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-        
-        nav ul li {
-            margin: 0 15px;
-        }
-        
-        nav ul li a {
-            color: #e0e0e0;
-            text-decoration: none;
-            font-size: 16px;
-            transition: color 0.3s;
-        }
-        
-        nav ul li a:hover {
-            color: #4CAF50;
-        }
-        
-        .login-btn {
-            background: transparent;
-            border: none;
-            color: #e0e0e0;
-            cursor: pointer;
-            font-size: 16px;
-            transition: color 0.3s;
-        }
-        
-        .login-btn:hover {
-            color: #4CAF50;
-        }
-        
-        /* Contact Section */
-        .contact {
-            padding: 60px 0;
-        }
-        
-        .contact h1 {
-            font-size: 2.5rem;
-            margin-bottom: 30px;
-            color: #fff;
-        }
-        
-        .contact-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-        }
-        
-        .contact-info h2 {
-            font-size: 1.8rem;
-            margin-bottom: 20px;
-            color: #fff;
-        }
-        
-        .contact-info p {
-            margin-bottom: 15px;
-            display: flex;
-            align-items: flex-start;
-        }
-        
-        .contact-info p span {
-            margin-right: 10px;
-            color: #4CAF50;
-        }
-        
-        .contact-info .address {
-            margin-bottom: 30px;
-        }
-        
-        .contact-form h2 {
-            font-size: 1.8rem;
-            margin-bottom: 20px;
-            color: #fff;
-        }
-        
-        .form-group {
-            margin-bottom: 20px;
-        }
-        
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-            color: #ccc;
-        }
-        
-        .form-group input,
-        .form-group textarea,
-        .form-group select {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #444;
-            background-color: #2a2e33;
-            color: #e0e0e0;
-            border-radius: 4px;
-        }
-        
-        .form-group textarea {
-            height: 150px;
-            resize: vertical;
-        }
-        
-        .submit-btn {
-            padding: 12px 25px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 16px;
-            transition: background-color 0.3s;
-        }
-        
-        .submit-btn:hover {
-            background-color: #45a049;
-        }
-        
-        /* Form status messages */
-        .form-status {
-            padding: 10px;
-            margin-top: 20px;
-            border-radius: 4px;
-            display: none;
-        }
-        
-        .form-status.success {
-            background-color: rgba(76, 175, 80, 0.1);
-            border: 1px solid #4CAF50;
-            color: #4CAF50;
-        }
-        
-        .form-status.error {
-            background-color: rgba(244, 67, 54, 0.1);
-            border: 1px solid #F44336;
-            color: #F44336;
-        }
-        
-        /* Map Section */
-        .map {
-            margin-top: 50px;
-            padding: 20px;
-            background-color: #2a2e33;
-            border-radius: 5px;
-        }
-        
-        .map h2 {
-            font-size: 1.8rem;
-            margin-bottom: 20px;
-            color: #fff;
-        }
-        
-        .map-placeholder {
-            height: 400px;
-            background-color: #333;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #aaa;
-            font-size: 1.2rem;
-            border-radius: 5px;
-        }
-        
-        /* Footer */
-        footer {
-            background-color: #f5f5f5;
-            color: #333;
-            padding: 20px 0;
-            margin-top: 60px;
-        }
-        
-        .footer-content {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-        }
-        
-        .footer-content .company-info h3 {
-            color: #4CAF50;
-            margin-bottom: 15px;
-        }
-        
-        .footer-content .company-info p {
-            margin: 5px 0;
-        }
-        
-        .footer-content .contact-info p {
-            margin: 5px 0;
-            display: flex;
-            align-items: center;
-        }
-        
-        .footer-content .contact-info p img {
-            margin-right: 10px;
-        }
-        
-        /* Responsive Styling */
-        @media (max-width: 768px) {
-            .contact-container {
-                grid-template-columns: 1fr;
-            }
-            
-            .contact-form {
-                order: -1;
-            }
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/header.css">
+    <script src="js/script.js" defer></script>
 </head>
 <body>
-    <header>
-        <div class="container header-container">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="images/logo.png" alt="Pragyametrics Logo">
-                </a>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="methodology.html">Methodology</a></li>
-                    <li><a href="engagement-models.html">Engagement Models</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                </ul>
-            </nav>
-            <button class="login-btn">Login</button>
+    <header id="header">
+        <div class="logo-container">
+            <img src="images/brain.png" alt="Pragyametrics Logo" class="logo">
+            <span class="logo-text">Pragya<span class="highlight">metrics</span></span>
+        </div>
+        <nav>
+            <a href="index.html#about">About</a>
+            <a href="services.html">Services</a>
+            <a href="methodology.html">Methodology</a>
+            <a href="engagement-models.html">Engagement Models</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+        
+        <!-- Mobile Menu Toggle -->
+        <div class="mobile-menu-toggle" id="mobile-menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
     </header>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <nav>
+            <a href="index.html#about">About</a>
+            <a href="services.html">Services</a>
+            <a href="methodology.html">Methodology</a>
+            <a href="engagement-models.html">Engagement Models</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+    </div>
 
-    <main>
-        <section class="contact container">
-            <h1>Contact Us</h1>
-            
-            <div class="contact-container">
-                <div class="contact-info">
-                    <h2>Get in Touch</h2>
-                    <div class="address">
-                        <p><span>📍</span> <strong>Office Address:</strong></p>
-                        <p>8B, Phase-1, Manjri Greens,</p>
-                        <p>Hadapsar, Pune, Maharashtra,</p>
-                        <p>India - 412307</p>
-                    </div>
-                    
-                    <p><span>📧</span> <strong>Email:</strong> pragyametrics@outlook.com</p>
-                    <p><span>📱</span> <strong>Phone:</strong> (+91) 77090 50817</p>
-                    <p><span>⏰</span> <strong>Business Hours:</strong> Monday to Friday, 9:00 AM - 6:00 PM IST</p>
+    <main id="main-content">
+        <section class="contact" id="contact">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <div class="about-content">
+                    <p>We're excited to hear from you! Reach out to discuss how Pragyametrics can help transform your business with AI.</p>
                 </div>
                 
-                <div class="contact-form">
-                    <h2>Send Us a Message</h2>
-                    <form id="contactForm" action="https://formspree.io/f/xeogajkz" method="POST">
-                        <div class="form-group">
-                            <label for="name">Your Name</label>
-                            <input type="text" id="name" name="name" required>
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <h3>Get in Touch</h3>
+                        <div class="address">
+                            <p><span class="icon">📍</span> <strong>Office Address:</strong></p>
+                            <p>88, Phase-1, Manjri Greens,<br>
+                            Hadapsar, Pune, Maharashtra,<br>
+                            India - 412307</p>
                         </div>
                         
-                        <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" name="phone">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="company">Company Name</label>
-                            <input type="text" id="company" name="company">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="interest">I'm interested in</label>
-                            <select id="interest" name="interest">
-                                <option value="">Select an option</option>
-                                <option value="strategy">AI Strategy Advisory</option>
-                                <option value="vendor">LLM Vendor Selection</option>
-                                <option value="usecase">Use Case Development</option>
-                                <option value="implementation">Implementation Support</option>
-                                <option value="adaptation">Indian Market Adaptation</option>
-                                <option value="industry">Industry-Specific Solutions</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="message">Your Message</label>
-                            <textarea id="message" name="message" required></textarea>
-                        </div>
-                        
-                        <!-- Hidden fields for Formspree -->
-                        <input type="hidden" name="_subject" value="New message from Pragyametrics Website">
-                        <input type="hidden" name="_next" value="/thank-you.html">
-                        
-                        <button type="submit" class="submit-btn">Send Message</button>
-                    </form>
+                        <p><span class="icon">📧</span> <strong>Email:</strong> pragyametrics@outlook.com</p>
+                        <p><span class="icon">📱</span> <strong>Phone:</strong> (+91) 77090 50817</p>
+                        <p><span class="icon">⏰</span> <strong>Business Hours:</strong> Monday to Friday, 9:00 AM - 6:00 PM IST</p>
+                    </div>
                     
-                    <!-- Status message div -->
-                    <div id="formStatus" class="form-status"></div>
+                    <div class="contact-form">
+                        <h3>Send Us a Message</h3>
+                        <form id="contactForm" action="https://formspree.io/f/xeogajkz" method="POST" novalidate>
+                            <div class="form-group">
+                                <label for="name">Your Name <span class="required">*</span></label>
+                                <input type="text" id="name" name="name" required>
+                                <div class="error-message" id="name-error"></div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email Address <span class="required">*</span></label>
+                                <input type="email" id="email" name="email" required>
+                                <div class="error-message" id="email-error"></div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" placeholder="+91 XXXXX XXXXX">
+                                <div class="error-message" id="phone-error"></div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="company">Company Name</label>
+                                <input type="text" id="company" name="company">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="interest">I'm interested in</label>
+                                <select id="interest" name="interest">
+                                    <option value="">Select an option</option>
+                                    <option value="strategy">AI Strategy Advisory</option>
+                                    <option value="vendor">LLM Vendor Selection</option>
+                                    <option value="usecase">Use Case Development</option>
+                                    <option value="implementation">Implementation Support</option>
+                                    <option value="adaptation">Indian Market Adaptation</option>
+                                    <option value="industry">Industry-Specific Solutions</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Your Message <span class="required">*</span></label>
+                                <textarea id="message" name="message" required></textarea>
+                                <div class="error-message" id="message-error"></div>
+                            </div>
+                            
+                            <!-- Hidden fields for Formspree -->
+                            <input type="hidden" name="_subject" value="New message from Pragyametrics Website">
+                            <input type="hidden" name="_next" value="/thank-you.html">
+                            
+                            <button type="submit" class="submit-btn">Send Message</button>
+                        </form>
+                        
+                        <!-- Status message div -->
+                        <div id="formStatus" class="form-status"></div>
+                    </div>
                 </div>
-            </div>
-            
-            <div class="map">
-                <h2>Find Us</h2>
-                <div class="map-placeholder">
-                    [Map will be embedded here]
+                
+                <div class="map">
+                    <h3>Find Us</h3>
+                    <div class="map-container">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.9933260425495!2d73.9595!3d18.5195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTjCsDMxJzEwLjIiTiA3M8KwNTcnMzQuMiJF!5e0!3m2!1sen!2sin!4v1673854917135!5m2!1sen!2sin" 
+                            width="100%" 
+                            height="400" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer>
-        <div class="container footer-content">
-            <div class="company-info">
-                <h3>Pragyametrics</h3>
-                <p>8B, Phase-1, Manjri Greens,</p>
-                <p>Hadapsar, Pune, Maharashtra,</p>
-                <p>India - 412307</p>
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="company-info">
+                    <h3>Pragyametrics</h3>
+                    <p>88, Phase-1, Manjri Greens,<br>Hadapsar, Pune, Maharashtra<br>India - 412307</p>
+                </div>
+                <div class="contact-info">
+                    <h4>Contact Us</h4>
+                    <p>📧 pragyametrics@outlook.com</p>
+                    <p>📞 +91 77090 50817</p>
+                </div>
             </div>
-            <div class="contact-info">
-                <p>📧 Email: pragyametrics@outlook.com</p>
-                <p>📱 Phone: (+91) 77090 50817</p>
-            </div>
+            <p class="copyright">© 2025 Pragyametrics (OPC) Private Limited. All rights reserved.</p>
         </div>
     </footer>
 
     <script>
-        // Get form elements
+        // Form validation functions
         const form = document.getElementById('contactForm');
         const submitButton = document.querySelector('.submit-btn');
         const formStatus = document.getElementById('formStatus');
         
-        // Handle form submission
+        // Error display functions
+        function showError(inputElement, message) {
+            const errorElement = document.getElementById(`${inputElement.id}-error`);
+            if (errorElement) {
+                errorElement.textContent = message;
+                errorElement.style.display = 'block';
+                inputElement.classList.add('error');
+            }
+        }
+        
+        function clearError(inputElement) {
+            const errorElement = document.getElementById(`${inputElement.id}-error`);
+            if (errorElement) {
+                errorElement.textContent = '';
+                errorElement.style.display = 'none';
+                inputElement.classList.remove('error');
+            }
+        }
+        
+        // Validation functions
+        function validateName(name) {
+            return name.trim().length >= 2;
+        }
+        
+        function validateEmail(email) {
+            const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            return re.test(String(email).toLowerCase());
+        }
+        
+        function validatePhone(phone) {
+            if (!phone.trim()) return true; // Phone is optional
+            const re = /^[+]?[(]?[0-9]{1,4}[)]?[-\s./0-9]{6,}$/;
+            return re.test(String(phone).trim());
+        }
+        
+        function validateMessage(message) {
+            return message.trim().length >= 10;
+        }
+        
+        // Add input event listeners for real-time validation
+        document.getElementById('name').addEventListener('input', function() {
+            const nameValid = validateName(this.value);
+            if (nameValid) {
+                clearError(this);
+            } else {
+                showError(this, 'Please enter a valid name (at least 2 characters)');
+            }
+        });
+        
+        document.getElementById('email').addEventListener('input', function() {
+            const emailValid = validateEmail(this.value);
+            if (emailValid) {
+                clearError(this);
+            } else {
+                showError(this, 'Please enter a valid email address');
+            }
+        });
+        
+        document.getElementById('phone').addEventListener('input', function() {
+            const phoneValid = validatePhone(this.value);
+            if (phoneValid) {
+                clearError(this);
+            } else {
+                showError(this, 'Please enter a valid phone number or leave empty');
+            }
+        });
+        
+        document.getElementById('message').addEventListener('input', function() {
+            const messageValid = validateMessage(this.value);
+            if (messageValid) {
+                clearError(this);
+            } else {
+                showError(this, 'Please enter a message (at least 10 characters)');
+            }
+        });
+        
+        // Form submission handler
         async function handleSubmit(event) {
             event.preventDefault();
+            
+            // Reset all errors
+            clearError(document.getElementById('name'));
+            clearError(document.getElementById('email'));
+            clearError(document.getElementById('phone'));
+            clearError(document.getElementById('message'));
+            
+            // Get form data
+            const nameInput = document.getElementById('name');
+            const emailInput = document.getElementById('email');
+            const phoneInput = document.getElementById('phone');
+            const messageInput = document.getElementById('message');
+            
+            // Validate all fields
+            let isValid = true;
+            
+            if (!validateName(nameInput.value)) {
+                showError(nameInput, 'Please enter a valid name (at least 2 characters)');
+                isValid = false;
+            }
+            
+            if (!validateEmail(emailInput.value)) {
+                showError(emailInput, 'Please enter a valid email address');
+                isValid = false;
+            }
+            
+            if (!validatePhone(phoneInput.value)) {
+                showError(phoneInput, 'Please enter a valid phone number or leave empty');
+                isValid = false;
+            }
+            
+            if (!validateMessage(messageInput.value)) {
+                showError(messageInput, 'Please enter a message (at least 10 characters)');
+                isValid = false;
+            }
+            
+            // If any validation fails, stop form submission
+            if (!isValid) {
+                return;
+            }
+            
+            // All validations passed, proceed with form submission
             
             // Change button state
             submitButton.disabled = true;
