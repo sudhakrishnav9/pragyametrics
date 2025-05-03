@@ -862,3 +862,222 @@ footer {
         font-size: 2rem;
     }
 }
+/* Services Page Styles */
+.services-section {
+    padding: 8rem 0 6rem;
+    background-color: #0a1128;
+    color: #ffffff;
+}
+
+.section-heading {
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.section-heading::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    width: 100px;
+    height: 4px;
+    background-color: #4361ee;
+}
+
+.section-intro {
+    max-width: 850px;
+    margin: 2.5rem 0 3.5rem;
+}
+
+.section-intro p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #f1f1f1;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.service-card {
+    background-color: #10192c;
+    border-radius: 12px;
+    padding: 1.8rem;
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.service-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(0, 212, 255, 0.03), rgba(0, 255, 150, 0.03));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 212, 255, 0.15);
+}
+
+.service-card:hover::after {
+    opacity: 1;
+}
+
+.service-icon {
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.service-card h2 {
+    font-size: 1.4rem;
+    margin-bottom: 0.9rem;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.service-card p {
+    color: #c5c5c5;
+    margin-bottom: 1.2rem;
+    line-height: 1.5;
+    font-size: 0.95rem;
+}
+
+.service-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem;
+    flex-grow: 1;
+}
+
+.service-card ul li {
+    padding-left: 1.2rem;
+    position: relative;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+    color: #d7d7d7;
+    font-size: 0.9rem;
+}
+
+.service-card ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #4361ee;
+}
+
+.service-card ul li strong {
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.service-card .deliverables {
+    font-style: italic;
+    margin-top: auto;
+    padding-top: 1rem;
+    color: #adb5bd;
+    font-size: 0.85rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.deliverable-icon {
+    margin-right: 0.5rem;
+    font-size: 1rem;
+}
+
+/* Icon color variations */
+.strategy-icon svg {
+    filter: drop-shadow(0 0 5px rgba(67, 97, 238, 0.5));
+}
+
+.vendor-icon svg {
+    filter: drop-shadow(0 0 5px rgba(76, 201, 240, 0.5));
+}
+
+.usecase-icon svg {
+    filter: drop-shadow(0 0 5px rgba(247, 37, 133, 0.5));
+}
+
+.implementation-icon svg {
+    filter: drop-shadow(0 0 5px rgba(58, 134, 255, 0.5));
+}
+
+.adaptation-icon svg {
+    filter: drop-shadow(0 0 5px rgba(56, 176, 0, 0.5));
+}
+
+.industry-icon svg {
+    filter: drop-shadow(0 0 5px rgba(255, 0, 110, 0.5));
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .services-section {
+        padding: 6rem 0 4rem;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .section-heading {
+        font-size: 2rem;
+        text-align: center;
+    }
+    
+    .section-heading::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .section-intro {
+        text-align: center;
+        margin: 2rem auto 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .services-section {
+        padding: 5rem 0 3rem;
+    }
+    
+    .section-heading {
+        font-size: 1.8rem;
+    }
+    
+    .service-card {
+        padding: 1.5rem;
+    }
+    
+    .service-card h2 {
+        font-size: 1.3rem;
+    }
+}
