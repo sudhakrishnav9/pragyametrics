@@ -1269,3 +1269,53 @@ footer {
         font-size: 1.2rem;
     }
 }
+/* Services Page Specific Styles */
+#services {
+    padding-top: 8rem; /* Add extra top padding to account for fixed header */
+}
+
+.pillar ul {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+}
+
+.pillar ul li {
+    padding-left: 1.2rem;
+    position: relative;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+    font-size: 0.95rem;
+    color: var(--light-text);
+}
+
+.pillar ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+}
+
+.pillar ul li strong {
+    color: var(--highlight-text);
+    font-weight: 500;
+}
+
+.pillar .deliverables {
+    font-style: italic;
+    margin-top: auto;
+    padding-top: 1rem;
+    color: var(--accent-color);
+    font-size: 0.9rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Icon styles for services */
+.icon-strategy::before, 
+.icon-vendor::before, 
+.icon-usecase::before,
+.icon-implementation::before,
+.icon-adaptation::before,
+.icon-industry::before {
+    font-size: 2rem;
+}
