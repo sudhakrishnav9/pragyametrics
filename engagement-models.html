@@ -4,333 +4,158 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Engagement Models - Pragyametrics</title>
-    <style>
-        /* Global Styles */
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #1a1e23;
-            color: #e0e0e0;
-            line-height: 1.6;
-        }
-        
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 15px;
-        }
-        
-        /* Header & Navigation */
-        header {
-            background-color: #1a1e23;
-            padding: 15px 0;
-            border-bottom: 1px solid #333;
-        }
-        
-        .header-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo {
-            display: flex;
-            align-items: center;
-        }
-        
-        .logo img {
-            height: 50px;
-        }
-        
-        nav ul {
-            display: flex;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-        
-        nav ul li {
-            margin: 0 15px;
-        }
-        
-        nav ul li a {
-            color: #e0e0e0;
-            text-decoration: none;
-            font-size: 16px;
-            transition: color 0.3s;
-        }
-        
-        nav ul li a:hover {
-            color: #4CAF50;
-        }
-        
-        .login-btn {
-            background: transparent;
-            border: none;
-            color: #e0e0e0;
-            cursor: pointer;
-            font-size: 16px;
-            transition: color 0.3s;
-        }
-        
-        .login-btn:hover {
-            color: #4CAF50;
-        }
-        
-        /* Engagement Models Section */
-        .engagement-models {
-            padding: 60px 0;
-        }
-        
-        .engagement-models h1 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            color: #fff;
-        }
-        
-        .engagement-models p {
-            font-size: 1.1rem;
-            max-width: 800px;
-            margin-bottom: 30px;
-        }
-        
-        .model {
-            margin-bottom: 50px;
-        }
-        
-        .model h2 {
-            color: #fff;
-            font-size: 1.8rem;
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-        }
-        
-        .model h2 .model-icon {
-            color: #FF5722;
-            margin-right: 15px;
-        }
-        
-        .model-details {
-            margin-bottom: 15px;
-            display: flex;
-            flex-wrap: wrap;
-        }
-        
-        .model-details div {
-            margin-right: 30px;
-            margin-bottom: 10px;
-        }
-        
-        .model-details strong {
-            color: #ccc;
-        }
-        
-        .model p {
-            margin-bottom: 15px;
-        }
-        
-        .model ul {
-            list-style: none;
-            padding: 0;
-        }
-        
-        .model ul li {
-            margin-bottom: 10px;
-        }
-        
-        .model-benefit {
-            margin-top: 15px;
-            font-style: italic;
-            color: #aaa;
-        }
-        
-        .model-benefit span {
-            margin-right: 10px;
-            color: #FF5722;
-        }
-        
-        .custom-model {
-            margin-top: 50px;
-            padding: 20px;
-            border: 1px solid #333;
-            border-radius: 5px;
-            background-color: rgba(255, 255, 255, 0.05);
-        }
-        
-        .custom-model p {
-            margin-bottom: 15px;
-        }
-        
-        .custom-model a {
-            color: #4CAF50;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        
-        .custom-model a:hover {
-            text-decoration: underline;
-        }
-        
-        .designer-note {
-            margin-top: 30px;
-            padding: 15px;
-            border: 1px dashed #555;
-            font-style: italic;
-            color: #888;
-        }
-        
-        /* Footer */
-        footer {
-            background-color: #f5f5f5;
-            color: #333;
-            padding: 20px 0;
-            margin-top: 60px;
-        }
-        
-        .footer-content {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-        }
-        
-        .footer-content .company-info h3 {
-            color: #4CAF50;
-            margin-bottom: 15px;
-        }
-        
-        .footer-content .company-info p {
-            margin: 5px 0;
-        }
-        
-        .footer-content .contact-info p {
-            margin: 5px 0;
-            display: flex;
-            align-items: center;
-        }
-        
-        .footer-content .contact-info p img {
-            margin-right: 10px;
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/header.css">
+    <script src="js/script.js" defer></script>
 </head>
 <body>
-    <header>
-        <div class="container header-container">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="images/logo.png" alt="Pragyametrics Logo">
-                </a>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="methodology.html">Methodology</a></li>
-                    <li><a href="engagement-models.html">Engagement Models</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                </ul>
-            </nav>
-            <button class="login-btn">Login</button>
+    <header id="header">
+        <div class="logo-container">
+            <img src="images/brain.png" alt="Pragyametrics Logo" class="logo">
+            <span class="logo-text">Pragya<span class="highlight">metrics</span></span>
+        </div>
+        <nav>
+            <a href="index.html#about">About</a>
+            <a href="services.html">Services</a>
+            <a href="methodology.html">Methodology</a>
+            <a href="engagement-models.html">Engagement Models</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+        
+        <!-- Mobile Menu Toggle -->
+        <div class="mobile-menu-toggle" id="mobile-menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
     </header>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <nav>
+            <a href="index.html#about">About</a>
+            <a href="services.html">Services</a>
+            <a href="methodology.html">Methodology</a>
+            <a href="engagement-models.html">Engagement Models</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+    </div>
 
-    <main>
-        <section class="engagement-models container">
-            <h1>Client Engagement Models</h1>
-            <p>At Pragyametrics, we offer flexible engagement models to match your organization's pace, priorities, and AI maturity level. Whether you're planning your first AI initiative or scaling enterprise-wide adoption, we have a support structure tailored for you.</p>
-
-            <div class="model">
-                <h2><span class="model-icon">◆</span> Strategic Advisory</h2>
-                <div class="model-details">
-                    <div><strong>Duration:</strong> 4-8 weeks</div>
-                    <div><strong>Ideal For:</strong> Organizations exploring AI or building a roadmap for future adoption</div>
+    <main id="main-content">
+        <section class="engagement-models" id="engagement-models">
+            <div class="container">
+                <h2>Client Engagement Models</h2>
+                <div class="about-content">
+                    <p>At Pragyametrics, we offer flexible engagement models to match your organization's pace, priorities, and AI maturity level. Whether you're planning your first AI initiative or scaling enterprise-wide adoption, we have a support structure tailored for you.</p>
                 </div>
-                <p>We partner with your leadership team to define a strategic vision for AI in your business.</p>
-                <ul>
-                    <li>AI Readiness Assessments</li>
-                    <li>Technology Roadmap Development</li>
-                    <li>Investment Planning & Budget Modeling</li>
-                    <li>Executive Briefings and Presentations</li>
-                </ul>
-                <p class="model-benefit"><span>🔮</span> Best for early-stage planning and long-term strategic clarity.</p>
-            </div>
+                
+                <div class="pillar-grid">
+                    <div class="pillar">
+                        <div class="pillar-icon">
+                            <i class="icon-strategic">◆</i>
+                        </div>
+                        <h3>Strategic Advisory</h3>
+                        <p>We partner with your leadership team to define a strategic vision for AI in your business.</p>
+                        <ul>
+                            <li><strong>Duration:</strong> 4-8 weeks</li>
+                            <li><strong>Ideal For:</strong> Organizations exploring AI or building a roadmap</li>
+                            <li>AI Readiness Assessments</li>
+                            <li>Technology Roadmap Development</li>
+                            <li>Investment Planning & Budget Modeling</li>
+                            <li>Executive Briefings and Presentations</li>
+                        </ul>
+                        <p class="deliverables">🔮 Best for early-stage planning and long-term strategic clarity.</p>
+                    </div>
 
-            <div class="model">
-                <h2><span class="model-icon">◆</span> Tactical Implementation</h2>
-                <div class="model-details">
-                    <div><strong>Duration:</strong> 6-12 weeks</div>
-                    <div><strong>Ideal For:</strong> Organizations with defined use cases seeking technical execution</div>
+                    <div class="pillar">
+                        <div class="pillar-icon">
+                            <i class="icon-tactical">◆</i>
+                        </div>
+                        <h3>Tactical Implementation</h3>
+                        <p>We focus on turning your ideas into reality through targeted implementation support.</p>
+                        <ul>
+                            <li><strong>Duration:</strong> 6-12 weeks</li>
+                            <li><strong>Ideal For:</strong> Organizations with defined use cases seeking execution</li>
+                            <li>Use Case Development</li>
+                            <li>LLM Vendor Selection & Evaluation</li>
+                            <li>Proof-of-Concept (POC) Design</li>
+                            <li>Integration Architecture Planning</li>
+                        </ul>
+                        <p class="deliverables">⭐ Best for companies ready to launch or validate specific AI initiatives.</p>
+                    </div>
+
+                    <div class="pillar">
+                        <div class="pillar-icon">
+                            <i class="icon-retainer">◆</i>
+                        </div>
+                        <h3>Retainer Support</h3>
+                        <p>We become your extended AI team—offering advisory, technical, and optimization support.</p>
+                        <ul>
+                            <li><strong>Duration:</strong> 3-12 months (ongoing support)</li>
+                            <li><strong>Ideal For:</strong> Businesses requiring continuous assistance</li>
+                            <li>On-Demand Consulting</li>
+                            <li>Technical Troubleshooting</li>
+                            <li>AI Model Monitoring & Refinement</li>
+                            <li>Documentation & Knowledge Transfer</li>
+                        </ul>
+                        <p class="deliverables">🔄 Best for ongoing implementation, scaling, and capability building.</p>
+                    </div>
+
+                    <div class="pillar">
+                        <div class="pillar-icon">
+                            <i class="icon-acceleration">◆</i>
+                        </div>
+                        <h3>AI Acceleration Program</h3>
+                        <p>A focused, rapid-execution engagement to demonstrate measurable AI value within 3 months.</p>
+                        <ul>
+                            <li><strong>Duration:</strong> 90 days</li>
+                            <li><strong>Ideal For:</strong> Enterprises aiming for quick wins with high impact</li>
+                            <li>Fast-Track Use Case Identification</li>
+                            <li>2-3 AI Prototypes Delivered</li>
+                            <li>ROI Modeling and Success Tracking</li>
+                            <li>Expansion Strategy Recommendations</li>
+                        </ul>
+                        <p class="deliverables">🚀 Best for businesses seeking visible results fast.</p>
+                    </div>
                 </div>
-                <p>We focus on turning your ideas into reality through targeted implementation support.</p>
-                <ul>
-                    <li>Use Case Development</li>
-                    <li>LLM Vendor Selection & Evaluation</li>
-                    <li>Proof-of-Concept (POC) Design</li>
-                    <li>Integration Architecture Planning</li>
-                </ul>
-                <p class="model-benefit"><span>⭐</span> Best for companies ready to launch or validate specific AI initiatives.</p>
-            </div>
-
-            <div class="model">
-                <h2><span class="model-icon">◆</span> Retainer Support</h2>
-                <div class="model-details">
-                    <div><strong>Duration:</strong> 3-12 months (ongoing support)</div>
-                    <div><strong>Ideal For:</strong> Businesses running or scaling AI programs requiring continuous assistance</div>
+                
+                <div class="custom-model">
+                    <h3>Need a Custom Engagement Model?</h3>
+                    <p>We're happy to tailor a plan that fits your structure, budget, and business goals.</p>
+                    <a href="contact.html" class="cta-button">Contact Us</a>
                 </div>
-                <p>We become your extended AI team—offering advisory, technical, and optimization support.</p>
-                <ul>
-                    <li>On-Demand Consulting</li>
-                    <li>Technical Troubleshooting</li>
-                    <li>AI Model Monitoring & Refinement</li>
-                    <li>Documentation & Knowledge Transfer</li>
-                </ul>
-                <p class="model-benefit"><span>🔄</span> Best for ongoing implementation, scaling, and in-house capability building.</p>
             </div>
+        </section>
 
-            <div class="model">
-                <h2><span class="model-icon">◆</span> AI Acceleration Program</h2>
-                <div class="model-details">
-                    <div><strong>Duration:</strong> 90 days</div>
-                    <div><strong>Ideal For:</strong> Enterprises aiming for quick wins with high-impact use cases</div>
-                </div>
-                <p>A focused, rapid-execution engagement to demonstrate measurable AI value within 3 months.</p>
-                <ul>
-                    <li>Fast-Track Use Case Identification</li>
-                    <li>2-3 AI Prototypes Delivered</li>
-                    <li>ROI Modeling and Success Tracking</li>
-                    <li>Expansion Strategy Recommendations</li>
-                </ul>
-                <p class="model-benefit"><span>🚀</span> Best for businesses seeking visible results fast with a time-boxed commitment.</p>
-            </div>
-
-            <div class="custom-model">
-                <p><strong>Need a custom engagement model?</strong></p>
-                <p>We're happy to tailor a plan that fits your structure, budget, and business goals.</p>
-                <p><a href="contact.html">Contact Us</a> for a personalized consultation.</p>
-            </div>
-
-            <div class="designer-note">
-                <p>Would you like this section styled with icons, cards, or pricing-table format in Squarespace?</p>
+        <!-- Call-to-Action Banner -->
+        <section class="cta-banner" id="cta">
+            <div class="container">
+                <h2>Ready to Engage with Pragyametrics?</h2>
+                <p>Choose the engagement model that works best for your organization.</p>
+                <a href="contact.html" class="cta-button">Get Started</a>
             </div>
         </section>
     </main>
 
-    <footer>
-        <div class="container footer-content">
-            <div class="company-info">
-                <h3>Pragyametrics</h3>
-                <p>8B, Phase-1, Manjri Greens,</p>
-                <p>Hadapsar, Pune, Maharashtra,</p>
-                <p>India - 412307</p>
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="company-info">
+                    <h3>Pragyametrics</h3>
+                    <p>88, Phase-1, Manjri Greens,<br>Hadapsar, Pune, Maharashtra<br>India - 412307</p>
+                </div>
+                <div class="contact-info">
+                    <h4>Contact Us</h4>
+                    <p>📧 pragyametrics@outlook.com</p>
+                    <p>📞 +91 77090 50817</p>
+                </div>
             </div>
-            <div class="contact-info">
-                <p>📧 Email: pragyametrics@outlook.com</p>
-                <p>📱 Phone: (+91) 77090 50817</p>
-            </div>
+            <p class="copyright">© 2025 Pragyametrics (OPC) Private Limited. All rights reserved.</p>
         </div>
     </footer>
 </body>
