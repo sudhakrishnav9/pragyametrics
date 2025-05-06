@@ -1694,16 +1694,23 @@ footer {
         margin: 0 auto 30px;
     }
 }
+/* Logo and Tagline Styling */
 .logo-container {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
+.logo {
+    height: 40px;
+    width: auto;
+}
+
 .logo-text-container {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    position: relative;
 }
 
 .logo-text {
@@ -1711,31 +1718,59 @@ footer {
     font-weight: 600;
     line-height: 1.2;
     display: block;
+    color: #ffffff;
+}
+
+.highlight {
+    color: #50c878; /* Green highlight for "metrics" */
 }
 
 .tagline {
     display: block;
-    font-size: 12px !important; /* Force 50% of the company name size */
+    font-size: 12px !important; /* Exactly 50% of logo text */
     font-weight: 400;
-    color: #e0e0e0;
+    color: #e0e0e0; /* Slightly lighter color */
     letter-spacing: 0.5px;
     margin-top: 2px;
+    opacity: 0; /* Start invisible for animation */
 }
 
-/* For connection line and particles */
+/* Connection Line Styling */
 .connection-line {
-    position: relative;
-    height: 2px;
-    width: 0;
+    position: absolute;
+    height: 1px;
+    width: 0; /* Start with 0 width for animation */
     background: linear-gradient(90deg, #4096ee, #50c878);
-    margin-top: 2px;
+    top: 28px; /* Position between logo text and tagline */
+    left: 0;
 }
 
+/* Particles Container Styling */
 .particles-container {
     position: absolute;
     width: 100%;
-    height: 30px;
-    top: 100%;
+    height: 20px;
+    top: 30px; /* Position around the tagline */
     left: 0;
     pointer-events: none;
+    overflow: hidden;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .logo-text {
+        font-size: 20px;
+    }
+    
+    .tagline {
+        font-size: 10px !important; /* Keep the 50% ratio */
+    }
+    
+    .connection-line {
+        top: 24px;
+    }
+    
+    .particles-container {
+        top: 26px;
+    }
 }
