@@ -1627,3 +1627,60 @@ footer {
     --heading-font: 'Poppins', sans-serif;
 }    
 }
+/* Leadership section styles */
+.leadership {
+    padding: 80px 0;
+    background-color: #f9fafb;
+}
+
+.leadership-content {
+    margin-top: 40px;
+}
+
+.leader-profile {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.leader-image-container {
+    flex: 0 0 280px;
+}
+
+.leader-image {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.leader-info {
+    flex: 1;
+}
+
+.leader-info h3 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.leader-info .title {
+    font-weight: 400;
+    color: #666;
+}
+
+.leader-bio p {
+    margin-bottom: 15px;
+    line-height: 1.7;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .leader-profile {
+        flex-direction: column;
+    }
+    
+    .leader-image-container {
+        max-width: 240px;
+        margin: 0 auto 30px;
+    }
+}
