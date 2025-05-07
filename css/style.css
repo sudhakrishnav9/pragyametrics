@@ -1827,3 +1827,19 @@ footer {
     0% { opacity: 0.7; }
     100% { opacity: 1; }
 }
+.tagline {
+    background: linear-gradient(90deg, #4096ee, #50c878);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: 
+        typewriter 2.5s steps(40) 1s forwards,
+        blink-cursor 0.75s step-end infinite,
+        fade-in 0.5s 0.5s forwards,
+        color-shift 5s ease-in-out 4s infinite alternate;
+}
+
+@keyframes color-shift {
+    0% { filter: hue-rotate(0deg); }
+    100% { filter: hue-rotate(30deg); }
+}
