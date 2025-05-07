@@ -218,7 +218,7 @@
 }
 
 @keyframes blink-cursor {
-    from, to { border-right-color: transparent; }
+    0%, 100% { border-right-color: transparent; }
     50% { border-right-color: #e0e0e0; }
 }
 
