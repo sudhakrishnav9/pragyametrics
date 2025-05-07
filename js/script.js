@@ -150,3 +150,50 @@ document.addEventListener('DOMContentLoaded', function() {
         button.addEventListener('click', createRipple);
     });
 });
+
+// Add particle effect around tagline
+function createTaglineParticles() {
+    const particlesContainer = document.getElementById('particles-container');
+    const tagline = document.getElementById('tagline');
+    
+    if (!particlesContainer || !tagline) return;
+    
+    // Clear any existing particles
+    particlesContainer.innerHTML = '';
+    
+    // Create particles
+    for (let i = 0; i < 15; i++) {
+        const particle = document.createElement('div');
+        particle.className = 'tagline-particle';
+        
+        // Random initial position
+        const randomX = Math.random() * 100;
+        const randomY = Math.random() * 20 - 10;
+        
+        // Random size
+        const size = Math.random() * 3 + 1;
+        
+        // Apply styles
+        particle.style.cssText = `
+            position: absolute;
+            width: ${size}px;
+            height: ${size}px;
+            background: ${Math.random() > 0.5 ? '#4096ee' : '#50c878'};
+            border-radius: 50%;
+            left: ${randomX}%;
+            top: ${randomY}px;
+            opacity: 0;
+            box-shadow: 0 0 ${size * 2}px ${size}px ${Math.random() > 0.5 ? 'rgba(64, 150, 238, 0.3)' : 'rgba(80, 200, 120, 0.3)'};
+            animation: float-particle ${Math.random() * 3 + 3}s ease-in-out ${Math.random() * 4 + 3}s infinite alternate,
+                      fade-particle ${Math.random() * 2 + 2}s ease-in-out ${Math.random() * 4 + 3}s forwards;
+        `;
+        
+        particlesContainer.appendChild(particle);
+    }
+}
+
+// Particle animations
+document.addEventListener('DOMContentLoaded', function() {
+    // Add this to your existing DOMContentLoaded event
+    setTimeout(createTaglineParticles, 3000); // Start after typewriter effect
+});
