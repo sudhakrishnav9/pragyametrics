@@ -150,7 +150,6 @@ document.addEventListener('DOMContentLoaded', function() {
         button.addEventListener('click', createRipple);
     });
 });
-
 function createTaglineParticles() {
     const particlesContainer = document.getElementById('particles-container');
     const tagline = document.getElementById('tagline');
@@ -160,34 +159,49 @@ function createTaglineParticles() {
     // Clear any existing particles
     particlesContainer.innerHTML = '';
     
-    // Create particles
-    for (let i = 0; i < 20; i++) { // Increased number of particles
+    // Create more particles (increase from 20 to 30)
+    for (let i = 0; i < 30; i++) {
         const particle = document.createElement('div');
         particle.className = 'tagline-particle';
         
-        // Random initial position
-        const randomX = Math.random() * 100;
-        const randomY = Math.random() * 24 - 12; // Increased range
+        // Random initial position - span wider horizontally
+        const randomX = Math.random() * 120 - 10; // From -10% to 110%
+        const randomY = Math.random() * 30 - 15; // From -15px to +15px
         
-        // Random size (larger)
-        const size = Math.random() * 4 + 2; // Increased size
+        // Larger size for better visibility
+        const size = Math.random() * 5 + 3;
         
-        // Random opacity for variety
-        const maxOpacity = 0.7 + Math.random() * 0.3; // Higher base opacity
+        // Higher opacity
+        const maxOpacity = 0.8 + Math.random() * 0.2;
         
-        // Apply styles
-        particle.style.cssText = `
-            position: absolute;
-            width: ${size}px;
-            height: ${size}px;
-            background: ${Math.random() > 0.5 ? '#4096ee' : '#50c878'};
-            border-radius: 50%;
-            left: ${randomX}%;
-            top: ${randomY}px;
-            opacity: 0;
-            box-shadow: 0 0 ${size
-// Particle animations
+        // Apply styles directly to the element
+        particle.style.position = 'absolute';
+        particle.style.width = `${size}px`;
+        particle.style.height = `${size}px`;
+        particle.style.backgroundColor = Math.random() > 0.5 ? '#4096ee' : '#50c878';
+        particle.style.borderRadius = '50%';
+        particle.style.left = `${randomX}%`;
+        particle.style.top = `${randomY}px`;
+        particle.style.opacity = '0';
+        particle.style.boxShadow = `0 0 ${size * 2}px ${size}px ${Math.random() > 0.5 ? 'rgba(64, 150, 238, 0.5)' : 'rgba(80, 200, 120, 0.5)'}`;
+        
+        // Set animation directly (avoid cssText which might have syntax issues)
+        const animDuration1 = Math.random() * 3 + 3;
+        const animDuration2 = Math.random() * 2 + 2;
+        const animDelay = Math.random() * 2 + 4;
+        
+        particle.style.animation = `float-particle ${animDuration1}s ease-in-out ${animDelay}s infinite alternate, fade-particle ${animDuration2}s ease-in-out ${animDelay}s forwards`;
+        
+        particlesContainer.appendChild(particle);
+    }
+    
+    // Debug log
+    console.log(`Created ${particlesContainer.children.length} particles`);
+}
+
+// Make sure this runs after the page has loaded
 document.addEventListener('DOMContentLoaded', function() {
-    // Add this to your existing DOMContentLoaded event
-    setTimeout(createTaglineParticles, 3000); // Start after typewriter effect
+    // Call immediately and also with a delay to ensure it runs
+    createTaglineParticles();
+    setTimeout(createTaglineParticles, 3000);
 });
