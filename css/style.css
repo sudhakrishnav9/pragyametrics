@@ -1724,41 +1724,132 @@ footer {
 .highlight {
     color: #50c878; /* Green highlight for "metrics" */
 }
-
+/* Tagline Styling with Gradient Effect */
 .tagline {
     display: block;
     font-size: 12px !important; /* Exactly 50% of logo text */
     font-weight: 400;
-    color: #e0e0e0; /* Slightly lighter color */
     letter-spacing: 0.5px;
     margin-top: 2px;
-    opacity: 1 !important; /* Changed from 0 to 1 to make it visible */
     white-space: nowrap;
+    overflow: hidden;
+    
+    /* Gradient text effect */
+    background: linear-gradient(90deg, #4096ee, #50c878);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    /* Combined animations */
+    animation: 
+        typewriter 2.5s steps(40) 1s forwards,
+        blink-cursor 0.75s step-end infinite,
+        color-shift 5s ease-in-out 4s infinite alternate;
+    
+    /* Ensure visibility */
+    opacity: 1 !important;
+    position: relative;
+    z-index: 2;
 }
 
-
-/* Connection Line Styling */
-
+/* Connection Line with Enhanced Styling */
 .connection-line {
     position: absolute;
-    height: 1px;
+    height: 2px; /* Slightly thicker line */
     width: 0; /* Start with 0 width for animation */
     background: linear-gradient(90deg, #4096ee, #50c878);
     top: 28px; /* Position between logo text and tagline */
     left: 0;
     opacity: 0;
     transform-origin: left;
+    box-shadow: 0 0 5px rgba(80, 200, 120, 0.7);
+    z-index: 1;
+    
+    /* Combined animations */
+    animation: 
+        draw-line 1.5s ease-in-out 3s forwards, 
+        pulse-line 2s ease-in-out 4.5s infinite alternate;
 }
 
-/* Particles Container Styling */
+/* Particles Container with Better Positioning */
 .particles-container {
     position: absolute;
     width: 100%;
-    height: 20px;
-    top: 30px; /* Position around the tagline */
+    height: 30px;
     left: 0;
+    top: 28px;
+    overflow: visible;
     pointer-events: none;
-    overflow: hidden;
+    z-index: 1;
+}
+
+/* Animation Keyframes */
+@keyframes typewriter {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-cursor {
+    from, to { border-right-color: transparent; }
+    50% { border-right-color: #e0e0e0; }
+}
+
+@keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes draw-line {
+    0% { 
+        width: 0; 
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    100% { 
+        width: 100%; 
+        opacity: 1;
+    }
+}
+
+@keyframes pulse-line {
+    0% { opacity: 0.7; box-shadow: 0 0 3px rgba(80, 200, 120, 0.5); }
+    100% { opacity: 1; box-shadow: 0 0 8px rgba(80, 200, 120, 0.8); }
+}
+
+@keyframes color-shift {
+    0% { filter: hue-rotate(0deg); }
+    100% { filter: hue-rotate(30deg); }
+}
+
+@keyframes float-particle {
+    0% {
+        transform: translateY(0) translateX(0);
+    }
+    50% {
+        transform: translateY(-3px) translateX(3px);
+    }
+    100% {
+        transform: translateY(3px) translateX(-2px);
+    }
+}
+
+@keyframes fade-particle {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0.8; /* Higher opacity for better visibility */
+    }
+}
+
+/* Particle Styling */
+.tagline-particle {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 3;
 }
 
 /* Responsive adjustments */
@@ -1779,67 +1870,13 @@ footer {
         top: 26px;
     }
 }
-/* Particle Animations */
-@keyframes float-particle {
-    0% {
-        transform: translateY(0) translateX(0);
-    }
-    50% {
-        transform: translateY(-3px) translateX(3px);
-    }
-    100% {
-        transform: translateY(3px) translateX(-2px);
-    }
-}
 
-@keyframes fade-particle {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 0.7;
-    }
-}
-
-/* Particle Container */
-.particles-container {
-    position: absolute;
-    width: 100%;
-    height: 30px;
-    left: 0;
-    top: 28px;
-    overflow: visible;
-    pointer-events: none;
-    z-index: 1;
-}
-
-/* Ensure particles are visible on hover */
+/* Enhance particles on hover */
 .logo-text-container:hover .tagline-particle {
-    animation-duration: 2s;
-}
-.connection-line {
-    box-shadow: 0 0 5px rgba(80, 200, 120, 0.7);
-    animation: draw-line 1.5s ease-in-out 3s forwards, 
-               pulse-line 2s ease-in-out 4.5s infinite alternate;
+    animation-duration: 1.5s;
+    filter: brightness(1.2);
 }
 
-@keyframes pulse-line {
-    0% { opacity: 0.7; }
-    100% { opacity: 1; }
-}
-.tagline {
-    background: linear-gradient(90deg, #4096ee, #50c878);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    animation: 
-        typewriter 2.5s steps(40) 1s forwards,
-        blink-cursor 0.75s step-end infinite,
-        fade-in 0.5s 0.5s forwards,
-        color-shift 5s ease-in-out 4s infinite alternate;
-}
-
-@keyframes color-shift {
-    0% { filter: hue-rotate(0deg); }
-    100% { filter: hue-rotate(30deg); }
+.logo-text-container:hover .connection-line {
+    animation: pulse-line 1.5s ease-in-out infinite alternate;
 }
