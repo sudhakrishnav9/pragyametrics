@@ -249,8 +249,8 @@
     border-right: 2px solid #e0e0e0;
     animation: 
         typewriter 2.5s steps(40) 1s forwards,
-        blink-cursor 0.75s step-end infinite,
-        fade-in 0.5s 0.5s forwards;
+        blink-cursor 0.75s step-end 3.5s, /* Remove infinite, add end time */
+        color-shift 5s ease-in-out 4s infinite alternate;          
 }
 
 .connection-line {
