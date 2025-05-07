@@ -1738,6 +1738,7 @@ footer {
 
 
 /* Connection Line Styling */
+
 .connection-line {
     position: absolute;
     height: 1px;
@@ -1745,6 +1746,8 @@ footer {
     background: linear-gradient(90deg, #4096ee, #50c878);
     top: 28px; /* Position between logo text and tagline */
     left: 0;
+    opacity: 0;
+    transform-origin: left;
 }
 
 /* Particles Container Styling */
