@@ -250,6 +250,7 @@
     animation: 
         typewriter 2.5s steps(40) 1s forwards,
         blink-cursor 0.75s step-end 3.5s, /* Remove infinite, add end time */
+        hide-cursor 0.1s 3.5s forwards,
         color-shift 5s ease-in-out 4s infinite alternate;          
 }
 
