@@ -178,7 +178,7 @@ function createTaglineParticles() {
         const randomY = Math.random() * 30 - 15; // From -15px to +15px
         
         // Larger size for better visibility
-        const size = Math.random() * 5 + 3;
+        const size = Math.random() * 3 + 1;
         
         // Apply styles directly to the element
         particle.style.position = 'absolute';
