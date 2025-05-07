@@ -1739,6 +1739,9 @@ footer {
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+
+    /* Add text shadow to make it stand out from particles */
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5), 0 0 5px rgba(0, 0, 0, 0.3);
     
     /* Combined animations */
     animation: 
