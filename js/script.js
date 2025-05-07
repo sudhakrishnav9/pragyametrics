@@ -117,7 +117,15 @@ document.addEventListener('DOMContentLoaded', function() {
     createTaglineParticles();
     // Also set a delayed call to ensure animations have started
     setTimeout(createTaglineParticles, 3000);
-    
+// Add this: Wait for typing animation to complete and remove cursor
+    setTimeout(function() {
+        const tagline = document.getElementById('tagline');
+        if (tagline) {
+            tagline.style.borderRight = 'none';
+            console.log('Cursor removed from tagline');
+        }
+    }, 3600); // 3.6 seconds (wait until after the typing animation ends)
+
     // Add ripple effect to all buttons
     const buttons = document.querySelectorAll('.cta-button, .secondary-button');
     buttons.forEach(button => {
