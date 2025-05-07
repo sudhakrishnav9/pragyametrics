@@ -112,6 +112,17 @@ document.addEventListener('DOMContentLoaded', function() {
             this.classList.remove('animate-glow');
         });
     }
+    
+    // Create tagline particles - Call directly within main DOMContentLoaded event
+    createTaglineParticles();
+    // Also set a delayed call to ensure animations have started
+    setTimeout(createTaglineParticles, 3000);
+    
+    // Add ripple effect to all buttons
+    const buttons = document.querySelectorAll('.cta-button, .secondary-button');
+    buttons.forEach(button => {
+        button.addEventListener('click', createRipple);
+    });
 });
 
 // Add header class for scrolled state on page load if needed
@@ -143,18 +154,16 @@ function createRipple(event) {
     button.appendChild(circle);
 }
 
-// Add ripple effect to all buttons
-document.addEventListener('DOMContentLoaded', function() {
-    const buttons = document.querySelectorAll('.cta-button, .secondary-button');
-    buttons.forEach(button => {
-        button.addEventListener('click', createRipple);
-    });
-});
+// Tagline particles function - Define before it's used
 function createTaglineParticles() {
+    console.log("Starting tagline particles creation...");
     const particlesContainer = document.getElementById('particles-container');
     const tagline = document.getElementById('tagline');
     
-    if (!particlesContainer || !tagline) return;
+    if (!particlesContainer || !tagline) {
+        console.log("Missing elements:", !particlesContainer ? "particles-container" : "", !tagline ? "tagline" : "");
+        return;
+    }
     
     // Clear any existing particles
     particlesContainer.innerHTML = '';
@@ -171,9 +180,6 @@ function createTaglineParticles() {
         // Larger size for better visibility
         const size = Math.random() * 5 + 3;
         
-        // Higher opacity
-        const maxOpacity = 0.8 + Math.random() * 0.2;
-        
         // Apply styles directly to the element
         particle.style.position = 'absolute';
         particle.style.width = `${size}px`;
@@ -184,6 +190,7 @@ function createTaglineParticles() {
         particle.style.top = `${randomY}px`;
         particle.style.opacity = '0';
         particle.style.boxShadow = `0 0 ${size * 2}px ${size}px ${Math.random() > 0.5 ? 'rgba(64, 150, 238, 0.5)' : 'rgba(80, 200, 120, 0.5)'}`;
+        particle.style.zIndex = '10';
         
         // Set animation directly (avoid cssText which might have syntax issues)
         const animDuration1 = Math.random() * 3 + 3;
@@ -195,13 +202,5 @@ function createTaglineParticles() {
         particlesContainer.appendChild(particle);
     }
     
-    // Debug log
     console.log(`Created ${particlesContainer.children.length} particles`);
 }
-
-// Make sure this runs after the page has loaded
-document.addEventListener('DOMContentLoaded', function() {
-    // Call immediately and also with a delay to ensure it runs
-    createTaglineParticles();
-    setTimeout(createTaglineParticles, 3000);
-});
