@@ -1847,6 +1847,11 @@ footer {
         opacity: 0.5; /* Higher opacity for better visibility */
     }
 }
+@keyframes hide-cursor {
+    to { border-right-width: 0; }
+}
+
+
 
 /* Particle Styling */
 .tagline-particle {
