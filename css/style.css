@@ -1840,7 +1840,7 @@ footer {
         opacity: 0;
     }
     100% {
-        opacity: 0.8; /* Higher opacity for better visibility */
+        opacity: 0.5; /* Higher opacity for better visibility */
     }
 }
 
