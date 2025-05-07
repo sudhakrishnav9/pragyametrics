@@ -151,7 +151,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Add particle effect around tagline
 function createTaglineParticles() {
     const particlesContainer = document.getElementById('particles-container');
     const tagline = document.getElementById('tagline');
@@ -162,16 +161,19 @@ function createTaglineParticles() {
     particlesContainer.innerHTML = '';
     
     // Create particles
-    for (let i = 0; i < 15; i++) {
+    for (let i = 0; i < 20; i++) { // Increased number of particles
         const particle = document.createElement('div');
         particle.className = 'tagline-particle';
         
         // Random initial position
         const randomX = Math.random() * 100;
-        const randomY = Math.random() * 20 - 10;
+        const randomY = Math.random() * 24 - 12; // Increased range
         
-        // Random size
-        const size = Math.random() * 3 + 1;
+        // Random size (larger)
+        const size = Math.random() * 4 + 2; // Increased size
+        
+        // Random opacity for variety
+        const maxOpacity = 0.7 + Math.random() * 0.3; // Higher base opacity
         
         // Apply styles
         particle.style.cssText = `
@@ -183,15 +185,7 @@ function createTaglineParticles() {
             left: ${randomX}%;
             top: ${randomY}px;
             opacity: 0;
-            box-shadow: 0 0 ${size * 2}px ${size}px ${Math.random() > 0.5 ? 'rgba(64, 150, 238, 0.3)' : 'rgba(80, 200, 120, 0.3)'};
-            animation: float-particle ${Math.random() * 3 + 3}s ease-in-out ${Math.random() * 4 + 3}s infinite alternate,
-                      fade-particle ${Math.random() * 2 + 2}s ease-in-out ${Math.random() * 4 + 3}s forwards;
-        `;
-        
-        particlesContainer.appendChild(particle);
-    }
-}
-
+            box-shadow: 0 0 ${size
 // Particle animations
 document.addEventListener('DOMContentLoaded', function() {
     // Add this to your existing DOMContentLoaded event
