@@ -1744,9 +1744,10 @@ footer {
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5), 0 0 5px rgba(0, 0, 0, 0.3);
     
     /* Combined animations */
+    border-right: 2px solid #e0e0e0;
     animation: 
         typewriter 2.5s steps(40) 1s forwards,
-        blink-cursor 0.75s step-end infinite,
+        blink-cursor 0.75s step-end 3.5s,
         color-shift 5s ease-in-out 4s infinite alternate;
     
     /* Ensure visibility */
