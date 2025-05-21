@@ -1,0 +1,77 @@
+{
+  "blogs": [
+      {
+    "id": "P001",
+    "title": "Agentic AI in Metro Design: Imagine Your Engineers Having Smart Digital Assistants",
+    "category": "AI Solutions",
+    "created_date": "2025-05-15",
+    "html_page": "blogs/metro_design_agentic_ai.html",
+    "description": "How agentic AI systems are revolutionizing metro infrastructure design in India, reducing design time by 40% while enhancing quality.",
+    "relevant_blogs": ["P006", "P003", "P005"]
+    },
+    {
+  "id": "P002",
+  "title": "AI-Powered Healthcare Assistant for PM-JAY",
+  "category": "AI Solutions, Healthcare",
+  "created_date": "2025-05-21",
+  "html_page": "blogs/healthcare_agentic_ai.html",
+  "description": "How agentic AI is making India's PM-JAY healthcare system transparent, responsive, and patient-centric through intelligent digital assistants.",
+  "relevant_blogs": ["P001", "P004", "P007"]
+    },
+
+    {
+      "id": "P003",
+      "title": "Calculating AI ROI for Indian Enterprises: Beyond Conventional Metrics",
+      "category": "AI Strategy",
+      "created_date": "2025-04-15",
+      "html_page": "blogs/ai-roi-Indian-Enterprises.html",
+      "description": "Innovative approaches to measuring the return on investment for AI initiatives in the Indian context.",
+      "relevant_blogs": ["P004", "P002", "P001"]
+    },
+  
+    {
+  "id": "P004",
+  "title": "Multilingual AI: Bridging Language Barriers in India's Digital Transformation",
+  "category": "Technical Papers",
+  "created_date": "2025-04-08",
+  "html_page": "blogs/multilingual-ai-india.html",
+  "description": "Technical approaches to developing AI systems that work effectively across India's diverse linguistic landscape.",
+  "relevant_blogs": ["P002", "P007", "P001"]
+},
+    {
+  "id": "P005",
+  "title": "AI-Powered Predictive Maintenance: Transforming Indian Manufacturing",
+  "category": "Industry",
+  "created_date": "2025-03-25",
+  "html_page": "blogs/predictive-maintenance-india.html",
+  "description": "Case studies and implementation strategies for predictive maintenance in India's manufacturing sector.",
+  "relevant_blogs": ["P001", "P006", "P002"]
+},
+   {
+  "id": "P006",
+  "title": "Rethinking Workflows: The Rise of Agentic AI",
+  "category": "Technical Papers",
+  "created_date": "2025-03-12",
+  "html_page": "blogs/agentic-ai-workflows.html",
+  "description": "Discover how AI systems that act with autonomy and contextual awareness are transforming business operations - from passive automation to intelligent digital colleagues that learn, adapt, and take initiative.",
+  "relevant_blogs": ["P001", "P005", "P007"]
+},
+    {
+  "id": "P007",
+  "title": "Bringing Intelligence to the Edge: AI-Driven Edge Solutions by Pragyametrics",
+  "category": "Implementation",
+  "created_date": "2025-05-21",
+  "html_page": "blogs/edge_ai_solutions.html",
+  "description": "Strategic overview of how Edge AI enables real-time, autonomous, and secure decision-making across sectors like manufacturing, healthcare, retail, and logistics.",
+  "relevant_blogs": ["P001", "P005", "P006"]
+}
+  ],
+  "categories": [
+    "All",
+    "AI Strategy",
+    "Implementation",
+    "Case Studies",
+    "Technical Papers",
+    "Industry"
+  ]
+}
