@@ -64,7 +64,17 @@
   "html_page": "blogs/edge_ai_solutions.html",
   "description": "Strategic overview of how Edge AI enables real-time, autonomous, and secure decision-making across sectors like manufacturing, healthcare, retail, and logistics.",
   "relevant_blogs": ["P001", "P005", "P006"]
-}
+},
+     {
+
+    "id": "P008",
+    "title": "Securing Healthcare with AI Safety: Leadership Imperative for India's Health Revolution",
+    "category": "Healthcare AI",
+    "created_date": "2025-06-10",
+    "html_page": "blogs/ai_safety.html",
+    "description": "AI safety is key to building trust in healthcare. Discover how responsible frameworks are reshaping India’s healthcare while protecting patients and data."
+     "relevant_blogs": ["P002", "P004", "P006"]  
+     }
   ],
   "categories": [
     "All",
@@ -72,6 +82,7 @@
     "Implementation",
     "Case Studies",
     "Technical Papers",
-    "Industry"
+    "Industry",
+    "Healthcare AI",
   ]
 }
