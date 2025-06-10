@@ -12,7 +12,7 @@
     {
       "id": "P002",
       "title": "AI-Powered Healthcare Assistant for PM-JAY",
-      "category": "AI Solutions, Healthcare",
+      "category": "AI Solutions",
       "created_date": "2025-05-21",
       "html_page": "blogs/healthcare_agentic_ai.html",
       "description": "How agentic AI is making India's PM-JAY healthcare system transparent, responsive, and patient-centric through intelligent digital assistants.",
@@ -75,11 +75,11 @@
   ],
   "categories": [
     "All",
+    "AI Solutions",
     "AI Strategy",
     "Implementation",
     "Case Studies",
     "Technical Papers",
-    "Industry",
-    
+    "Industry"
   ]
 }
