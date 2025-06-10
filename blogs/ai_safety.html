@@ -987,6 +987,40 @@
     </footer>
 
     <script>
+        // Fallback blog data in case JSON fails to load
+        const fallbackBlogPosts = [
+            {
+                id: 'P001',
+                title: 'Agentic AI in Metro Design: Imagine Your Engineers Having Smart Digital Assistants',
+                category: 'AI Solutions',
+                excerpt: 'Reduce Design Time by 40% While Enhancing Quality. Discover how Agentic AI transforms metro infrastructure design.',
+                date: 'May 15, 2025',
+                readTime: '8 min read',
+                image: 'images/metro_design_ai.png',
+                link: 'agentic-ai-metro-design.html'
+            },
+            {
+                id: 'P003',
+                title: 'The Future of Smart Cities: AI-Driven Infrastructure Planning',
+                category: 'Smart Cities',
+                excerpt: 'How artificial intelligence is revolutionizing urban planning and infrastructure development for sustainable cities.',
+                date: 'June 5, 2025',
+                readTime: '6 min read',
+                image: 'images/smart_cities_ai.png',
+                link: 'smart-cities-ai-infrastructure.html'
+            },
+            {
+                id: 'P004',
+                title: 'Building Trust in AI: Transparency and Accountability in Healthcare Systems',
+                category: 'Healthcare AI',
+                excerpt: 'Essential principles for implementing trustworthy AI systems in healthcare environments across India.',
+                date: 'June 1, 2025',
+                readTime: '7 min read',
+                image: 'images/healthcare_trust.png',
+                link: 'healthcare-ai-trust.html'
+            }
+        ];
+
         // Function to load blogs from JSON and populate related blogs
         async function loadAndPopulateRelatedBlogs() {
             const container = document.getElementById('related-blogs-container');
@@ -994,53 +1028,99 @@
             
             if (!container) return;
             
-            try {
-                // Fetch blogs list from JSON file
-                const response = await fetch('../data/blogs_list.json');
-                if (!response.ok) {
-                    throw new Error('Failed to load blogs list');
+            let blogsList = null;
+            
+            // Try multiple JSON file paths
+            const jsonPaths = [
+                '../data/blogs_list.json',
+                'data/blogs_list.json',
+                '/data/blogs_list.json',
+                'blogs_list.json'
+            ];
+            
+            console.log('Attempting to load blogs from JSON...');
+            
+            // Try to load from JSON first
+            for (const path of jsonPaths) {
+                try {
+                    console.log(`Trying path: ${path}`);
+                    const response = await fetch(path);
+                    if (response.ok) {
+                        const data = await response.json();
+                        blogsList = data.blogs || data; // Handle both {blogs: [...]} and [...] formats
+                        console.log('Successfully loaded blogs from:', path);
+                        console.log('Loaded blogs:', blogsList);
+                        break;
+                    }
+                } catch (error) {
+                    console.log(`Failed to load from ${path}:`, error);
                 }
-                
-                const blogsList = await response.json();
-                
-                // Filter out current blog and get related posts
-                const relatedPosts = blogsList.blogs.filter(post => post.id !== currentBlogId).slice(0, 3);
-                
-                if (relatedPosts.length === 0) {
-                    container.innerHTML = '<p style="color: rgba(255, 255, 255, 0.7);">No related articles found.</p>';
-                    return;
-                }
-                
-                container.innerHTML = relatedPosts.map(post => `
-                    <article class="blog-related-post" onclick="window.location.href='${post.link}'">
-                        <img src="${post.image}" alt="${post.title}" class="blog-related-post-image" onerror="this.style.display='none'">
-                        <div class="blog-related-post-content">
-                            <span class="blog-related-post-category">${post.category}</span>
-                            <h4 class="blog-related-post-title">${post.title}</h4>
-                            <p class="blog-related-post-excerpt">${post.excerpt}</p>
-                            <div class="blog-related-post-meta">
-                                <div style="display: flex; align-items: center; gap: 5px;">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
-                                    <span>${post.date}</span>
-                                </div>
-                                <div style="display: flex; align-items: center; gap: 5px;">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12,6 12,12 16,14"></polyline></svg>
-                                    <span>${post.readTime}</span>
-                                </div>
+            }
+            
+            // If JSON loading failed, use fallback data
+            if (!blogsList) {
+                console.log('JSON loading failed, using fallback data');
+                blogsList = fallbackBlogPosts;
+            }
+            
+            // Filter out current blog and get related posts
+            const relatedPosts = blogsList.filter(post => post.id !== currentBlogId).slice(0, 3);
+            
+            if (relatedPosts.length === 0) {
+                container.innerHTML = '<p style="color: rgba(255, 255, 255, 0.7);">No related articles found.</p>';
+                return;
+            }
+            
+            console.log('Related posts to display:', relatedPosts);
+            
+            container.innerHTML = relatedPosts.map(post => `
+                <article class="blog-related-post" onclick="navigateToBlog('${post.link}')">
+                    <img src="${post.image}" alt="${post.title}" class="blog-related-post-image" onerror="this.style.display='none'">
+                    <div class="blog-related-post-content">
+                        <span class="blog-related-post-category">${post.category}</span>
+                        <h4 class="blog-related-post-title">${post.title}</h4>
+                        <p class="blog-related-post-excerpt">${post.excerpt}</p>
+                        <div class="blog-related-post-meta">
+                            <div style="display: flex; align-items: center; gap: 5px;">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                                <span>${post.date}</span>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 5px;">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12,6 12,12 16,14"></polyline></svg>
+                                <span>${post.readTime}</span>
                             </div>
                         </div>
-                    </article>
-                `).join('');
-                
-                // Add cursor pointer style for better UX
-                container.querySelectorAll('.blog-related-post').forEach(post => {
-                    post.style.cursor = 'pointer';
-                });
-                
-            } catch (error) {
-                console.error('Error loading related blogs:', error);
-                container.innerHTML = '<p style="color: rgba(255, 255, 255, 0.7);">Unable to load related articles.</p>';
+                    </div>
+                </article>
+            `).join('');
+            
+            // Add cursor pointer style for better UX
+            container.querySelectorAll('.blog-related-post').forEach(post => {
+                post.style.cursor = 'pointer';
+            });
+        }
+
+        // Function to handle blog navigation with proper path resolution
+        function navigateToBlog(link) {
+            console.log('Attempting to navigate to:', link);
+            
+            // If link already contains full path or domain, use as-is
+            if (link.startsWith('http') || link.startsWith('/')) {
+                window.location.href = link;
+                return;
             }
+            
+            // Try different path combinations
+            const possiblePaths = [
+                link, // Same directory
+                `./${link}`, // Explicit same directory
+                `../${link}`, // Parent directory
+                `/blog/${link}`, // Absolute blog path
+                `/${link}` // Root path
+            ];
+            
+            // Use the first path (same directory) as default
+            window.location.href = possiblePaths[0];
         }
 
         // Add smooth animations on scroll
