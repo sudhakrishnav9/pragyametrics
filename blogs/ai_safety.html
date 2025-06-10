@@ -621,42 +621,42 @@
             margin-bottom: 30px;
         }
 
-        .blog-related-text-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
+        .blog-related-posts {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
         }
 
-        .blog-related-text-item {
-            margin-bottom: 20px;
-            opacity: 0;
-            transform: translateY(20px);
-            transition: all 0.5s ease;
-        }
-
-        .blog-related-text-item.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .blog-related-text-link {
-            display: block;
-            padding: 20px;
+        .blog-related-post {
             background: rgba(255, 255, 255, 0.05);
             border-radius: 12px;
-            text-decoration: none;
-            color: rgba(255, 255, 255, 0.9);
+            overflow: hidden;
             transition: all 0.3s ease;
             border: 1px solid rgba(0, 188, 212, 0.1);
+            text-decoration: none;
+            color: inherit;
+            display: block;
         }
 
-        .blog-related-text-link:hover {
+        .blog-related-post:hover {
             background: rgba(255, 255, 255, 0.1);
             border-color: rgba(0, 188, 212, 0.3);
             transform: translateY(-2px);
         }
 
-        .blog-id {
+        .blog-related-post-image {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            background: linear-gradient(135deg, rgba(0, 188, 212, 0.2), rgba(33, 150, 243, 0.2));
+        }
+
+        .blog-related-post-content {
+            padding: 20px;
+        }
+
+        .blog-related-post-category {
             display: inline-block;
             background: linear-gradient(90deg, #00bcd4, #2196f3);
             color: white;
@@ -664,7 +664,35 @@
             border-radius: 4px;
             font-size: 0.8rem;
             font-weight: 600;
-            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+
+        .blog-related-post-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+
+        .blog-related-post-excerpt {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+
+        .blog-related-post-meta {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.8rem;
+        }
+
+        .blog-related-post-meta svg {
+            width: 14px;
+            height: 14px;
         }
 
         #footer {
@@ -739,7 +767,7 @@
         }
     </style>
 </head>
-<body>
+<body data-blog-id="P002">
     <div class="container">
         <div class="blog-header">
             <h1 class="blog-title">Securing Healthcare with AI Safety: Leadership Imperative for India's Health Revolution</h1>
@@ -923,15 +951,15 @@
                 </div>
             </div>
         </div>
-         <div class="blog-related">
-                    <h3 class="blog-related-title">Related Articles</h3>
-                    <div class="blog-related-posts" id="related-blogs-container">
-                        <!-- This container will be populated dynamically -->
-                    </div>
-           </div>
+        
+        <div class="blog-related">
+            <h3 class="blog-related-title">Related Articles</h3>
+            <div class="blog-related-posts" id="related-blogs-container">
+                <!-- This container will be populated dynamically -->
+            </div>
+        </div>
 
     </div>
-</section>
 
 <!-- Footer -->
 <footer id="footer">
@@ -960,8 +988,90 @@
 </footer>
 
     <script>
+        // Blog posts data - similar to metro design blog structure
+        const blogPosts = [
+            {
+                id: 'P001',
+                title: 'Agentic AI in Metro Design: Imagine Your Engineers Having Smart Digital Assistants',
+                category: 'AI Solutions',
+                excerpt: 'Reduce Design Time by 40% While Enhancing Quality. Discover how Agentic AI transforms metro infrastructure design.',
+                date: 'May 15, 2025',
+                readTime: '8 min read',
+                image: '../images/metro_design_ai.png',
+                link: '../blog/agentic-ai-metro-design.html'
+            },
+            {
+                id: 'P003',
+                title: 'The Future of Smart Cities: AI-Driven Infrastructure Planning',
+                category: 'Smart Cities',
+                excerpt: 'How artificial intelligence is revolutionizing urban planning and infrastructure development for sustainable cities.',
+                date: 'June 5, 2025',
+                readTime: '6 min read',
+                image: '../images/smart_cities_ai.png',
+                link: '../blog/smart-cities-ai-infrastructure.html'
+            },
+            {
+                id: 'P004',
+                title: 'Building Trust in AI: Transparency and Accountability in Healthcare Systems',
+                category: 'Healthcare AI',
+                excerpt: 'Essential principles for implementing trustworthy AI systems in healthcare environments across India.',
+                date: 'June 1, 2025',
+                readTime: '7 min read',
+                image: '../images/healthcare_trust.png',
+                link: '../blog/healthcare-ai-trust.html'
+            }
+        ];
+
+        // Function to populate related blogs
+        function populateRelatedBlogs() {
+            const container = document.getElementById('related-blogs-container');
+            const currentBlogId = document.body.getAttribute('data-blog-id');
+            
+            if (!container) return;
+            
+            // Filter out current blog and get related posts
+            const relatedPosts = blogPosts.filter(post => post.id !== currentBlogId).slice(0, 3);
+            
+            if (relatedPosts.length === 0) {
+                container.innerHTML = '<p style="color: rgba(255, 255, 255, 0.7);">No related articles found.</p>';
+                return;
+            }
+            
+            container.innerHTML = relatedPosts.map(post => `
+                <article class="blog-related-post">
+                    <img src="${post.image}" alt="${post.title}" class="blog-related-post-image" onerror="this.style.display='none'">
+                    <div class="blog-related-post-content">
+                        <span class="blog-related-post-category">${post.category}</span>
+                        <h4 class="blog-related-post-title">${post.title}</h4>
+                        <p class="blog-related-post-excerpt">${post.excerpt}</p>
+                        <div class="blog-related-post-meta">
+                            <div style="display: flex; align-items: center; gap: 5px;">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                                <span>${post.date}</span>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 5px;">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12,6 12,12 16,14"></polyline></svg>
+                                <span>${post.readTime}</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            `).join('');
+            
+            // Add click handlers to related posts
+            container.querySelectorAll('.blog-related-post').forEach((post, index) => {
+                post.style.cursor = 'pointer';
+                post.addEventListener('click', () => {
+                    window.location.href = relatedPosts[index].link;
+                });
+            });
+        }
+
         // Add smooth animations on scroll
         document.addEventListener('DOMContentLoaded', function() {
+            // Initialize related blogs
+            populateRelatedBlogs();
+            
             // Newsletter form submission
             const newsletterForm = document.querySelector('.blog-newsletter-form');
             
@@ -1025,17 +1135,6 @@
                         submitButton.disabled = false;
                         submitButton.textContent = 'Subscribe';
                     });
-                });
-            }
-            
-            // Initialize related blog items animation
-            const relatedItems = document.querySelectorAll('.blog-related-text-item');
-            if (relatedItems.length > 0) {
-                // Add animation delay to each item
-                relatedItems.forEach((item, index) => {
-                    setTimeout(() => {
-                        item.classList.add('visible');
-                    }, 100 * index);
                 });
             }
             
