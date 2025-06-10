@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Securing Healthcare with AI Safety: Leadership Imperative for India's Health Revolution</title>
+    <link rel="icon" href="../images/brain128.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/blog_styles.css">
+    <script type="text/javascript">
+            (function(c,l,a,r,i,t,y){
+                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+            })(window, document, "clarity", "script", "rgwjbwq5hz");
+    </script>
+    <!-- Custom Clarity User Tracking -->
+    <script src="../js/clarity-user-tracking.js" defer></script>
+    <script src="../js/script.js" defer></script>
+    <script src="../js/ind_blog_script.js" defer></script>
+    <script src="../js/share-buttons.js" defer></script>
+    <script src="../js/blog_scripts.js" defer></script>
+    <script src="../js/newsletter.js" defer></script>
+    <!-- Additional CSS -->
+    <style>
+        /* Healthcare AI Safety specific custom styles */
+        .healthcare-metrics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+        
+        .healthcare-metric-card {
+            background: linear-gradient(135deg, rgba(255, 71, 87, 0.1), rgba(255, 154, 0, 0.1));
+            border-radius: 16px;
+            padding: 30px;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.4s ease;
+            text-align: center;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .healthcare-metric-card:hover {
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 20px 40px rgba(255, 71, 87, 0.2);
+        }
+        
+        .healthcare-metric-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(255, 71, 87, 0.1), rgba(255, 154, 0, 0.1));
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+        
+        .healthcare-metric-card:hover::before {
+            opacity: 1;
+        }
+        
+        .healthcare-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            background: linear-gradient(90deg, #ff4757, #ff9500);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: block;
+        }
+        
+        .healthcare-metric-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 15px;
+        }
+        
+        .healthcare-metric-desc {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.6;
+        }
+        
+        .safety-framework {
+            background: linear-gradient(135deg, rgba(255, 71, 87, 0.05), rgba(255, 154, 0, 0.05));
+            border-radius: 16px;
+            padding: 40px;
+            margin: 50px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .safety-framework::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at top right, rgba(255, 71, 87, 0.1), transparent 60%);
+            z-index: -1;
+        }
+        
+        .safety-framework::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at bottom left, rgba(255, 154, 0, 0.1), transparent 60%);
+            z-index: -1;
+        }
+        
+        .trust-pillars {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+        
+        .trust-pillar {
+            background: rgba(17, 17, 17, 0.8);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .trust-pillar::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(180deg, #ff4757, #ff9500);
+            border-radius: 4px 0 0 4px;
+        }
+        
+        .trust-pillar:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(255, 71, 87, 0.2);
+            border-color: rgba(255, 71, 87, 0.3);
+        }
+        
+        .trust-pillar-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 15px;
+            padding-left: 15px;
+        }
+        
+        .trust-pillar-desc {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.6;
+            padding-left: 15px;
+        }
+        
+        .implementation-showcase {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+        
+        .implementation-card {
+            background: linear-gradient(135deg, rgba(17, 17, 17, 0.9), rgba(255, 71, 87, 0.05));
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .implementation-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(255, 71, 87, 0.15);
+        }
+        
+        .implementation-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(45deg, rgba(255, 71, 87, 0.2), rgba(255, 154, 0, 0.2));
+            border-radius: 0 16px 0 50px;
+        }
+        
+        .implementation-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 15px;
+            position: relative;
+        }
+        
+        .implementation-desc {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+        
+        .implementation-impact {
+            display: inline-block;
+            background: linear-gradient(90deg, rgba(255, 71, 87, 0.2), rgba(255, 154, 0, 0.2));
+            padding: 8px 16px;
+            border-radius: 25px;
+            font-weight: 500;
+            color: #ff9500;
+            font-size: 0.9rem;
+        }
+        
+        .healthcare-quote {
+            font-size: 1.6rem;
+            line-height: 1.6;
+            font-weight: 300;
+            margin: 50px 0;
+            color: rgba(255, 255, 255, 0.9);
+            text-align: center;
+            position: relative;
+            padding: 40px;
+            background: linear-gradient(135deg, rgba(255, 71, 87, 0.05), rgba(255, 154, 0, 0.05));
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .healthcare-quote::before {
+            content: '"';
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            font-size: 4rem;
+            color: rgba(255, 71, 87, 0.3);
+            font-family: serif;
+        }
+        
+        .healthcare-quote::after {
+            content: '"';
+            position: absolute;
+            bottom: 10px;
+            right: 20px;
+            font-size: 4rem;
+            color: rgba(255, 154, 0, 0.3);
+            font-family: serif;
+        }
+        
+        .healthcare-quote strong {
+            font-weight: 600;
+            color: white;
+            position: relative;
+        }
+        
+        .healthcare-quote strong::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, #ff4757, #ff9500);
+        }
+        
+        .collaboration-section {
+            background: linear-gradient(135deg, rgba(255, 71, 87, 0.1), rgba(255, 154, 0, 0.05));
+            border-radius: 20px;
+            padding: 50px;
+            margin: 60px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .collaboration-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 71, 87, 0.1) 0%, transparent 50%);
+            animation: pulse 8s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(0.8); opacity: 0.5; }
+            50% { transform: scale(1.2); opacity: 0.2; }
+        }
+        
+        .collaboration-title {
+            font-size: 2rem;
+            color: white;
+            margin-bottom: 25px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .collaboration-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, #ff4757, #ff9500);
+            border-radius: 3px;
+        }
+        
+        .collaboration-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+        
+        .collaboration-item {
+            text-align: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+        
+        .collaboration-item:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        .collaboration-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: #ff4757;
+        }
+        
+        .collaboration-item-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: white;
+            margin-bottom: 10px;
+        }
+        
+        .collaboration-item-desc {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+        }
+        
+        /* Medical pulse animation */
+        .medical-pulse {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 20px;
+            height: 20px;
+            background: #ff4757;
+            border-radius: 50%;
+            animation: medicalPulse 2s ease-in-out infinite;
+        }
+        
+        @keyframes medicalPulse {
+            0% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.5); opacity: 0.7; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        
+        .medical-cross {
+            position: relative;
+            display: inline-block;
+            color: #ff4757;
+            margin-right: 10px;
+        }
+        
+        .medical-cross::before {
+            content: '⚕';
+            font-size: 1.2em;
+        }
+        
+        /* Enhanced responsive design */
+        @media (max-width: 768px) {
+            .healthcare-metrics {
+                grid-template-columns: 1fr;
+            }
+            
+            .healthcare-quote {
+                font-size: 1.3rem;
+                padding: 25px;
+            }
+            
+            .collaboration-section {
+                padding: 30px 20px;
+            }
+            
+            .collaboration-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .trust-pillars {
+                grid-template-columns: 1fr;
+            }
+            
+            .implementation-showcase {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* India flag colors accent */
+        .india-accent {
+            background: linear-gradient(90deg, #ff9933, #ffffff, #138808);
+            height: 3px;
+            width: 60px;
+            margin: 20px auto;
+            border-radius: 3px;
+        }
+        
+        /* Ayushman Bharat themed elements */
+        .ayushman-highlight {
+            background: linear-gradient(135deg, rgba(0, 123, 191, 0.1), rgba(255, 154, 0, 0.1));
+            border-left: 4px solid #007bbf;
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 0 12px 12px 0;
+        }
+        
+        .ayushman-highlight h3 {
+            color: #007bbf;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body data-blog-id="P008">
+    <header id="header">
+        <div class="logo-container">
+            <img src="../images/brain.png" alt="Pragyametrics Logo" class="logo">
+            <div class="logo-text-container">
+                <span class="logo-text">Pragya<span class="highlight">metrics</span></span>
+                <span class="tagline" id="tagline">Where Knowledge Meets Intelligence</span>
+                <div class="connection-line" id="connection-line"></div>
+                <div class="particles-container" id="particles-container"></div>
+            </div>
+        </div>
+        
+        <nav>
+            <a href="../index.html#about">About</a>
+            <a href="../services.html">Services</a>
+            <a href="../methodology.html">Methodology</a>
+            <a href="../engagement-models.html">Engagement Models</a>
+            <a href="../blog.html">Blog</a>
+            <a href="../contact.html">Contact Us</a>
+        </nav>
+        
+        <!-- Mobile Menu Toggle -->
+        <div class="mobile-menu-toggle" id="mobile-menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <nav>
+            <a href="../index.html#about">About</a>
+            <a href="../services.html">Services</a>
+            <a href="../methodology.html">Methodology</a>
+            <a href="../engagement-models.html">Engagement Models</a>
+            <a href="../blog.html">Blog</a>
+            <a href="../contact.html">Contact Us</a>
+        </nav>
+    </div>
+
+    <main id="main-content">
+        <section class="blog-section">
+            <div class="blog-container">
+                <div class="blog-header">
+                    <h1 class="blog-title">Securing Healthcare with AI Safety: Leadership Imperative for India's Health Revolution</h1>
+                    <p class="blog-subtitle">Building Trust Through Responsible AI in Healthcare</p>
+                    <div class="blog-meta">
+                        <div class="blog-meta-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                            <span>June 10, 2025</span>
+                        </div>
+                        <div class="blog-meta-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                            <span>Healthcare AI</span>
+                        </div>
+                        <div class="blog-meta-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                            <span>8 min read</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="blog-content">
+                    <div class="safety-framework">
+                        <div class="medical-pulse"></div>
+                        <h2 class="collaboration-title">The Vision: Safe, Secure, Trusted Healthcare AI</h2>
+                        
+                        <p>Imagine a healthcare system where every patient interaction is safe, secure, transparent, and deeply trusted. Picture AI systems that help predict potential disease outbreaks, ensure precise treatments, and communicate complex healthcare policies effortlessly to millions.</p>
+                        
+                        <p>The transformative potential of AI in healthcare is undeniable—but equally undeniable are the associated risks. Ensuring AI safety isn't optional; it's foundational to building trust.</p>
+                        
+                        <div class="india-accent"></div>
+                    </div>
+                    
+                    <h2><span class="medical-cross"></span>Why AI Safety in Healthcare Matters Now More Than Ever</h2>
+                    
+                    <div class="ayushman-highlight">
+                        <h3>India's Healthcare Revolution</h3>
+                        <p>India's healthcare landscape is rapidly evolving with groundbreaking initiatives like Ayushman Bharat (PM-JAY), the world's largest public health program. As AI increasingly becomes central to healthcare—from diagnostics and patient interactions to hospital management and personalized treatment—the potential risks of misuse, bias, data breaches, and critical errors grow exponentially.</p>
+                    </div>
+                    
+                    <img src="images/ai_safety.png" alt="AI Safety in Healthcare Visualization" class="blog-image">
+                    
+                    <h2>Top Concerns for Healthcare Leaders</h2>
+                    
+                    <div class="trust-pillars">
+                        <div class="trust-pillar">
+                            <div class="trust-pillar-title">🔒 Data Privacy and Security</div>
+                            <div class="trust-pillar-desc">Ensuring rigorous protection of patient data to maintain confidentiality and prevent breaches.</div>
+                        </div>
+                        
+                        <div class="trust-pillar">
+                            <div class="trust-pillar-title">⚖️ Bias and Fairness</div>
+                            <div class="trust-pillar-desc">Developing AI systems that consistently deliver equitable outcomes across India's diverse populations.</div>
+                        </div>
+                        
+                        <div class="trust-pillar">
+                            <div class="trust-pillar-title">🔍 Transparency and Explainability</div>
+                            <div class="trust-pillar-desc">Communicating healthcare decisions clearly and transparently to instill trust in every interaction.</div>
+                        </div>
+                        
+                        <div class="trust-pillar">
+                            <div class="trust-pillar-title">🎯 Error Mitigation</div>
+                            <div class="trust-pillar-desc">Ensuring accuracy, reliability, and safety in life-critical AI-driven decisions.</div>
+                        </div>
+                    </div>
+                    
+                    <h2>Learning from Real-World AI Implementation</h2>
+                    
+                    <p>At Pragyametrics, our experience developing AI solutions within India's healthcare ecosystem has provided us with valuable insights into AI safety and trust. From healthcare accessibility platforms to policy communication tools, we have firsthand knowledge of the importance of robust AI governance.</p>
+                    
+                    <div class="healthcare-metrics">
+                        <div class="healthcare-metric-card">
+                            <div class="healthcare-icon">🎯</div>
+                            <div class="healthcare-metric-title">Context Matters</div>
+                            <div class="healthcare-metric-desc">AI safety frameworks must be tailored to India's diverse healthcare environments—from sophisticated urban hospitals to resource-limited rural clinics.</div>
+                        </div>
+                        
+                        <div class="healthcare-metric-card">
+                            <div class="healthcare-icon">🤝</div>
+                            <div class="healthcare-metric-title">Trust is Earned</div>
+                            <div class="healthcare-metric-desc">Each AI interaction must be transparent, explainable, and culturally sensitive to build enduring trust.</div>
+                        </div>
+                        
+                        <div class="healthcare-metric-card">
+                            <div class="healthcare-icon">🔗</div>
+                            <div class="healthcare-metric-title">Collaboration is Essential</div>
+                            <div class="healthcare-metric-desc">Effective AI safety measures emerge from partnerships among technologists, healthcare providers, and policymakers.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="healthcare-quote">
+                        Through our implementations across multiple healthcare touchpoints, we've seen that <strong>prioritizing safety from the design phase</strong> allows AI to improve healthcare access for millions securely and reliably.
+                    </div>
+                    
+                    <h2>Real-World AI Safety in Practice</h2>
+                    
+                    <div class="implementation-showcase">
+                        <div class="implementation-card">
+                            <div class="implementation-title">Healthcare Accessibility Solutions</div>
+                            <div class="implementation-desc">Our AI-powered assistance for government healthcare programs has shown that robust safety frameworks can securely facilitate essential healthcare access for millions.</div>
+                            <span class="implementation-impact">Millions Served Safely</span>
+                        </div>
+                        
+                        <div class="implementation-card">
+                            <div class="implementation-title">Transparent AI Communication</div>
+                            <div class="implementation-desc">We have developed methods to simplify complex healthcare policies, ensuring clarity and accuracy tailored to diverse populations.</div>
+                            <span class="implementation-impact">Clear & Accurate Communication</span>
+                        </div>
+                        
+                        <div class="implementation-card">
+                            <div class="implementation-title">Scalable Safety Protocols</div>
+                            <div class="implementation-desc">By scaling AI solutions across varied healthcare infrastructures, we've learned to build safety measures grounded in practical constraints rather than idealized conditions.</div>
+                            <span class="implementation-impact">Practical & Scalable</span>
+                        </div>
+                    </div>
+                    
+                    <div class="collaboration-section">
+                        <h2 class="collaboration-title">Partnering for a Safer AI-Driven Healthcare Future</h2>
+                        
+                        <p>At Pragyametrics, we believe ensuring AI safety in healthcare demands collaboration across the entire ecosystem. We actively partner with healthcare providers, policymakers, and technology innovators to develop practical frameworks tailored for India's unique context.</p>
+                        
+                        <h3>How we're contributing:</h3>
+                        
+                        <div class="collaboration-grid">
+                            <div class="collaboration-item">
+                                <div class="collaboration-icon">🛠️</div>
+                                <div class="collaboration-item-title">Best Practices Development</div>
+                                <div class="collaboration-item-desc">Developing AI safety best practices through real-world healthcare implementations</div>
+                            </div>
+                            
+                            <div class="collaboration-item">
+                                <div class="collaboration-icon">🤝</div>
+                                <div class="collaboration-item-title">Institutional Collaboration</div>
+                                <div class="collaboration-item-desc">Collaborating with institutions to create transparent, accountable AI systems</div>
+                            </div>
+                            
+                            <div class="collaboration-item">
+                                <div class="collaboration-icon">📊</div>
+                                <div class="collaboration-item-title">Knowledge Sharing</div>
+                                <div class="collaboration-item-desc">Sharing insights from our experiences scaling AI solutions across diverse healthcare settings</div>
+                            </div>
+                            
+                            <div class="collaboration-item">
+                                <div class="collaboration-icon">🏛️</div>
+                                <div class="collaboration-item-title">IndiaAI Safety Institute</div>
+                                <div class="collaboration-item-desc">Supporting initiatives that advance indigenous research and robust governance frameworks</div>
+                            </div>
+                        </div>
+                        
+                        <p style="margin-top: 30px; text-align: center; color: rgba(255, 255, 255, 0.9);">Initiatives like the IndiaAI Safety Institute are advancing this critical work by supporting indigenous research, robust governance frameworks, and best practices, ensuring AI's potential is responsibly and inclusively harnessed.</p>
+                    </div>
+                    
+                    <div class="healthcare-quote">
+                        Ready to explore AI safety in healthcare? Connect with us to discover how <strong>AI safety frameworks can be tailored</strong> to your organization's specific needs.
+                    </div>
+                    
+                    <h2>Building the Future Together</h2>
+                    
+                    <p>Let's discuss how responsible AI can transform healthcare delivery while maintaining the trust that patients deserve. Together, we can build an AI-driven healthcare future that is both innovative and trustworthy.</p>
+                    
+                    <div class="blog-cta">
+                        <h3 class="blog-cta-title">Ready to Explore AI Safety in Healthcare?</h3>
+                        <p class="blog-cta-text">Connect with us to explore how AI safety frameworks can be tailored to your organization's specific needs. Let's discuss how responsible AI can transform healthcare delivery while maintaining the trust that patients deserve.</p>
+                        <a href="../contact.html" class="blog-cta-button">Partner with Pragyametrics</a>
+                    </div>
+                    
+                    <div class="blog-share">
+                        <span class="blog-share-text">Share this article:</span>
+                        <div class="blog-share-links">
+                            <a href="#" class="blog-share-link" data-platform="facebook">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                            </a>
+                            <a href="#" class="blog-share-link" data-platform="twitter">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+                            </a>
+                            <a href="#" class="blog-share-link" data-platform="linkedin">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                            </a>
+                            <a href="#" class="blog-share-link" data-platform="generic">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M16 12l-4 4-4-4M12 8v7"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="blog-related">
+                    <h3 class="blog-related-title">Related Articles</h3>
+                    <div class="blog-related-posts" id="related-blogs-container">
+                        <!-- This container will be populated dynamically with related blogs -->
+                        <ul class="blog-related-text-list">
+                            <li class="blog-related-text-item">
+                                <a href="blogs/edge_ai_solutions.html" class="blog-related-text-link">
+                                    <span class="blog-id">P007</span> Bringing Intelligence to the Edge: AI-Driven Edge Solutions by Pragyametrics
+                                </a>
+                            </li>
+                            <li class="blog-related-text-item">
+                                <a href="blogs/agentic_ai_workflows.html" class="blog-related-text-link">
+                                    <span class="blog-id">P006</span> Designing Agentic AI Workflows for Business Process Automation
+                                </a>
+                            </li>
+                            <li class="blog-related-text-item">
+                                <a href="blogs/ai_implementation_strategies.html" class="blog-related-text-link">
+                                    <span class="blog-id">P005</span> Strategic Frameworks for Enterprise AI Implementation
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="company-info">
+                    <h3>Pragyametrics</h3>
+                    <p>8B, Phase-1, Manjri Greens,<br>Hadapsar, Pune, Maharashtra<br>India - 412307</p>
+                </div>
+                <div class="contact-info">
+                    <h4>Contact Us</h4>
+                    <p>📧 info@pragyametrics.com</p>
+                    <p>📞 +91 77090 50817</p>
+                </div>
+
+                <div class="newsletter-section">
+                    <h4>Subscribe to Our Newsletter</h4>
+                    <form class="blog-newsletter-form">
+                        <input type="email" class="blog-newsletter-input" placeholder="Your email address">
+                        <button type="submit" class="blog-newsletter-button">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <p class="copyright">© 2025 Pragyametrics (OPC) Private Limited. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script>
+    // Newsletter form submission
+    document.addEventListener('DOMContentLoaded', function() {
+        const newsletterForm = document.querySelector('.blog-newsletter-form');
+        
+        if (newsletterForm) {
+            newsletterForm.addEventListener('submit', function(e) {
+                console.log('Form submission detected');
+                e.preventDefault();
+                
+                // Get form elements
+                const emailInput = this.querySelector('.blog-newsletter-input');
+                const email = emailInput.value.trim();
+                const submitButton = this.querySelector('.blog-newsletter-button');
+                
+                console.log('Captured email:', email);
+                
+                // Simple email validation
+                if (!email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
+                    alert('Please enter a valid email address.');
+                    return false;
+                }
+                
+                // Change button state
+                submitButton.disabled = true;
+                submitButton.textContent = 'Subscribing...';
+                
+                console.log('Sending to Formspree...');
+                
+                // Send directly to formspree
+                fetch("https://formspree.io/f/xeogajkz", {
+                    method: "POST",
+                    body: JSON.stringify({
+                        email: email,
+                        _subject: 'New Newsletter Subscription',
+                        subscription_type: 'Newsletter'
+                    }),
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    }
+                })
+                .then(response => {
+                    console.log('Response received:', response.status);
+                    
+                    if (response.ok) {
+                        // Success
+                        alert('Thank you for subscribing to our newsletter!');
+                        emailInput.value = '';
+                    } else {
+                        alert('There was a problem with your submission. Please try again.');
+                    }
+                    
+                    // Reset button
+                    submitButton.disabled = false;
+                    submitButton.textContent = 'Subscribe';
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('Network error. Please check your connection and try again.');
+                    
+                    // Reset button
+                    submitButton.disabled = false;
+                    submitButton.textContent = 'Subscribe';
+                });
+            });
+        }
+        
+        // Initialize related blog items animation
+        const relatedItems = document.querySelectorAll('.blog-related-text-item');
+        if (relatedItems.length > 0) {
+            // Add animation delay to each item
+            relatedItems.forEach((item, index) => {
+                setTimeout(() => {
+                    item.classList.add('visible');
+                }, 100 * index);
+            });
+        }
+        
+        // Medical pulse animation control
+        const medicalPulse = document.querySelector('.medical-pulse');
+        if (medicalPulse) {
+            // Add intersection observer to control animation
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animationPlayState = 'running';
+                    } else {
+                        entry.target.style.animationPlayState = 'paused';
+                    }
+                });
+            });
+            
+            observer.observe(medicalPulse);
+        }
+        
+        // Healthcare metrics cards animation
+        const metricCards = document.querySelectorAll('.healthcare-metric-card');
+        if (metricCards.length > 0) {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry, index) => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => {
+                            entry.target.style.opacity = '1';
+                            entry.target.style.transform = 'translateY(0)';
+                        }, index * 200);
+                    }
+                });
+            });
+            
+            metricCards.forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(card);
+            });
+        }
+        
+        // Trust pillars animation
+        const trustPillars = document.querySelectorAll('.trust-pillar');
+        if (trustPillars.length > 0) {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry, index) => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => {
+                            entry.target.style.opacity = '1';
+                            entry.target.style.transform = 'translateX(0)';
+                        }, index * 150);
+                    }
+                });
+            });
+            
+            trustPillars.forEach(pillar => {
+                pillar.style.opacity = '0';
+                pillar.style.transform = 'translateX(-20px)';
+                pillar.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                observer.observe(pillar);
+            });
+        }
+        
+        // Implementation showcase animation
+        const implementationCards = document.querySelectorAll('.implementation-card');
+        if (implementationCards.length > 0) {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry, index) => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => {
+                            entry.target.style.opacity = '1';
+                            entry.target.style.transform = 'scale(1)';
+                        }, index * 100);
+                    }
+                });
+            });
+            
+            implementationCards.forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'scale(0.9)';
+                card.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+                observer.observe(card);
+            });
+        }
+        
+        // Collaboration items animation
+        const collaborationItems = document.querySelectorAll('.collaboration-item');
+        if (collaborationItems.length > 0) {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry, index) => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => {
+                            entry.target.style.opacity = '1';
+                            entry.target.style.transform = 'translateY(0)';
+                        }, index * 100);
+                    }
+                });
+            });
+            
+            collaborationItems.forEach(item => {
+                item.style.opacity = '0';
+                item.style.transform = 'translateY(30px)';
+                item.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                observer.observe(item);
+            });
+        }
+    });
+    </script>
+</body>
+</html>
