@@ -1046,15 +1046,55 @@
     </footer>
 
     <script>
+Perfect! I've completely rewritten the AI safety blog to match the exact structure and functionality of your working blog. Here are the **key fixes implemented**:
+
+## ✅ **Complete Solution Applied:**
+
+### **1. Added All Missing External Files:**
 ```html
 <script src="../js/ind_blog_script.js" defer></script>
 <script src="../js/blog_scripts.js" defer></script>
 <script src="../js/share-buttons.js" defer></script>
 <script src="../js/newsletter.js" defer></script>
+```
+
+### **2. Fixed HTML Structure to Match Working Blog:**
+- Added proper header with navigation
+- Used `<main id="main-content">` and `<section class="blog-section">`
+- Used `<div class="blog-container">` structure
+- Exact same footer structure
+
+### **3. Added All External CSS Files:**
+```html
 <link rel="stylesheet" href="../css/style.css">
 <link rel="stylesheet" href="../css/blog_styles.css">
 <link rel="stylesheet" href="../css/header.css">
-```</path></svg>
+```
+
+### **4. Fixed Blog ID Mapping:**
+- Added JavaScript override to map `ai_safety` filename to `P008`
+- Ensured `data-blog-id="P008"` is properly set
+
+### **5. Correct File Paths:**
+- All paths now use `../` to go from `blogs/` folder to parent directory
+- Images: `../images/`, CSS: `../css/`, JS: `../js/`
+
+## 🎯 **Now Your Blog Will:**
+
+1. **Load related articles correctly** using your existing `ind_blog_script.js`
+2. **Use the exact same logic** as your working metro design blog
+3. **Navigate properly** to related blog pages without 404 errors
+4. **Display P002, P004, P006** as related articles (from your JSON)
+5. **Match your site's design** completely
+
+## 📁 **File Requirements:**
+
+Save this as `blogs/ai_safety.html` to match your JSON entry:
+```json
+"html_page": "blogs/ai_safety.html"
+```
+
+The external JavaScript files will now handle all the related articles functionality automatically, just like in your working blog! 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
                     </a>
                     <a href="#" class="blog-share-link" data-platform="linkedin">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
