@@ -66,7 +66,7 @@
     {
       "id": "P008",
       "title": "Securing Healthcare with AI Safety: Leadership Imperative for India's Health Revolution",
-      "category": "Healthcare AI",
+      "category": "AI Strategy",
       "created_date": "2025-06-10",
       "html_page": "blogs/ai_safety.html",
       "description": "AI safety is key to building trust in healthcare. Discover how responsible frameworks are reshaping India's healthcare while protecting patients and data.",
@@ -80,6 +80,6 @@
     "Case Studies",
     "Technical Papers",
     "Industry",
-    "Healthcare AI"
+    
   ]
 }
