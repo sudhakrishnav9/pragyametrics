@@ -1,0 +1,67 @@
+<div class="arch-wrap">
+<div class="arch-diagram" role="img" aria-label="Netra reference architecture: your systems, four agents, human gates, MCP orchestrator, AI services">
+<svg class="arch-svg" viewBox="0 0 1080 520" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<linearGradient id="netraAgentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+<stop offset="0%" stop-color="#4CAF50"/>
+<stop offset="100%" stop-color="#03A9F4"/>
+</linearGradient>
+<filter id="netraLayerShadow" x="-4%" y="-8%" width="108%" height="120%">
+<feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000" flood-opacity="0.35"/>
+</filter>
+</defs>
+<rect x="24" y="16" width="1032" height="488" rx="14" fill="#141a18" stroke="rgba(174,249,241,0.12)" stroke-width="1"/>
+<text x="48" y="44" fill="#aef9f1" font-family="Poppins, sans-serif" font-size="11" font-weight="700" letter-spacing="1.2">NETRA&trade; / REFERENCE ARCHITECTURE</text>
+<text x="1032" y="44" text-anchor="end" fill="#8a9690" font-family="Poppins, sans-serif" font-size="10">PRAGYAMETRICS &middot; PUBLIC OVERVIEW</text>
+<g filter="url(#netraLayerShadow)">
+<rect x="48" y="56" width="72" height="52" rx="10" fill="#1e2623" stroke="rgba(174,249,241,0.2)"/>
+<text x="84" y="88" text-anchor="middle" fill="#8a9690" font-family="Poppins, sans-serif" font-size="9" font-weight="600">L1</text>
+<rect x="136" y="56" width="896" height="52" rx="10" fill="#1a211f" stroke="rgba(174,249,241,0.18)"/>
+<text x="156" y="78" fill="#fff" font-family="Poppins, sans-serif" font-size="14" font-weight="600">Your systems of record</text>
+<text x="156" y="96" fill="#b8c4be" font-family="Poppins, sans-serif" font-size="11">PGRS &middot; CPGRAMS &middot; ServiceNow &middot; Jira &middot; CRM &middot; any REST API</text>
+</g>
+<text x="48" y="128" fill="#4CAF50" font-family="Poppins, sans-serif" font-size="10" font-weight="700" letter-spacing="1">NETRA&trade; AGENTS + MCP</text>
+<g filter="url(#netraLayerShadow)" font-family="Poppins, sans-serif">
+<rect x="48" y="136" width="196" height="72" rx="8" fill="url(#netraAgentGrad)"/>
+<text x="146" y="158" text-anchor="middle" fill="#aef9f1" font-size="9" font-weight="600">MCP</text>
+<text x="146" y="178" text-anchor="middle" fill="#fff" font-size="12" font-weight="600">Orchestrator</text>
+<text x="146" y="194" text-anchor="middle" fill="#c8e6c9" font-size="9">Routing &middot; audit &middot; cost</text>
+<rect x="256" y="136" width="196" height="72" rx="8" fill="url(#netraAgentGrad)"/>
+<text x="354" y="178" text-anchor="middle" fill="#fff" font-size="12" font-weight="600">Intake</text>
+<rect x="464" y="136" width="196" height="72" rx="8" fill="url(#netraAgentGrad)"/>
+<text x="562" y="178" text-anchor="middle" fill="#fff" font-size="12" font-weight="600">Verify</text>
+<rect x="672" y="136" width="196" height="72" rx="8" fill="url(#netraAgentGrad)"/>
+<text x="770" y="178" text-anchor="middle" fill="#fff" font-size="12" font-weight="600">Pulse</text>
+<rect x="880" y="136" width="152" height="72" rx="8" fill="url(#netraAgentGrad)"/>
+<text x="956" y="178" text-anchor="middle" fill="#fff" font-size="12" font-weight="600">Insight</text>
+</g>
+<rect x="48" y="220" width="984" height="28" rx="6" fill="rgba(250,204,21,0.12)" stroke="rgba(250,204,21,0.45)"/>
+<text x="540" y="239" text-anchor="middle" fill="#fde68a" font-family="Poppins, sans-serif" font-size="10" font-weight="700" letter-spacing="1.2">HUMAN GATES &middot; REVIEW &middot; APPROVE &middot; OVERRIDE-AUDITED</text>
+<g filter="url(#netraLayerShadow)">
+<rect x="48" y="260" width="984" height="52" rx="10" fill="rgba(3,169,244,0.06)" stroke="#03A9F4" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="156" y="286" fill="#03A9F4" font-family="Poppins, sans-serif" font-size="14" font-weight="700">Netra | MCP &mdash; orchestration layer</text>
+<text x="156" y="304" fill="#b8e4f0" font-family="Poppins, sans-serif" font-size="11">Quality gates &middot; escalation pricing &middot; LLM registry &middot; zero data residency</text>
+</g>
+<g filter="url(#netraLayerShadow)">
+<rect x="48" y="324" width="984" height="52" rx="10" fill="rgba(76,175,80,0.08)" stroke="#4CAF50" stroke-width="1.5"/>
+<text x="156" y="350" fill="#4CAF50" font-family="Poppins, sans-serif" font-size="14" font-weight="700">Netra | AI services</text>
+<text x="156" y="368" fill="#c8e6c9" font-family="Poppins, sans-serif" font-size="11">OCR &middot; ASR &middot; vision &middot; NLP &middot; LLM &middot; model registry</text>
+</g>
+<rect x="48" y="388" width="984" height="48" rx="10" fill="#1a211f" stroke="rgba(174,249,241,0.18)"/>
+<text x="156" y="410" fill="#aef9f1" font-family="Poppins, sans-serif" font-size="13" font-weight="700">Netra | Outputs &mdash; JSON &middot; CSV &middot; PDF &middot; Excel &middot; dashboards</text>
+<text x="156" y="428" fill="#b8c4be" font-family="Poppins, sans-serif" font-size="11">Plugs into your system of record &mdash; Netra stores nothing</text>
+<text x="540" y="488" text-anchor="middle" fill="#8a9690" font-family="Poppins, sans-serif" font-size="11">Your grievance portal, ITSM or CRM stays authoritative &mdash; Netra adds intelligence.</text>
+</svg>
+</div>
+<div class="arch-legend" aria-hidden="true">
+<div class="arch-legend-item"><span class="legend-dot legend-agents"></span><span><strong>Agents</strong> Intake &middot; Verify &middot; Pulse &middot; Insight</span></div>
+<div class="arch-legend-item"><span class="legend-dot legend-gates"></span><span><strong>Gates</strong> Human approval every stage</span></div>
+<div class="arch-legend-item"><span class="legend-dot legend-model"></span><span><strong>MCP</strong> Orchestration &amp; audit</span></div>
+<div class="arch-legend-item"><span class="legend-dot legend-code"></span><span><strong>AI services</strong> Multimodal intelligence</span></div>
+<div class="arch-legend-item"><span class="legend-dot legend-out"></span><span><strong>Outputs</strong> Open-format deliverables</span></div>
+</div>
+<div class="arch-cta-band">
+<div class="arch-cta-text"><strong>Want the reference-architecture deep dive?</strong><span>Agent catalogue, model registry, audit-trail schema and integration protocol available under NDA.</span></div>
+<a class="cta-btn cta-btn-light" href="#engagement">Request the Netra&trade; Reference Architecture Brief &rarr;</a>
+</div>
+</div>

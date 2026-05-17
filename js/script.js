@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const path = window.location.pathname.replace(/\\/g, '/').toLowerCase();
     const onPragya = path.includes('pragya-cnc');
     const onSetu = path.includes('setu-bridge');
+    const onNetra = path.includes('netra-incident');
 
     document.querySelectorAll('.nav-item-products').forEach(function(wrap) {
         const trigger = wrap.querySelector('.nav-products-trigger');
@@ -28,6 +29,10 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         if (onSetu) {
             const link = menu.querySelector('a[href*="setu-bridge"]');
+            if (link) link.classList.add('active');
+        }
+        if (onNetra) {
+            const link = menu.querySelector('a[href*="netra-incident"]');
             if (link) link.classList.add('active');
         }
 
