@@ -81,6 +81,42 @@ nav a.active {
     color: var(--primary-color);
 }
 
+/* Products nav — same hover/underline as other items; NEW badge uses a span (not ::after) */
+nav a.nav-products {
+    display: inline-flex;
+    align-items: center;
+    gap: 0;
+}
+
+nav a.nav-products .nav-badge {
+    display: inline-block;
+    margin-left: 6px;
+    background-color: var(--primary-color);
+    color: var(--dark-bg);
+    font-size: 9px;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: 700;
+    vertical-align: middle;
+    letter-spacing: 0.5px;
+    line-height: 1.2;
+    pointer-events: none;
+}
+
+nav a.nav-products:hover,
+nav a.nav-products:focus-visible {
+    color: var(--highlight-text);
+}
+
+nav a.nav-products.active {
+    color: var(--primary-color);
+}
+
+nav a.nav-products.active .nav-badge {
+    background-color: var(--highlight-text);
+    color: var(--dark-bg);
+}
+
 /* Mobile Menu Button */
 .mobile-menu-toggle {
     display: none;
@@ -143,6 +179,10 @@ nav a.active {
 
 .mobile-menu nav a {
     font-size: 1.2rem;
+}
+
+.mobile-menu nav a.nav-products {
+    justify-content: center;
 }
 
 /* Responsive Styles */

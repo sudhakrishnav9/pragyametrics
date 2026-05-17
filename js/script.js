@@ -12,6 +12,15 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // Keep Products nav highlighted on product pages; sync mobile + desktop
+    const path = window.location.pathname.replace(/\\/g, '/').toLowerCase();
+    const onProductsPage = path.includes('/products/');
+    if (onProductsPage) {
+        document.querySelectorAll('a.nav-products').forEach(function(link) {
+            link.classList.add('active');
+        });
+    }
+
     // Add data flow elements to the brain
     const brainWrapper = document.querySelector('.brain-wrapper');
     if (brainWrapper) {
