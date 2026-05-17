@@ -12,14 +12,72 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Keep Products nav highlighted on product pages; sync mobile + desktop
+    // Products dropdown — click to open; highlight current product
     const path = window.location.pathname.replace(/\\/g, '/').toLowerCase();
-    const onProductsPage = path.includes('/products/');
-    if (onProductsPage) {
-        document.querySelectorAll('a.nav-products').forEach(function(link) {
-            link.classList.add('active');
+    const onPragya = path.includes('pragya-cnc');
+    const onSetu = path.includes('setu-bridge');
+
+    document.querySelectorAll('.nav-item-products').forEach(function(wrap) {
+        const trigger = wrap.querySelector('.nav-products-trigger');
+        const menu = wrap.querySelector('.nav-products-dropdown');
+        if (!trigger || !menu) return;
+
+        if (onPragya) {
+            const link = menu.querySelector('a[href*="pragya-cnc"]');
+            if (link) link.classList.add('active');
+        }
+        if (onSetu) {
+            const link = menu.querySelector('a[href*="setu-bridge"]');
+            if (link) link.classList.add('active');
+        }
+
+        trigger.addEventListener('click', function(e) {
+            if (window.matchMedia('(min-width: 993px)').matches) {
+                e.preventDefault();
+                e.stopPropagation();
+                const isOpen = wrap.classList.toggle('is-open');
+                trigger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+            }
         });
-    }
+
+        menu.querySelectorAll('a').forEach(function(link) {
+            link.addEventListener('click', function(e) {
+                e.stopPropagation();
+                wrap.classList.remove('is-open');
+                trigger.setAttribute('aria-expanded', 'false');
+                if (mobileMenu && mobileMenu.classList.contains('active')) {
+                    mobileMenuToggle.classList.remove('active');
+                    mobileMenu.classList.remove('active');
+                    document.body.classList.remove('menu-open');
+                }
+            });
+            link.addEventListener('mousedown', function(e) {
+                e.stopPropagation();
+            });
+        });
+    });
+
+    document.addEventListener('click', function(e) {
+        if (e.target.closest('.nav-products-dropdown a')) {
+            return;
+        }
+        document.querySelectorAll('.nav-item-products.is-open').forEach(function(wrap) {
+            if (!wrap.contains(e.target)) {
+                wrap.classList.remove('is-open');
+                const t = wrap.querySelector('.nav-products-trigger');
+                if (t) t.setAttribute('aria-expanded', 'false');
+            }
+        });
+    });
+
+    document.addEventListener('keydown', function(e) {
+        if (e.key !== 'Escape') return;
+        document.querySelectorAll('.nav-item-products.is-open').forEach(function(wrap) {
+            wrap.classList.remove('is-open');
+            const t = wrap.querySelector('.nav-products-trigger');
+            if (t) t.setAttribute('aria-expanded', 'false');
+        });
+    });
 
     // Add data flow elements to the brain
     const brainWrapper = document.querySelector('.brain-wrapper');
