@@ -1,0 +1,972 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>From Work IQ to Machine IQ — PragyaMetrics Perspective</title>
+<meta name="description" content="PragyaMetrics white paper: From Work IQ to Machine IQ — Enabling the Future of Operational Intelligence." />
+<meta name="author" content="PragyaMetrics" />
+<link rel="canonical" href="https://pragyametrics.com/blogs/Work-IQ-to-Machine-IQ.html" />
+<link rel="icon" href="../images/brain128.png" type="image/png" />
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="PragyaMetrics" />
+<meta property="og:title" content="From Work IQ to Machine IQ — Enabling the Future of Operational Intelligence" />
+<meta property="og:description" content="A PragyaMetrics perspective on Federated Machine Intelligence: a governed operating model for turning approved industrial context into traceable decisions and bounded actions." />
+<meta property="og:url" content="https://pragyametrics.com/blogs/Work-IQ-to-Machine-IQ.html" />
+<meta property="og:image" content="https://pragyametrics.com/images/brain.png" />
+<meta property="og:locale" content="en_US" />
+<meta property="article:published_time" content="2026-08-08" />
+<meta property="article:modified_time" content="2026-08-09" />
+<meta property="article:author" content="PragyaMetrics" />
+<meta property="article:section" content="Operational Intelligence" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="From Work IQ to Machine IQ — Enabling the Future of Operational Intelligence" />
+<meta name="twitter:description" content="A PragyaMetrics perspective on Federated Machine Intelligence: governed industrial context, traceable decisions, bounded actions." />
+<meta name="twitter:image" content="https://pragyametrics.com/images/brain.png" />
+<style>
+  :root{
+    --paper:#f6f1e7; --paper-2:#fbf8f1; --ink:#263043; --navy:#0d2848; --blue:#1676c7;
+    --blue-2:#7da8c6; --green:#11a777; --green-dark:#087859; --mint:#e8f5ef; --orange:#e39a25;
+    --muted:#6d6f72; --line:#ded7c9; --card:#fbf8f0; --shadow:0 10px 28px rgba(45,52,60,.08);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,Segoe UI,Arial,sans-serif;line-height:1.6;font-size:17px}
+  body:before{content:"";position:fixed;inset:0 0 auto 0;height:4px;background:linear-gradient(90deg,var(--blue),var(--green));z-index:1000}
+  #progress{position:fixed;left:0;top:0;height:4px;width:0;background:linear-gradient(90deg,#58c6ff,#1dd39f);z-index:1001}
+  .shell{max-width:1120px;margin:0 auto;padding:0 34px 80px}
+  .menu-btn{position:fixed;left:18px;top:24px;z-index:999;border:0;background:rgba(246,241,231,.92);backdrop-filter:blur(10px);box-shadow:0 4px 15px rgba(0,0,0,.08);width:44px;height:44px;border-radius:12px;font-size:24px;color:var(--navy);cursor:pointer}
+  .drawer{position:fixed;left:16px;top:76px;width:300px;max-height:calc(100vh - 100px);overflow:auto;background:#fffdf7;border:1px solid var(--line);border-radius:14px;box-shadow:0 18px 45px rgba(26,39,50,.18);padding:12px;z-index:998;display:none}
+  .drawer.open{display:block}.drawer a{display:block;text-decoration:none;color:#334052;padding:8px 10px;border-radius:8px;font-size:14px}.drawer a:hover{background:#eef5f8;color:var(--blue)}
+  header.hero{padding:74px 0 34px;margin:0 0 20px;background:transparent;color:var(--ink);position:relative}
+  header.hero:after{display:none}
+  .eyebrow,.section-label{font-size:13px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--blue)}
+  .hero .eyebrow{color:var(--blue)}.hero h1{font-size:clamp(36px,5.2vw,58px);line-height:1.07;max-width:930px;margin:12px 0 18px;letter-spacing:-.03em;color:var(--navy)}.hero h1 span{color:var(--green)}
+  .hero .sub{font-size:20px;max-width:820px;color:#4e5965}.hero .meta{margin-top:28px;font-size:14px;color:#6f7479}
+  h2{color:var(--navy);font-size:clamp(29px,4vw,45px);line-height:1.12;letter-spacing:-.025em;margin:10px 0 20px} h3{color:var(--navy);font-size:23px;margin:24px 0 10px}
+  p{margin:0 0 20px}.lead{font-size:19px;font-weight:600}.in-one-line{border-left:4px solid #3fb98e;padding:7px 0 7px 18px;color:#62656a;font-style:italic;margin:18px 0 28px}.in-one-line strong{font-style:normal;color:var(--blue);font-size:12px;letter-spacing:.14em;text-transform:uppercase;margin-right:10px}
+  section{padding:42px 0}.quote{border-left:4px solid #3fb98e;padding:14px 20px;margin:28px 0;font-weight:800;font-size:25px;line-height:1.35;color:#1e2938}.quote:before{content:'“';display:block;color:#b9dfd2;font-size:40px;line-height:.3;margin-bottom:8px}
+  .callout{border-left:5px solid var(--blue);background:rgba(255,255,255,.48);border-radius:14px;padding:22px 25px;margin:28px 0}.callout.green{border-left-color:var(--green)}.callout.orange{border-left-color:var(--orange);background:#fff5df}.callout h4{margin:0 0 9px;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--blue)}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin:24px 0}.cards.four{grid-template-columns:repeat(4,1fr)}.card{background:rgba(255,255,255,.43);border:1px solid var(--line);border-radius:16px;padding:24px;box-shadow:0 3px 10px rgba(24,40,50,.03)}.card h3,.card h4{margin-top:0;font-size:20px}.card p:last-child{margin-bottom:0}
+  .stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin:24px 0}.stat{background:#fffaf2;border:1px solid var(--line);border-top:3px solid var(--blue);border-radius:16px;padding:20px}.stat:nth-child(even){border-top-color:var(--green)}.stat .big{font-weight:900;color:var(--navy);font-size:34px;line-height:1}.stat small{display:block;margin-top:12px;color:#676a70}
+  .hero-stats{background:transparent;border:0;padding:0;margin-top:30px}.hero-stats ul{padding-left:28px}.hero-stats li{margin:16px 0}.hero-stats li::marker{color:var(--green)}.hero-stat{background:linear-gradient(90deg,#f2efe5,#eaf3ed);border-radius:14px;padding:20px 24px;margin-top:22px;display:flex;gap:25px;align-items:center}.hero-stat b{font-size:38px;white-space:nowrap;color:var(--navy)}.hero-stat span{color:#4e5965}
+  .figure{background:rgba(255,255,255,.38);border:1px solid #e5ded0;border-radius:22px;box-shadow:var(--shadow);padding:30px;margin:34px 0}.figure-title{text-align:center;font-weight:800;color:var(--navy);font-size:21px}.figure-sub{text-align:center;color:#6a6d70;font-size:13px;margin-bottom:22px}.figcap{margin-top:20px;font-size:15px;color:#575d63}.figcap strong{color:var(--blue)}.so-what{color:var(--green-dark);font-weight:800;margin-top:4px;font-size:15px}
+  .dia-wrap{overflow-x:auto;overflow-y:hidden;margin:0 -6px;padding:0 6px 4px}
+  svg.dia{display:block;width:100%;height:auto;min-width:660px;font-family:Inter,Segoe UI,Arial,sans-serif;overflow:visible}
+  svg.dia text{fill:var(--ink)}
+  .dia .t-title{font-size:17px;font-weight:800;fill:var(--navy)}
+  .dia .t-node{font-size:14px;font-weight:700}
+  .dia .t-body{font-size:13px;fill:#5a6270}
+  .dia .t-micro{font-size:10.5px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;fill:#8a8681}
+  .dia .t-num{font-size:22px;font-weight:900;fill:var(--navy)}
+  .dia .t-inv{fill:#fff}
+  .dia .stroke-soft{stroke:#cfc6b6;fill:none}
+  .maturity-grid{display:grid;grid-template-columns:repeat(4,1fr);border-top:4px solid transparent;border-image:linear-gradient(90deg,#546374,#167bc8,#0faa78) 1;margin:25px 0}.maturity-col{padding:25px 20px;min-height:360px;border-right:1px solid var(--line)}.maturity-col:last-child{border-right:0}.badge{width:30px;height:30px;border-radius:50%;background:#525e6d;color:white;display:grid;place-items:center;font-weight:800}.maturity-col:nth-child(2) .badge{background:#167bc8}.maturity-col:nth-child(n+3) .badge{background:#0faa78}.you-are{color:#1a639d;font-size:12px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;margin-top:20px}
+
+  .table-wrap{overflow-x:auto;overflow-y:hidden;margin:26px -6px;padding:0 6px 4px}
+  table{width:100%;min-width:660px;border-collapse:separate;border-spacing:0;overflow:hidden;border-radius:18px;background:rgba(255,255,255,.35);margin:0;font-size:15px} th,td{padding:18px 20px;text-align:left;vertical-align:top;border-bottom:1px solid #e2dbcf} th{color:white;background:#0f2a4a} th:nth-child(2){background:#54575b} th:nth-child(3){background:#136fbd} th:nth-child(4){background:#10a979} tr:last-child td{border-bottom:0}td:first-child{font-weight:800;color:#323c49;width:18%}.machine-col{font-weight:650}
+  table caption{caption-side:top;text-align:left;font-size:14px;color:#5a6270;font-style:italic;padding:0 2px 10px}
+  .scroll-cue{display:none;font-size:12px;color:#6a6d70;font-style:italic;margin:-18px 0 22px}
+  .scroll-cue:before{content:"↔ ";font-style:normal}
+  .deeper{margin-top:15px;padding-top:15px;border-top:1px dashed #ddd5c7;font-size:15.5px;color:#454e5a}.deeper p{margin:0 0 14px}.deeper p:last-child{margin-bottom:0}.deeper h5{margin:18px 0 7px;font-size:15px;color:var(--navy);letter-spacing:-.01em}.deeper ul{margin:0 0 14px;padding-left:22px}.deeper li{margin:7px 0}.deeper li::marker{color:var(--green)}.deeper .tag{display:inline-block;background:#eef5f8;color:#1a639d;border-radius:5px;padding:1px 7px;font-size:12px;font-weight:800;margin-right:8px}
+  details{border:1px solid #ddd5c7;border-radius:12px;padding:12px 14px;margin:15px 0;background:rgba(255,255,255,.28)} summary{cursor:pointer;font-weight:800;color:#26384c;list-style:none} summary:before{content:"GO DEEPER";display:inline-block;background:var(--blue);color:white;border-radius:20px;padding:4px 9px;font-size:10px;letter-spacing:.09em;margin-right:12px} summary:after{content:"+";float:right;color:var(--blue);font-size:22px} details[open] summary:after{content:"–"}
+  .lighthouse{background:#0e2949;color:#eaf2f7;border-radius:26px;padding:38px;margin:34px 0}.lighthouse h2,.lighthouse h3{color:white}.lighthouse .section-label{color:#47d7b2}.phase-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.phase{background:#173654;border:1px solid #2b4b67;border-radius:15px;padding:22px}.phase .phase-label{color:#3fd5b0;font-weight:900;letter-spacing:.09em;font-size:12px}.phase h4{font-size:20px;margin:10px 0;color:#ffe7d1}.gates{background:#15314b;border-radius:14px;padding:22px;margin-top:18px}.gates h4{color:#ffe2b7;margin:0 0 8px}.gates li{margin:4px 0}.contact{margin-top:17px;font-weight:800}.contact a{color:#43d0a9}
+  .source-note{color:#6f6b66;font-style:italic}a.source-link{text-decoration:underline;text-underline-offset:2px}
+  .ref{display:grid;grid-template-columns:42px 1fr;gap:16px;padding:19px 0;border-bottom:1px solid #e1d9ca}.ref .num{color:var(--blue);font-weight:900}.ref p{margin:0}.source-link{color:#3d6485}.method-note{font-size:14px;color:#6f6b66;font-style:italic;margin:24px 0}
+  footer{margin:48px 0 0;background:#0d2848;color:#d9e5ec;border-radius:28px;padding:44px 50px;text-align:center}.mark{width:54px;height:54px;margin:0 auto 22px;background:linear-gradient(135deg,#118dc5,#13ae78);border-radius:12px}.footer-title{font-size:25px;font-weight:900;color:#f2e6d8}.footer-title span{color:#2cc18e}.footer-line{width:75px;height:3px;background:#2bbf91;margin:20px auto}.footer-copy{max-width:710px;margin:0 auto}.copyright{font-size:12px;color:#9eafbd;margin-top:18px}
+  sup a{text-decoration:none;color:var(--blue);font-weight:800}
+  @media(max-width:850px){.shell{padding:0 20px 60px}.menu-btn{left:8px}.cards,.cards.four,.stat-grid,.phase-grid,.maturity-grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:560px){body{font-size:16px}.cards,.cards.four,.stat-grid,.phase-grid,.maturity-grid{grid-template-columns:1fr}.hero-stats{padding:18px}.hero-stat{display:block}.hero-stat b{display:block;margin-bottom:10px}.figure{padding:18px}.quote{font-size:21px}.lighthouse{padding:24px}.drawer{left:8px;right:8px;width:auto}.scroll-cue{display:block}}
+
+  @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+
+  @media print{
+    @page{margin:16mm}
+    html{scroll-behavior:auto}
+    body{background:#fff;font-size:11pt}
+    body:before,#progress,.menu-btn,.drawer,.scroll-cue{display:none!important}
+    .shell{max-width:none;padding:0}
+    section{padding:18pt 0;break-inside:auto}
+    h2,h3,.figure-title{break-after:avoid}
+    .card,.stat,.phase,.ref,.figure,.callout,.quote,.in-one-line,.maturity-col{break-inside:avoid}
+    .table-wrap{overflow:visible}table{min-width:0;font-size:9.5pt;break-inside:auto}tr{break-inside:avoid}
+    details{break-inside:avoid}details summary:after{content:""}details:not([open]) .deeper{display:none}
+    .lighthouse{background:#fff;color:#000;border:1pt solid #0e2949;border-radius:0}
+    .lighthouse h2,.lighthouse h3,.lighthouse h4{color:#0e2949}
+    .lighthouse .phase{background:#fff;border:.5pt solid #7b8ea1}
+    .lighthouse .phase h4{color:#0e2949}
+    .lighthouse .gates{background:#f2f2f2}
+    .lighthouse .gates h4,.lighthouse p,.lighthouse li,.lighthouse .contact{color:#1a1a1a}
+    .lighthouse .contact a,.lighthouse .section-label{color:#0e2949}
+    footer{background:#fff;color:#1a1a1a;border-top:1pt solid #0d2848;border-radius:0;padding:18pt 0}
+    .footer-title,.footer-title span,.copyright{color:#0d2848}
+    a.source-link:after,.ref a[href^="http"]:after{content:" (" attr(href) ")";font-size:8.5pt;color:#444;word-break:break-all}
+    sup a:after{content:""}
+  }
+</style>
+</head>
+<body>
+<div id="progress"></div>
+<button class="menu-btn" id="menuBtn" aria-label="Open section navigation" aria-expanded="false" aria-controls="drawer">☰</button>
+<nav class="drawer" id="drawer" aria-label="Sections of this white paper">
+  <a href="#overview">Overview</a><a href="#s1">01 — Executive Summary</a><a href="#s2">02 — The Three Eras of Intelligence</a><a href="#s3">03 — Industrial Intelligence Gap</a><a href="#s4">04 — Why Now</a><a href="#s5">05 — Research Inspiration</a><a href="#s6">06 — Federated Machine Intelligence</a><a href="#s7">07 — Inside Machine IQ</a><a href="#s8">08 — Machine IQ in Action</a><a href="#s9">09 — Cross-Industry Use Cases</a><a href="#s10">10 — Adoption Realities</a><a href="#s11">11 — Maturity Model</a><a href="#s12">12 — The Eras Compared</a><a href="#s13">13 — Strategic Vision</a><a href="#references">References</a>
+</nav>
+<div class="shell">
+<main id="content">
+<header class="hero" id="overview">
+  <div class="eyebrow">PragyaMetrics Perspective · 2026 · v2.3</div>
+  <h1>From Work IQ to Machine IQ — <span>Enabling the Future of Operational Intelligence.</span></h1>
+  <p class="sub">PragyaMetrics is developing <strong>Federated Machine Intelligence</strong> — a governed operating model for turning approved industrial context into traceable decisions and bounded actions.</p>
+  <div class="hero-stats">
+    <ul>
+      <li><strong>The evidence.</strong> Published industrial research reports that mature predictive-maintenance programs can reduce machine downtime by <strong>30–50%</strong> and extend machine life by <strong>20–40%</strong>, with results depending on the asset, baseline, data quality, and operating discipline.<sup><a href="#ref-3">[3]</a></sup></li>
+      <li><strong>The call to action.</strong> Prove it through a <strong>12-week Machine IQ Lighthouse Program</strong>: baseline one high-cost problem, connect one line or segment, validate recommendations in shadow mode, and finish with measured evidence and a scale, redesign, or stop decision.</li>
+    </ul>
+    <div class="hero-stat"><b>$1.4 trillion</b><span>Siemens’ extrapolated estimate for the world’s 500 biggest companies — about 11% of revenue, based on research covering April 2019 to March 2023.<sup><a href="#ref-1">[1]</a></sup></span></div>
+    <p style="margin:18px 0 0;color:#77736d;font-style:italic">Short on time? The nine diagrams tell the whole story on their own — skim <strong>Figures 1–9</strong>. Want depth? Expand any “Go deeper” panel as you read.</p>
+    <p style="font-size:12px;color:#6f6b66;margin-top:18px">† “Machine IQ” is used here as PragyaMetrics’ label for an operational intelligence outcome. The term has prior commercial uses, including Bobcat’s telematics platform and an Australian industrial-automation consultancy.<sup><a href="#ref-11">[11]</a></sup> <strong>Federated Machine Intelligence</strong> is the operating model proposed in this paper; category and trademark claims require independent legal review.</p>
+  </div>
+</header>
+
+<section id="s1">
+  <div class="section-label">01 — Executive Summary</div>
+  <h2>The next era of enterprise AI is not about finding answers — it is about operations that can interpret their own state.</h2>
+  <div class="in-one-line"><strong>In one line</strong> Enterprise intelligence is moving from helping people search and work to making the operation itself intelligent — the paradigm PragyaMetrics calls Machine IQ, delivered through Federated Machine Intelligence.</div>
+  <p class="lead">For two decades, enterprises invested in intelligence that helped people search and work better. The next frontier is different: governed intelligence built around the machines, processes, and networks that run industrial operations. PragyaMetrics calls the desired outcome <strong>Machine IQ</strong> and proposes <strong>Federated Machine Intelligence</strong> as an operating model for delivering it.</p>
+  <p>Microsoft’s Work IQ represents a genuine milestone. It provides permission-aware semantic context across Microsoft 365, connected business systems, tools, workspaces, and agents, and supports governed actions through standard interfaces.<sup><a href="#ref-12">[12]</a></sup> Industrial operations add constraints that workplace systems were not designed around by default: sensor and control data, deterministic safety, edge continuity, strict latency, engineering semantics, and long-lived OT assets.</p>
+  <p>The industrial enterprise faces a structural problem: <strong>fragmented systems cannot produce a shared understanding.</strong> Each system — ERP, MES, SCADA, PLM, CMMS, IIoT — sees a fragment. None sees the whole. The result is reactive operations, duplicated effort, and decisions made on stale or incomplete pictures of reality. Federated Machine Intelligence addresses this by letting specialized systems collaborate through a shared operational workspace while keeping data and governance where they belong — at the edge, in the plant, on the network, inside the enterprise boundary.</p>
+</section>
+
+<section id="s2">
+  <div class="section-label">02 — The Three Eras of Intelligence</div>
+  <h2>Search found information. Work organized context. Machine intelligence moves the center of gravity to operations.</h2>
+  <div class="in-one-line"><strong>In one line</strong> The three eras are overlapping layers with different centers of gravity — Machine IQ is an industrial specialization, not a replacement for what came before.</div>
+  <p>Industrial operations are distributed across systems built in different decades by different vendors for different purposes.</p>
+  <p>Work IQ and Machine IQ are best understood as overlapping layers with different centers of gravity. The evolution proposed here is not a replacement; it is an industrial specialization for the plant floor, field, network core, and grid edge.</p>
+  <div class="quote">Search IQ found knowledge. Work IQ organized work. Machine IQ understands operations.</div>
+  <p>Consider the analogy of a hospital. Search IQ is the medical library — essential, but passive. Work IQ is the clinical coordination system — who is treating whom, with what history, in which ward. Machine IQ is the continuous monitoring of patients, instruments, and protocols — sensing, correlating, predicting, and recommending before a crisis emerges. Industrial enterprises need all three levels. Figure 1 presents this as PragyaMetrics’ conceptual progression from retrieval to workplace context to governed operational intelligence.</p>
+  <div class="figure">
+    <div class="figure-title">The Three Eras of Intelligence</div><div class="figure-sub">Organizational intelligence evolves — and operational leverage rises with each era</div>
+    <div class="dia-wrap">
+    <svg class="dia" viewBox="0 0 980 440" role="img" aria-labelledby="f1t f1d">
+      <title id="f1t">The three eras of enterprise intelligence</title>
+      <desc id="f1d">An ascending path across three stations: Search IQ asks where the information is, Work IQ asks how work gets done, and Machine IQ asks what operations are saying and what should be done.</desc>
+      <defs>
+        <linearGradient id="f1grad" x1="0" y1="1" x2="1" y2="0">
+          <stop offset="0%" stop-color="#9aa4ae"/><stop offset="45%" stop-color="#1676c7"/><stop offset="100%" stop-color="#11a777"/>
+        </linearGradient>
+        <radialGradient id="f1b1" cx="35%" cy="28%"><stop offset="0%" stop-color="#697380"/><stop offset="100%" stop-color="#414c58"/></radialGradient>
+        <radialGradient id="f1b2" cx="35%" cy="28%"><stop offset="0%" stop-color="#3e97e0"/><stop offset="100%" stop-color="#1163ab"/></radialGradient>
+        <radialGradient id="f1b3" cx="35%" cy="28%"><stop offset="0%" stop-color="#2fc79a"/><stop offset="100%" stop-color="#0a8c63"/></radialGradient>
+        <filter id="f1sh" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#2d343c" flood-opacity="0.16"/></filter>
+        <marker id="f1arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#11a777"/></marker>
+      </defs>
+
+      <path d="M50 214 Q250 202 490 148 T928 92" fill="none" stroke="url(#f1grad)" stroke-width="5" stroke-linecap="round" marker-end="url(#f1arrow)" opacity=".9"/>
+      <text class="t-micro" x="928" y="66" text-anchor="end">increasing operational leverage</text>
+
+      <!-- Era 1 -->
+      <g filter="url(#f1sh)"><circle cx="170" cy="190" r="55" fill="url(#f1b1)"/></g>
+      <text class="t-node t-inv" x="170" y="186" text-anchor="middle">Search IQ</text>
+      <text class="t-inv" x="170" y="206" text-anchor="middle" font-size="11.5" opacity=".82">Era 1</text>
+      <rect x="28" y="256" width="284" height="116" rx="16" fill="#fbf7ef" stroke="#b6a99a" stroke-width="2"/>
+      <text class="t-micro" x="170" y="282" text-anchor="middle">Guiding question</text>
+      <text class="t-node" x="170" y="312" text-anchor="middle">“Where is the</text>
+      <text class="t-node" x="170" y="334" text-anchor="middle">information?”</text>
+      <text class="t-body" x="170" y="404" text-anchor="middle" font-size="12.5">Web &amp; enterprise search</text>
+
+      <!-- Era 2 -->
+      <g filter="url(#f1sh)"><circle cx="490" cy="145" r="55" fill="url(#f1b2)"/></g>
+      <text class="t-node t-inv" x="490" y="141" text-anchor="middle">Work IQ</text>
+      <text class="t-inv" x="490" y="161" text-anchor="middle" font-size="11.5" opacity=".85">Era 2</text>
+      <rect x="348" y="256" width="284" height="116" rx="16" fill="#fbf7ef" stroke="#b6a99a" stroke-width="2"/>
+      <text class="t-micro" x="490" y="282" text-anchor="middle">Guiding question</text>
+      <text class="t-node" x="490" y="312" text-anchor="middle">“How do I get my</text>
+      <text class="t-node" x="490" y="334" text-anchor="middle">work done?”</text>
+      <text class="t-body" x="490" y="404" text-anchor="middle" font-size="12.5">Workplace copilots (e.g., Microsoft 365 Copilot)</text>
+
+      <!-- Era 3 -->
+      <g filter="url(#f1sh)"><circle cx="810" cy="100" r="55" fill="url(#f1b3)"/></g>
+      <text class="t-node t-inv" x="810" y="96" text-anchor="middle">Machine IQ</text>
+      <text class="t-inv" x="810" y="116" text-anchor="middle" font-size="11.5" opacity=".85">Era 3</text>
+      <rect x="668" y="256" width="284" height="116" rx="16" fill="#eef9f4" stroke="#49b996" stroke-width="2.5"/>
+      <text class="t-micro" x="810" y="280" text-anchor="middle" fill="#0a8c63">Guiding question</text>
+      <text class="t-node" x="810" y="306" text-anchor="middle">“What are my operations</text>
+      <text class="t-node" x="810" y="328" text-anchor="middle">telling me — and what</text>
+      <text class="t-node" x="810" y="350" text-anchor="middle">should we do?”</text>
+      <text class="t-body" x="810" y="404" text-anchor="middle" font-size="12.5">PragyaMetrics · Federated Machine Intelligence</text>
+    </svg>
+    </div>
+    <div class="figcap"><strong>Figure 1</strong> &nbsp; PragyaMetrics’ conceptual progression from information retrieval to workplace context to governed operational intelligence.</div>
+    <div class="so-what">So what — industrial intelligence adds domain and safety requirements beyond workplace copilots.</div>
+  </div>
+</section>
+
+<section id="s3">
+  <div class="section-label">03 — The Industrial Intelligence Gap</div>
+  <h2>Factories, networks, and grids do not run on emails and documents — and neither should their intelligence.</h2>
+  <div class="in-one-line"><strong>In one line</strong> The gap is not a data shortage but a context-fragmentation failure; Siemens estimates the broader cost of unplanned downtime across the world’s 500 biggest companies at almost $1.4 trillion annually.</div>
+  <p class="lead">The industrial intelligence gap is not a technology shortage. It is an <strong>integration failure of cognition</strong> — dozens of systems each holding a piece of operational truth, none able to assemble a coherent picture of what is happening, what will happen, and what should be done about it.</p>
+  <p>Walk through any major industrial site and you will find the same architectural pattern. ERP knows what was ordered and what was invoiced. MES knows what was produced and when. SCADA knows what the equipment is doing right now. PLM knows how the product was designed to be built. CMMS knows what was maintained and when. IIoT platforms know what the sensors are reading. Engineering document systems know what the original specifications required. Each system is competent within its domain. Together, they are blind.</p>
+  <p>The gap manifests in predictable ways. Maintenance teams respond to failures instead of preventing them. Quality engineers investigate defects after batches ship. Operations leaders reconcile conflicting reports from different systems before they can trust a single dashboard. Digital transformation programs stall not because sensors were not installed, but because the data from those sensors never joined the context that would make it meaningful — the maintenance history, the design tolerances, the production schedule, the operator notes.</p>
+  <p>This is not a data volume problem. Industrial enterprises have been generating terabytes for years. It is a <strong>context fragmentation problem.</strong> Intelligence requires not just data, but the relationships between data — the causal links between a bearing temperature trend, a lubrication schedule, a production speed change, and a design specification revision. Those relationships are not stored in any single system. They must be constructed, continuously, from federated sources.</p>
+  <p>The cost of this gap is not abstract, but the available figures require care. Siemens’ 2024 report estimates that unplanned downtime costs the world’s 500 biggest companies almost <strong>$1.4 trillion annually, about 11% of revenue.</strong> The estimate extrapolates from 181 interviews with industrial organizations conducted between April 2019 and March 2023, together with public company information.<sup><a href="#ref-1">[1]</a></sup> The figure indicates scale; it does not substitute for an enterprise’s own downtime baseline.</p>
+  <div class="stat-grid"><div class="stat"><div class="big">$1.4T</div><small>Siemens’ extrapolated annual estimate for the world’s 500 biggest companies <sup><a href="#ref-1">[1]</a></sup></small></div><div class="stat"><div class="big">181</div><small>Industrial interviews underlying the Siemens estimate, covering Apr 2019–Mar 2023 <sup><a href="#ref-1">[1]</a></sup></small></div><div class="stat"><div class="big">30–50%</div><small>Typical machine-downtime reduction reported by McKinsey <sup><a href="#ref-3">[3]</a></sup></small></div><div class="stat"><div class="big">20–40%</div><small>Typical increase in machine life reported by McKinsey <sup><a href="#ref-3">[3]</a></sup></small></div></div>
+  <p style="font-size:13px;color:#73716d;font-style:italic">Sources: Siemens, <em>The True Cost of Downtime 2024</em>; McKinsey & Company, manufacturing analytics research. Figures are directional and baseline-dependent. Full primary links appear in the References section.</p>
+  <p>McKinsey’s analytics research reports that predictive maintenance can reduce machine downtime by 30–50% and extend machine life by 20–40% in mature programs.<sup><a href="#ref-3">[3]</a></sup> Achieving those ranges depends on data quality, failure-mode coverage, maintenance execution, operator adoption, and the starting baseline.</p>
+  <div class="callout orange"><h4>The Gap</h4><strong>Disconnected intelligence is no intelligence at all.</strong> An enterprise with twenty smart systems and zero shared context has twenty opinions — not one understanding.</div>
+  <div class="figure">
+    <div class="figure-title">The Industrial Intelligence Gap</div><div class="figure-sub">Fragmented sources each see a fragment — governed federation assembles a shared picture</div>
+    <div class="dia-wrap">
+    <svg class="dia" viewBox="0 0 980 450" role="img" aria-labelledby="f2t f2d">
+      <title id="f2t">The industrial intelligence gap</title>
+      <desc id="f2d">On the left, seven source systems sit at angles with broken links between them. A jagged fracture in the centre marks the intelligence gap. On the right, a governed workspace connects production, quality, maintenance and supply into one operational view.</desc>
+      <defs>
+        <filter id="f2sh" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#2d343c" flood-opacity="0.13"/></filter>
+        <radialGradient id="f2core" cx="35%" cy="28%"><stop offset="0%" stop-color="#2fc79a"/><stop offset="100%" stop-color="#0a8c63"/></radialGradient>
+        <marker id="f2tip" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#2f9e7c"/></marker>
+      </defs>
+
+      <!-- LEFT: siloed systems -->
+      <text class="t-micro" x="200" y="34" text-anchor="middle">Siloed source systems</text>
+      <g class="silochips" font-size="13.5" font-weight="700" text-anchor="middle">
+        <g transform="translate(95,102) rotate(-6)"><rect x="-56" y="-19" width="112" height="38" rx="9" fill="#faf5ec" stroke="#8a8178" stroke-width="2"/><text y="5">ERP</text></g>
+        <g transform="translate(232,88) rotate(5)"><rect x="-56" y="-19" width="112" height="38" rx="9" fill="#faf5ec" stroke="#8a8178" stroke-width="2"/><text y="5">SCADA</text></g>
+        <g transform="translate(98,178) rotate(4)"><rect x="-56" y="-19" width="112" height="38" rx="9" fill="#faf5ec" stroke="#8a8178" stroke-width="2"/><text y="5">MES</text></g>
+        <g transform="translate(243,172) rotate(-7)"><rect x="-56" y="-19" width="112" height="38" rx="9" fill="#faf5ec" stroke="#8a8178" stroke-width="2"/><text y="5">IIoT</text></g>
+        <g transform="translate(88,256) rotate(-5)"><rect x="-56" y="-19" width="112" height="38" rx="9" fill="#faf5ec" stroke="#8a8178" stroke-width="2"/><text y="5">PLM</text></g>
+        <g transform="translate(233,252) rotate(6)"><rect x="-56" y="-19" width="112" height="38" rx="9" fill="#faf5ec" stroke="#8a8178" stroke-width="2"/><text y="5">CMMS</text></g>
+        <g transform="translate(160,330) rotate(-3)"><rect x="-56" y="-19" width="112" height="38" rx="9" fill="#faf5ec" stroke="#8a8178" stroke-width="2"/><text y="5">Docs</text></g>
+      </g>
+      <g stroke="#b3aa9e" stroke-width="1.6" stroke-dasharray="5 6" fill="none">
+        <path d="M152 100 L176 94"/><path d="M110 128 L112 152"/><path d="M232 112 L240 148"/>
+        <path d="M152 180 L186 176"/><path d="M100 204 L92 230"/><path d="M232 276 L190 312"/>
+      </g>
+      <g stroke="#c9705a" stroke-width="2" stroke-linecap="round">
+        <path d="M160 92 l8 8 M168 92 l-8 8"/><path d="M107 136 l8 8 M115 136 l-8 8"/><path d="M232 126 l8 8 M240 126 l-8 8"/>
+        <path d="M165 174 l8 8 M173 174 l-8 8"/><path d="M92 212 l8 8 M100 212 l-8 8"/><path d="M207 290 l8 8 M215 290 l-8 8"/>
+      </g>
+      <text class="t-body" x="200" y="386" text-anchor="middle" font-size="12.5">Each system sees only a fragment</text>
+
+      <!-- CENTRE: the gap -->
+      <path d="M400 58 L386 150 L404 150 L388 250 L406 250 L392 352" fill="none" stroke="#e39a25" stroke-width="3" stroke-linecap="round" opacity=".55"/>
+      <g fill="#e39a25"><path d="M405 108 L383 158 L398 158 L389 200 L415 146 L399 146 Z"/><path d="M405 226 L383 276 L398 276 L389 318 L415 264 L399 264 Z"/></g>
+      <text class="t-micro" x="396" y="382" text-anchor="middle" fill="#9e6f1f">Intelligence</text>
+      <text class="t-micro" x="396" y="398" text-anchor="middle" fill="#9e6f1f">gap</text>
+
+      <!-- RIGHT: governed view -->
+      <rect x="466" y="52" width="480" height="322" rx="28" fill="#edf8f2" stroke="#43af8a" stroke-width="3"/>
+      <g stroke="#2f9e7c" stroke-width="2" fill="none" marker-end="url(#f2tip)">
+        <path d="M660 176 L600 132"/><path d="M760 176 L818 136"/><path d="M660 254 L602 300"/><path d="M760 254 L816 296"/>
+      </g>
+      <g filter="url(#f2sh)"><circle cx="710" cy="215" r="66" fill="url(#f2core)"/></g>
+      <text class="t-node t-inv" x="710" y="211" text-anchor="middle">PragyaMetrics</text>
+      <text class="t-inv" x="710" y="230" text-anchor="middle" font-size="10.5" opacity=".88">governed context</text>
+      <g font-size="12.5" font-weight="700" text-anchor="middle">
+        <g transform="translate(556,116)"><rect x="-58" y="-18" width="116" height="36" rx="9" fill="#faf6ef" stroke="#9fbfae" stroke-width="1.8"/><text y="5">Production</text></g>
+        <g transform="translate(862,118)"><rect x="-52" y="-18" width="104" height="36" rx="9" fill="#faf6ef" stroke="#9fbfae" stroke-width="1.8"/><text y="5">Quality</text></g>
+        <g transform="translate(556,316)"><rect x="-62" y="-18" width="124" height="36" rx="9" fill="#faf6ef" stroke="#9fbfae" stroke-width="1.8"/><text y="5">Maintenance</text></g>
+        <g transform="translate(860,314)"><rect x="-50" y="-18" width="100" height="36" rx="9" fill="#faf6ef" stroke="#9fbfae" stroke-width="1.8"/><text y="5">Supply</text></g>
+      </g>
+      <text class="t-body" x="710" y="404" text-anchor="middle" font-size="12.5">One governed operational view</text>
+    </svg>
+    </div>
+    <div class="figcap"><strong>Figure 2</strong> &nbsp; PragyaMetrics’ proposed pattern for assembling governed context across fragmented industrial systems.</div>
+    <div class="so-what">So what — federation is one response to fragmentation, subject to integration and governance evidence.</div>
+  </div>
+</section>
+
+<section id="s4">
+  <div class="section-label">04 — Why Now</div>
+  <h2>Industrial connectivity, applied AI, workforce pressure, and operating economics are converging.</h2>
+  <div class="in-one-line"><strong>In one line</strong> Better sensing and edge capability, rapidly developing agent systems, retiring expertise, and margin pressure make governed operational intelligence increasingly practical and strategically relevant.</div>
+  <p class="lead">Operational intelligence in the plant is not a new idea. What has changed is the combination of connected assets, improved edge and cloud infrastructure, stronger analytical models, and growing pressure to preserve engineering knowledge. Readiness still varies by site, asset class, data quality, and safety requirements.</p>
+  <div class="cards four"><div class="card"><h3>Sensing and compute improved</h3><p>Industrial sensing, connectivity, and edge compute are more capable and accessible than in earlier deployment cycles. The remaining cost and difficulty still vary sharply across brownfield assets, protocols, safety zones, and data-quality conditions.</p></div><div class="card"><h3>Agent systems are advancing</h3><p>Large models and multi-agent systems are moving from demonstrations into bounded deployments. Recent preprint surveys document collaboration-centric approaches and Industry 5.0 use cases, while also identifying open coordination and governance challenges.<sup><a href="#ref-8">[8]</a></sup></p></div><div class="card"><h3>Experience is walking out the door</h3><p>As experienced engineers, operators, and maintenance specialists retire or change roles, decades of undocumented operational judgment leave with them. Intelligence that captures and federates that know-how is now a continuity requirement, not a nicety.</p></div><div class="card"><h3>Downtime is financially material</h3><p>Siemens estimates that unplanned downtime is equivalent to roughly 11% of revenue across the world’s 500 biggest companies.<sup><a href="#ref-1">[1]</a></sup> Every business case should replace that industry estimate with asset-level cost and failure-history data.</p></div></div>
+  <p>These four forces converge to justify disciplined experimentation: start where the operational loss is measurable, the data path is governable, and domain experts can validate recommendations. The case for action should be earned through evidence rather than assumed from technology trends.</p>
+  <p>The practical question is whether a specific operation has a valuable use case, sufficient data, a safe deployment boundary, and accountable owners to move from experiment to production.</p>
+</section>
+
+<section id="s5">
+  <div class="section-label">05 — Research Inspiration</div>
+  <h2>A shared-workspace model offers a useful design analogy for coordinating specialized operational systems.</h2>
+  <div class="in-one-line"><strong>In one line</strong> Research from cognitive science and model interpretability motivates the design pattern; it does not prove a specific industrial architecture or product.</div>
+  <p class="lead">The Shared Machine Workspace draws design inspiration from <strong>Global Workspace Theory.</strong> Proposed by Bernard Baars in 1988, the theory describes specialized processors whose information becomes globally available through a shared workspace.<sup><a href="#ref-6">[6]</a></sup> Dehaene, Kerszberg, and Changeux later proposed a Global Neuronal Workspace with distributed, long-range connections.<sup><a href="#ref-7">[7]</a></sup> PragyaMetrics uses this as an architectural analogy: specialized systems can coordinate when approved context is made available through a governed shared layer.</p>
+  <p>In July 2026, Anthropic published <em>Verbalizable Representations Form a Global Workspace in Language Models.</em> The work identifies a small, privileged set of internal representations — “J-space,” surfaced through a “Jacobian Lens” — with functional properties associated with a global workspace.<sup><a href="#ref-5">[5]</a></sup> J-space accounts for less than 10% of activation variance in a layer; ablation severely reduced performance on selected internal-reasoning evaluations while leaving many routine capabilities relatively intact. This is evidence about model internals, not validation of an industrial integration architecture.</p>
+  <div class="callout green"><h4>An engineering principle, not a consciousness claim</h4>Global Workspace Theory was formulated to explain conscious access in humans, and it is tempting to over-read the parallel. We do not. Anthropic is explicit that its finding is a <em>functional</em> claim about how information is organized and shared — not a claim about machine consciousness or experience. PragyaMetrics adopts the workspace strictly as an <strong>architectural principle:</strong> shared, broadcastable context is how specialized systems produce coordinated intelligence. We treat the finding as <strong>inspiration and directional evidence, not architectural proof</strong> of any specific product — and nothing in this paper asserts that machines are, or become, conscious.</div>
+  <p>Microsoft describes Work IQ as a permission-aware workplace intelligence layer spanning Microsoft 365 and connected business systems.<sup><a href="#ref-12">[12]</a></sup> PragyaMetrics sees a conceptual parallel, not an official Microsoft claim: both approaches make governed context available to specialized tools and agents. The industrial proposal additionally treats SCADA, MES, PLM, CMMS, IIoT, historians, and engineering systems as domain sources with distinct safety, latency, and ownership constraints.</p>
+  <p>The <strong>Shared Machine Workspace</strong> is the proposed coordination layer. A vibration anomaly could request approved context from CMMS on recent maintenance, from PLM on design tolerances, from MES on production load, and from SCADA or a historian on operating conditions. A workspace can make coordination more explicit and inspectable, but policy compliance and auditability require identity, authorization, provenance, logging, retention, and action controls; they do not arise automatically from shared context.<sup><a href="#ref-8">[8]</a></sup></p>
+  <div class="callout"><h4>What a shared workspace does — and does not — do</h4>Intellectual honesty matters here. A Shared Machine Workspace does <strong>not</strong> make any individual model or agent inherently smarter. What it improves is <strong>shared context, auditability, traceability, and explainability</strong> across the operation — the ability to see why a conclusion was reached, from which sources, under which governance. The progression from retrieval (RAG) to agents to a shared workspace is a progression in <em>coordination and accountability</em>, not a claim of superhuman reasoning. That distinction is precisely what makes the architecture defensible to a CTO.</div>
+  <p>Fully centralized architectures can be unsuitable where latency, sovereignty, bandwidth, safety zoning, or continuity require local processing. Federation is not an absolute ban on central services: each deployment must define which raw records, derived features, events, model updates, and recommendations may cross each boundary and under what policy.</p>
+  <details><summary>RAG 1.0 → Agents 2.0 → Workspace 3.0, honestly</summary>
+    <div class="deeper">
+      <p>The three generations are often sold as a ladder of raw capability. They are better understood as a ladder of <em>context assembly</em> — and each rung buys something specific at a specific cost.</p>
+      <h5><span class="tag">RAG 1.0</span> Retrieval grounds a model in documents</h5>
+      <p>Strength: cheap, fast, and auditable at the passage level — you can point at the paragraph that produced the answer. Limit in industry: operational truth is mostly not written down. It is streaming, numeric, time-ordered, and often only meaningful relative to an asset’s own history. A retriever tuned for prose does not natively reason about a bearing’s vibration spectrum over six weeks.</p>
+      <h5><span class="tag">Agents 2.0</span> Tools, memory, and a plan</h5>
+      <p>Strength: an agent can query a historian, join a maintenance record, run a calculation, and draft a work order rather than merely describing one. Limit: each agent assembles its own private context. Two agents can reach contradictory conclusions about the same asset from the same plant, and neither can show the other why. Private context also means private failure — an error in one agent’s picture of the world is invisible until it surfaces as a bad recommendation.</p>
+      <h5><span class="tag">Workspace 3.0</span> A shared, governed context layer</h5>
+      <p>What a workspace adds is not reasoning power. It is a common, permissioned, provenance-carrying record of what is currently believed about the operation, who contributed each belief, on what evidence, and with what confidence. Contradiction becomes visible instead of silent. That is a coordination and accountability gain, not an intelligence gain — and it is the honest way to describe it.<sup><a href="#ref-8">[8]</a></sup></p>
+      <h5>The failure modes a workspace introduces</h5>
+      <p>Shared context is not free. A workspace can propagate a confident wrong inference faster than any single agent could, and broad subscriptions can turn one bad sensor into a plant-wide false narrative. The controls that matter:</p>
+      <ul>
+        <li><strong>Time-to-live on published beliefs</strong> — an anomaly assessment expires unless refreshed, so stale claims stop steering decisions.</li>
+        <li><strong>Source-scoped subscriptions</strong> — agents subscribe to the signals they are accountable for, not to everything.</li>
+        <li><strong>Mandatory provenance and confidence</strong> on every published claim; unattributed assertions are rejected at write time.</li>
+        <li><strong>A contradiction log</strong> — conflicting conclusions are recorded and routed to a human, never silently resolved by recency or precedence.</li>
+      </ul>
+      <p>None of these arise from shared context automatically. They are product requirements to build and test.</p>
+    </div>
+  </details>
+  <div class="quote">A single system sees a signal. A shared workspace sees a story.</div>
+</section>
+
+<section id="s6">
+  <div class="section-label">06 — The PragyaMetrics Vision: Federated Machine Intelligence</div>
+  <h2>Federated Machine Intelligence is the proposed operating model; Machine IQ is the intended outcome.</h2>
+  <div class="in-one-line"><strong>In one line</strong> Federation lets autonomous domains collaborate under shared governance while retaining local control over data and operations where required.</div>
+  <p class="lead">PragyaMetrics proposes <strong>Federated Machine Intelligence</strong> as an architectural and operating model in which machines, processes, systems, and governed agents share approved context without assuming that every raw operational record must move to one central platform.</p>
+  <p>The word <em>federated</em> is deliberate. In enterprise architecture, federation means autonomous domains cooperating under shared governance — not a single authority absorbing everything. In the industrial context, federation means a plant in Pune and a plant in Ohio each maintain sovereign control over their data and operations, while sharing intelligence patterns, anomaly models, and operational context through a common workspace. It means an energy utility’s grid operations center and its field substations each process local intelligence, while contributing to a network-wide understanding of load, risk, and capacity.</p>
+  <p>Federated Machine Intelligence rests on three principles. <strong>Process locally where constraints require it.</strong> Latency-sensitive, safety-relevant, regulated, or high-volume workloads may remain in the plant, edge device, or enterprise boundary. <strong>Share only governed context.</strong> Every deployment defines which events, derived features, model updates, recommendations, and records may cross each boundary. <strong>Learn only from validated outcomes.</strong> Feedback improves the system only when ground truth, operator review, data quality, and model controls prevent errors from being amplified.</p>
+  <p>The model borrows one idea from <strong>federated learning:</strong> distributed participants can train a shared model while raw training records generally remain local.<sup><a href="#ref-9">[9]</a></sup> Research applies this pattern to IoT and distributed industrial settings.<sup><a href="#ref-10">[10]</a></sup> Federated learning is not automatically private or secure; gradients and model updates can leak information or be poisoned unless additional protections are used.<sup><a href="#ref-13">[13]</a></sup> Federated Machine Intelligence extends the locality principle as a design proposal, not as a result proven by federated-learning research.</p>
+  <p>Machine IQ is what this architecture produces. It is not a score or a metric in the abstract — it is the lived capability of an operation to sense its own state, understand its own patterns, predict its own failures, and prescribe its own improvements. An enterprise with high operational intelligence does not wait for a human to ask the right question. The operation generates the questions — and the answers — continuously.</p>
+  <p>This is the operating model PragyaMetrics is developing: not generic AI, not another dashboard, and not a chatbot with direct control-system authority, but governed infrastructure for turning approved industrial context into traceable recommendations and, only within validated bounds, human-authorized actions.</p>
+  <div class="figure">
+    <div class="figure-title">Federated Machine Intelligence Architecture</div><div class="figure-sub">Five capability layers — each one yields something the layer above depends on, and every layer answers to the same assurance spine</div>
+    <div class="dia-wrap">
+    <svg class="dia" viewBox="0 0 1120 580" role="img" aria-labelledby="f3t f3d">
+      <title id="f3t">The five layers of Federated Machine Intelligence</title>
+      <desc id="f3d">Five capability layers read from the bottom up — Data Intelligence, Knowledge Intelligence, Agent Intelligence, the Shared Machine Workspace, and Machine IQ. Each layer states what it yields, and a cross-cutting assurance spine of identity, provenance, policy, audit and safety case applies to all five.</desc>
+      <defs>
+        <linearGradient id="f3cap" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#07724f"/><stop offset="55%" stop-color="#0d9a6d"/><stop offset="100%" stop-color="#1cbb8c"/></linearGradient>
+        <linearGradient id="f3spine" x1="0" y1="1" x2="0" y2="0"><stop offset="0%" stop-color="#96a0ac"/><stop offset="30%" stop-color="#3f5f80"/><stop offset="62%" stop-color="#1676c7"/><stop offset="100%" stop-color="#0d9a6d"/></linearGradient>
+        <linearGradient id="f3val" x1="0" y1="1" x2="0" y2="0"><stop offset="0%" stop-color="#b9bfc7"/><stop offset="50%" stop-color="#1676c7"/><stop offset="100%" stop-color="#11a777"/></linearGradient>
+        <linearGradient id="f3band" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#123a63"/><stop offset="100%" stop-color="#0a2039"/></linearGradient>
+        <filter id="f3sh" x="-8%" y="-45%" width="116%" height="200%"><feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#1d2733" flood-opacity="0.11"/></filter>
+        <filter id="f3bsh" x="-60%" y="-60%" width="220%" height="220%"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#1d2733" flood-opacity="0.28"/></filter>
+        <marker id="f3tip" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#11a777"/></marker>
+        <marker id="f3flow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#a9a094"/></marker>
+      </defs>
+
+      <text class="t-micro" x="138" y="44">Capability layer</text>
+      <text class="t-micro" x="838" y="44">What the layer yields</text>
+      <text class="t-micro" transform="rotate(-90 44 272)" x="44" y="272" text-anchor="middle">data → insight</text>
+
+      <!-- assurance spine -->
+      <rect x="740" y="64" width="80" height="416" rx="16" fill="url(#f3band)"/>
+      <g stroke="#7fd8bb" stroke-width="2" opacity=".55"><path d="M740 100 h14"/><path d="M740 186 h14"/><path d="M740 272 h14"/><path d="M740 358 h14"/><path d="M740 444 h14"/></g>
+      <g transform="rotate(-90 780 272)" text-anchor="middle">
+        <text x="780" y="264" font-size="13" font-weight="800" letter-spacing="2.6" fill="#ffffff">CROSS-CUTTING ASSURANCE</text>
+        <text x="780" y="286" font-size="10.5" letter-spacing="1.1" fill="#7fd8bb">identity · provenance · policy · audit · safety case</text>
+      </g>
+
+      <!-- layer-to-yield flow -->
+      <g stroke="#c4bbad" stroke-width="1.4" marker-end="url(#f3flow)" fill="none">
+        <path d="M722 100 h12"/><path d="M826 100 h8"/>
+        <path d="M722 186 h12"/><path d="M826 186 h8"/>
+        <path d="M722 272 h12"/><path d="M826 272 h8"/>
+        <path d="M722 358 h12"/><path d="M826 358 h8"/>
+        <path d="M722 444 h12"/><path d="M826 444 h8"/>
+      </g>
+
+      <!-- badge spine -->
+      <path d="M100 444 V100" stroke="url(#f3spine)" stroke-width="3.5" stroke-linecap="round"/>
+
+      <!-- LAYER 5 — capstone -->
+      <g filter="url(#f3sh)"><rect x="138" y="64" width="584" height="72" rx="15" fill="url(#f3cap)"/></g>
+      <text class="t-inv" x="166" y="94" font-size="17" font-weight="800">Machine IQ</text>
+      <text class="t-inv" x="166" y="117" font-size="13" opacity=".93">Interpret context, predict selected outcomes, recommend action — measured and governed</text>
+      <g filter="url(#f3bsh)"><circle cx="100" cy="100" r="27" fill="#0d2848" stroke="#1cbb8c" stroke-width="3"/></g>
+      <text class="t-inv" x="100" y="108" text-anchor="middle" font-size="20" font-weight="900">5</text>
+      <rect x="838" y="76" width="200" height="48" rx="10" fill="#eefaf5" stroke="#43af8a" stroke-width="1.6"/>
+      <rect x="852" y="86" width="4" height="28" rx="2" fill="#0d9a6d"/>
+      <text x="866" y="97" font-size="12.5" font-weight="800" fill="#07724f">Governed decisions</text>
+      <text class="t-body" x="866" y="113" font-size="11">measured against a baseline</text>
+
+      <!-- LAYER 4 -->
+      <g filter="url(#f3sh)"><rect x="138" y="150" width="584" height="72" rx="15" fill="#e4f5f1" stroke="#12a08e" stroke-width="1.8"/></g>
+      <text class="t-node" x="166" y="180" font-size="16.5">Shared Machine Workspace</text>
+      <text class="t-body" x="166" y="203" font-size="13">Governed layer where agents exchange observations, risks, and proposals</text>
+      <g filter="url(#f3bsh)"><circle cx="100" cy="186" r="27" fill="#0f9080" stroke="#fbf8f0" stroke-width="3"/></g>
+      <text class="t-inv" x="100" y="194" text-anchor="middle" font-size="20" font-weight="900">4</text>
+      <rect x="838" y="162" width="200" height="48" rx="10" fill="#fdfbf6" stroke="#ded7c9" stroke-width="1.4"/>
+      <rect x="852" y="172" width="4" height="28" rx="2" fill="#0f9080"/>
+      <text x="866" y="183" font-size="12.5" font-weight="800" fill="#0b6c60">Shared beliefs</text>
+      <text class="t-body" x="866" y="199" font-size="10.5">with provenance and expiry</text>
+
+      <!-- LAYER 3 -->
+      <g filter="url(#f3sh)"><rect x="138" y="236" width="584" height="72" rx="15" fill="#e6f1fc" stroke="#1676c7" stroke-width="1.8"/></g>
+      <text class="t-node" x="166" y="266" font-size="16.5">Agent Intelligence</text>
+      <text class="t-body" x="166" y="289" font-size="13">Domain-scoped agents for maintenance, quality, production, and more</text>
+      <g filter="url(#f3bsh)"><circle cx="100" cy="272" r="27" fill="#1676c7" stroke="#fbf8f0" stroke-width="3"/></g>
+      <text class="t-inv" x="100" y="280" text-anchor="middle" font-size="20" font-weight="900">3</text>
+      <rect x="838" y="248" width="200" height="48" rx="10" fill="#fdfbf6" stroke="#ded7c9" stroke-width="1.4"/>
+      <rect x="852" y="258" width="4" height="28" rx="2" fill="#1676c7"/>
+      <text x="866" y="269" font-size="12.5" font-weight="800" fill="#12558f">Bounded reasoning</text>
+      <text class="t-body" x="866" y="285" font-size="10.5">carrying its own evidence</text>
+
+      <!-- LAYER 2 -->
+      <g filter="url(#f3sh)"><rect x="138" y="322" width="584" height="72" rx="15" fill="#e9eff6" stroke="#5d7f9e" stroke-width="1.8"/></g>
+      <text class="t-node" x="166" y="352" font-size="16.5">Knowledge Intelligence</text>
+      <text class="t-body" x="166" y="375" font-size="13">Encode domain expertise, standards, and operational know-how</text>
+      <g filter="url(#f3bsh)"><circle cx="100" cy="358" r="27" fill="#43617f" stroke="#fbf8f0" stroke-width="3"/></g>
+      <text class="t-inv" x="100" y="366" text-anchor="middle" font-size="20" font-weight="900">2</text>
+      <rect x="838" y="334" width="200" height="48" rx="10" fill="#fdfbf6" stroke="#ded7c9" stroke-width="1.4"/>
+      <rect x="852" y="344" width="4" height="28" rx="2" fill="#43617f"/>
+      <text x="866" y="355" font-size="12.5" font-weight="800" fill="#33506c">Operational knowledge</text>
+      <text class="t-body" x="866" y="371" font-size="10.5">linked across systems</text>
+
+      <!-- LAYER 1 -->
+      <g filter="url(#f3sh)"><rect x="138" y="408" width="584" height="72" rx="15" fill="#eef1f4" stroke="#8b95a1" stroke-width="1.8"/></g>
+      <text class="t-node" x="166" y="438" font-size="16.5">Data Intelligence</text>
+      <text class="t-body" x="166" y="461" font-size="13">Ingest, harmonize, and contextualize operational data across systems</text>
+      <g filter="url(#f3bsh)"><circle cx="100" cy="444" r="27" fill="#5f6b78" stroke="#fbf8f0" stroke-width="3"/></g>
+      <text class="t-inv" x="100" y="452" text-anchor="middle" font-size="20" font-weight="900">1</text>
+      <rect x="838" y="420" width="200" height="48" rx="10" fill="#fdfbf6" stroke="#ded7c9" stroke-width="1.4"/>
+      <rect x="852" y="430" width="4" height="28" rx="2" fill="#5f6b78"/>
+      <text x="866" y="441" font-size="12.5" font-weight="800" fill="#4a5561">Contextualized signals</text>
+      <text class="t-body" x="866" y="457" font-size="10.5">time-aligned and flagged</text>
+
+      <!-- value axis -->
+      <path d="M1074 480 V70" stroke="url(#f3val)" stroke-width="6" stroke-linecap="round" fill="none" marker-end="url(#f3tip)"/>
+      <text class="t-micro" transform="rotate(-90 1104 272)" x="1104" y="272" text-anchor="middle">value rising</text>
+
+      <text class="t-body" x="560" y="514" text-anchor="middle" font-size="13" font-weight="700" fill="#3d4652">Each layer builds on the one below — federation, not fragmentation</text>
+      <text class="t-body" x="560" y="538" text-anchor="middle" font-size="11.5">A capability model, not five separately deployable products.</text>
+      <text class="t-body" x="560" y="556" text-anchor="middle" font-size="11.5">A bounded first deployment uses Layers 1–2 in full, one agent at Layer 3, and only the workspace needed to carry that agent’s evidence.</text>
+    </svg>
+    </div>
+    <div class="figcap"><strong>Figure 3</strong> &nbsp; PragyaMetrics stacks five intelligence layers from raw data to Machine IQ, with context flowing upward and a single assurance spine applying across all five.</div>
+    <div class="so-what">So what — architecture determines whether AI stays siloed or becomes operational.</div>
+  </div>
+</section>
+
+<section id="s7">
+  <div class="section-label">07 — Inside Machine IQ</div>
+  <h2>Five capability layers turn fragmented industrial data into governed operational decisions.</h2>
+  <div class="in-one-line"><strong>In one line</strong> Data, Knowledge, Agent, Shared Workspace, and Machine IQ capabilities build incrementally, with safety, identity, provenance, and lifecycle assurance applied across every layer.</div>
+  <p class="lead">Machine IQ is not a single product or a monolithic platform. It is a <strong>five-layer capability model</strong> for transforming industrial signals into traceable operational context, recommendations, and — only within validated authority boundaries — actions.</p>
+  <div class="cards"><div class="card"><h3>Layer 1 — Data Intelligence</h3><p>The foundation. Data Intelligence connects, normalizes, and gives semantic meaning to streams and records from ERP, MES, SCADA, PLM, CMMS, IIoT, and engineering systems. It does not move data unnecessarily — it understands data where it lives, establishing the raw perceptual layer of operational intelligence.</p></div><div class="card"><h3>Layer 2 — Knowledge Intelligence</h3><p>Where context is constructed. Knowledge Intelligence maps relationships across systems — linking a sensor reading to a maintenance event, a design tolerance, a production order, and an operator observation. This is the layer that transforms disconnected signals into structured operational knowledge.</p></div><div class="card"><h3>Layer 3 — Agent Intelligence</h3><p>Where bounded reasoning tasks occur. Domain-scoped agents can diagnose anomalies, draft maintenance recommendations, correlate quality deviations, or simulate scenarios. Auditability depends on enforced permissions, source provenance, logging, and approval controls.</p></div><div class="card"><h3>Layer 4 — Shared Machine Workspace</h3><p>The integration layer. The Shared Machine Workspace is the federated context fabric where agents and systems broadcast findings, subscribe to updates, and collaborate on the operational equivalent of what Work IQ provides for knowledge work — but built for machines, processes, and networks.</p></div><div class="card"><h3>Layer 5 — Machine IQ</h3><p>The intended outcome. The operation develops a traceable ability to sense state, interpret context, anticipate selected events, and recommend responses. Improvement is demonstrated against approved metrics; it is not assumed from continuous feedback alone.</p></div></div>
+  <p>These layers are a <strong>capability model</strong>, not a claim that every layer is an independently deployable product. An enterprise can begin with bounded Data and Knowledge capabilities on one line, validate value and governance, then add agent and workspace capabilities as evidence and safety permit.</p>
+  <p>Recent preprint literature surveys a move from isolated models toward <strong>collaboration-centric multi-agent systems</strong>, including Industry 5.0 use cases, while identifying open coordination, security, and governance challenges.<sup><a href="#ref-8">[8]</a></sup> The Shared Machine Workspace is PragyaMetrics’ proposed response for the operational domain; its effectiveness must be demonstrated in deployment.</p>
+  <details><summary>Architecture internals — the five layers in technical detail</summary>
+    <div class="deeper">
+      <p>Each layer below is described by what it holds, what it must <em>not</em> do, and how you would test that it works. A layer without a test is an aspiration, not a capability.</p>
+      <h5>Layer 1 — Data Intelligence</h5>
+      <p><strong>Holds:</strong> connections to historians, OPC UA and fieldbus gateways, MES and ERP records, CMMS work orders, PLM revisions, and engineering documents; time alignment, unit normalization, asset identity resolution, and quality flags. <strong>Must not:</strong> silently impute missing values or discard quality flags downstream. <strong>Test:</strong> replay a known historical window and confirm the reconstructed asset state matches the record, including gaps declared as gaps.</p>
+      <h5>Layer 2 — Knowledge Intelligence</h5>
+      <p><strong>Holds:</strong> the asset and process model — which pump belongs to which line, which tolerance governs which characteristic, which failure modes are credible for this equipment class, which standard applies. <strong>Must not:</strong> encode site-specific conventions as universal truth. <strong>Test:</strong> ask a domain expert to review a sample of generated relationships blind; precision on relationship assertions is the metric, and it should be measured before any agent depends on them.</p>
+      <h5>Layer 3 — Agent Intelligence</h5>
+      <p><strong>Holds:</strong> domain-scoped agents with explicit tool permissions, a declared read/write boundary, and a required evidence bundle attached to every output. <strong>Must not:</strong> hold ambient credentials, write to control systems, or produce a recommendation without citable sources. <strong>Test:</strong> precision, recall, and lead time against labelled historical events, plus an adversarial pass in which a degraded or spoofed input must produce an abstention rather than a confident answer.</p>
+      <h5>Layer 4 — Shared Machine Workspace</h5>
+      <p><strong>Holds:</strong> the publish/subscribe context fabric, the belief store with provenance and time-to-live, the contradiction log, and the policy engine that decides which claim may cross which boundary. <strong>Must not:</strong> become a general-purpose data lake by accident — the workspace carries context and conclusions, not bulk raw history. <strong>Test:</strong> policy conformance tests that attempt disallowed crossings and assert refusal plus an audit entry.</p>
+      <h5>Layer 5 — Machine IQ</h5>
+      <p><strong>Holds:</strong> the measured outcome — traceable sensing, interpretation, anticipation, and recommendation against an agreed baseline. <strong>Must not:</strong> be reported as a single composite score that hides which capability actually improved. <strong>Test:</strong> the agreed decision gates in the Lighthouse Program, re-run on a rolling window so that drift shows up as a falling measurement rather than a surprise.</p>
+      <p>These are capability boundaries, not five separately purchasable products. A bounded first deployment typically uses Layers 1 and 2 in full, a single agent at Layer 3, and only the minimum workspace needed to carry that agent’s evidence.</p>
+    </div>
+  </details>
+  <details><summary>Cross-cutting industrial assurance — safety, authority, and evidence</summary>
+    <div class="deeper">
+      <p>Assurance is not a sixth layer stacked on top. It cuts across all five, and it is what separates an industrial architecture from a workplace one. Two published frameworks carry most of the weight.</p>
+      <h5>Risk management: NIST AI RMF</h5>
+      <p>The NIST AI Risk Management Framework organizes AI risk around four functions — <strong>Govern, Map, Measure, Manage</strong>.<sup><a href="#ref-14">[14]</a></sup> Mapped onto this architecture: <em>Govern</em> names the accountable owner for every agent and every published belief; <em>Map</em> documents the operational context, the affected people, and the credible harms of a wrong recommendation; <em>Measure</em> supplies the precision, recall, lead-time, and false-alarm figures that the decision gates consume; <em>Manage</em> covers drift monitoring, incident response, and the authority to withdraw a model from service.</p>
+      <h5>Security zoning: IEC 62443-3-2</h5>
+      <p>IEC 62443-3-2 requires the system under consideration to be defined, partitioned into <strong>zones and conduits</strong>, risk-assessed, and assigned target security levels.<sup><a href="#ref-15">[15]</a></sup> A federated deployment inherits that partitioning rather than cutting across it: the workspace is a conduit with an explicit, reviewed policy, not a tunnel that quietly bridges a safety zone to a cloud tenant. Where a proposed context flow cannot be expressed as an approved conduit, it does not ship.</p>
+      <h5>The authority ladder</h5>
+      <p>Every deployed capability sits at exactly one rung, declared in writing, and moves up only by evidence:</p>
+      <ul>
+        <li><strong>Observe</strong> — read-only; the system reports state and provenance and nothing else.</li>
+        <li><strong>Recommend</strong> — read-only outputs reviewed by a qualified human, with acceptance and rejection both logged.</li>
+        <li><strong>Human-approved write</strong> — the system drafts a work order or a setpoint change; a person with the relevant competence approves it before it takes effect.</li>
+        <li><strong>Bounded automated action</strong> — narrow, reversible, rate-limited actions inside a separately reviewed safety case, with tested rollback and standing human override.</li>
+      </ul>
+      <h5>The evidence pack</h5>
+      <p>Nothing advances a rung without a package a reviewer can actually audit: the labelled evaluation set and its provenance, model performance with confidence intervals and known failure modes, the data-quality monitoring plan, the access model and its least-privilege proof, rollback tests, the security review findings and their disposition, and a named owner for each. Safety-instrumented functions remain out of scope for this architecture; they stay in their certified systems.</p>
+    </div>
+  </details>
+  <div class="figure">
+    <div class="figure-title">The Shared Machine Workspace</div><div class="figure-sub">A governed workspace where domain-scoped agents exchange observations, predictions, and risks</div>
+    <div class="dia-wrap">
+    <svg class="dia" viewBox="0 0 980 530" role="img" aria-labelledby="f4t f4d">
+      <title id="f4t">The Shared Machine Workspace</title>
+      <desc id="f4d">A central governed workspace ringed by a dashed policy boundary, exchanging context bidirectionally with seven domain agents: production, quality, engineering, supply chain, sustainability, safety and maintenance.</desc>
+      <defs>
+        <radialGradient id="f4core" cx="34%" cy="26%"><stop offset="0%" stop-color="#2fc79a"/><stop offset="100%" stop-color="#0a8c63"/></radialGradient>
+        <filter id="f4sh" x="-40%" y="-40%" width="180%" height="180%"><feDropShadow dx="0" dy="5" stdDeviation="7" flood-color="#2d343c" flood-opacity="0.14"/></filter>
+        <marker id="f4a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#7f96a8"/></marker>
+        <marker id="f4b" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M10 0 L0 5 L10 10 z" fill="#7f96a8"/></marker>
+      </defs>
+
+      <g stroke="#9db0c0" stroke-width="1.8" fill="none" marker-end="url(#f4a)" marker-start="url(#f4b)">
+        <path d="M490 134 L490 96"/>
+        <path d="M605 209 L685 174"/>
+        <path d="M615 276 L744 292"/>
+        <path d="M572 355 L602 389"/>
+        <path d="M408 355 L378 389"/>
+        <path d="M365 276 L236 292"/>
+        <path d="M375 209 L295 174"/>
+      </g>
+
+      <circle cx="490" cy="260" r="122" fill="none" stroke="#43af8a" stroke-width="2" stroke-dasharray="7 8" opacity=".85"/>
+      <g filter="url(#f4sh)"><circle cx="490" cy="260" r="88" fill="url(#f4core)"/></g>
+      <text class="t-inv" x="490" y="248" text-anchor="middle" font-size="15" font-weight="800">Shared Machine</text>
+      <text class="t-inv" x="490" y="268" text-anchor="middle" font-size="15" font-weight="800">Workspace</text>
+      <text class="t-inv" x="490" y="288" text-anchor="middle" font-size="10.5" opacity=".9">a governed workspace</text>
+
+      <g font-size="13" font-weight="700" text-anchor="middle">
+        <g transform="translate(490,70)"><rect x="-78" y="-23" width="156" height="46" rx="11" fill="#fbf7ef" stroke="#8390a0" stroke-width="2"/><text y="5">Production</text></g>
+        <g transform="translate(756,142)"><rect x="-78" y="-23" width="156" height="46" rx="11" fill="#fbf7ef" stroke="#8390a0" stroke-width="2"/><text y="5">Quality</text></g>
+        <g transform="translate(821,302)"><rect x="-78" y="-23" width="156" height="46" rx="11" fill="#fbf7ef" stroke="#8390a0" stroke-width="2"/><text y="5">Engineering</text></g>
+        <g transform="translate(638,431)"><rect x="-78" y="-23" width="156" height="46" rx="11" fill="#fbf7ef" stroke="#8390a0" stroke-width="2"/><text y="5">Supply Chain</text></g>
+        <g transform="translate(342,431)"><rect x="-78" y="-23" width="156" height="46" rx="11" fill="#fbf7ef" stroke="#8390a0" stroke-width="2"/><text y="5">Sustainability</text></g>
+        <g transform="translate(159,302)"><rect x="-78" y="-23" width="156" height="46" rx="11" fill="#fbf7ef" stroke="#8390a0" stroke-width="2"/><text y="5">Safety</text></g>
+        <g transform="translate(224,142)"><rect x="-78" y="-23" width="156" height="46" rx="11" fill="#fbf7ef" stroke="#8390a0" stroke-width="2"/><text y="5">Maintenance</text></g>
+      </g>
+
+      <text class="t-micro" x="490" y="488" text-anchor="middle" fill="#0a8c63">observations · predictions · risks</text>
+      <text class="t-body" x="490" y="512" text-anchor="middle" font-size="12.5">Every exchange crosses a policy boundary carrying identity, provenance, and an audit record</text>
+    </svg>
+    </div>
+    <div class="figcap"><strong>Figure 4</strong> &nbsp; A proposed hub-and-spoke coordination model for specialized agents with policy-controlled context exchange.</div>
+    <div class="so-what">So what — coordination requires shared context plus identity, provenance, policy, and audit controls.</div>
+  </div>
+</section>
+
+<section id="s8">
+  <div class="section-label">08 — Machine IQ in Action</div>
+  <h2>Machine IQ moves enterprises from reacting to problems to prescribing solutions — and then learning from every outcome.</h2>
+  <div class="in-one-line"><strong>In one line</strong> Across maintenance, quality, and decision-making, operations can move reactive → predictive → prescriptive through baseline-dependent value cases and validated feedback loops.</div>
+  <p class="lead">The potential value concentrates in three operational domains: <strong>maintenance, quality, and operational decision-making.</strong> Each should progress only as its evidence and safety case allow — from descriptive and reactive practice toward prediction, human-reviewed prescription, and bounded automation.</p>
+  <p><strong>Predictive maintenance</strong> is a practical proving ground. Operations commonly use a mix of reactive, preventive, condition-based, and predictive strategies. In the proposed future-state workflow, vibration trends, thermal patterns, operating hours, maintenance histories, and design specifications are assembled with provenance. A governed model can identify a degradation pattern, estimate remaining useful life, and recommend a maintenance window; a technician or planner validates the evidence before a work order is approved.</p>
+  <p>Published sources report meaningful but baseline-dependent ranges for mature predictive-maintenance programs:</p>
+  <div class="stat-grid"><div class="stat"><div class="big">30–50%</div><small>Typical machine-downtime reduction reported by McKinsey <sup><a href="#ref-3">[3]</a></sup></small></div><div class="stat"><div class="big">20–40%</div><small>Typical increase in machine life reported by McKinsey <sup><a href="#ref-3">[3]</a></sup></small></div><div class="stat"><div class="big">10–20%</div><small>Average equipment-uptime improvement in Deloitte internal analyses <sup><a href="#ref-2">[2]</a></sup></small></div><div class="stat"><div class="big">5–10%</div><small>Average maintenance-cost reduction in Deloitte internal analyses <sup><a href="#ref-2">[2]</a></sup></small></div></div>
+  <p>The direction is consistent, but the magnitude varies. Deloitte’s position paper also repeats larger headline figures — 25% productivity, 70% fewer breakdowns, and 25% lower maintenance cost — while its own internal analyses give the more conservative averages shown above.<sup><a href="#ref-2">[2]</a></sup> For an enterprise business case, the conservative ranges and the site’s own baseline are the more defensible starting point.</p>
+  <div class="callout"><h4>Read these as ranges, not promises</h4>These figures depend heavily on the baseline. A program measured against purely reactive maintenance will look larger than the same program measured against preventive maintenance — the U.S. Department of Energy guide reports roughly 30–40% savings versus reactive maintenance but 8–12% versus preventive maintenance.<sup><a href="#ref-4">[4]</a></sup> The honest number comes from the site’s failure history, downtime cost, current maintenance maturity, implementation cost, and measured Lighthouse Program results.</div>
+  <div class="figure">
+    <div class="figure-title">The Machine IQ Value Bridge</div><div class="figure-sub">A transparent single-line value case — illustrative figures, not a forecast</div>
+    <div class="dia-wrap">
+    <svg class="dia" viewBox="0 0 980 460" role="img" aria-labelledby="f5t f5d">
+      <title id="f5t">Illustrative value bridge</title>
+      <desc id="f5d">Left panel: a ten million dollar baseline downtime cost falls to six million after an illustrative forty per cent reduction, a four million dollar delta. Right panel: that four million gross avoided loss less a one and a half million program cost leaves two and a half million net annual value.</desc>
+      <defs>
+        <linearGradient id="f5base" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#5a636e"/><stop offset="100%" stop-color="#3b434e"/></linearGradient>
+        <linearGradient id="f5blue" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#3e97e0"/><stop offset="100%" stop-color="#1163ab"/></linearGradient>
+        <linearGradient id="f5grn" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#2fc79a"/><stop offset="100%" stop-color="#0f9c72"/></linearGradient>
+        <linearGradient id="f5net" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#12a87c"/><stop offset="100%" stop-color="#066b4e"/></linearGradient>
+        <marker id="f5up" viewBox="0 0 10 10" refX="5" refY="1" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 10 L5 0 L10 10 z" fill="#0a8c63"/></marker>
+        <marker id="f5dn" viewBox="0 0 10 10" refX="5" refY="9" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L5 10 L10 0 z" fill="#0a8c63"/></marker>
+      </defs>
+
+      <text x="490" y="250" text-anchor="middle" font-size="76" font-weight="900" fill="#c4851a" opacity=".07" transform="rotate(-11 490 250)" letter-spacing="8">ILLUSTRATIVE</text>
+
+      <g stroke="#e0d8c9" stroke-width="1" stroke-dasharray="3 6">
+        <path d="M78 322 H950"/><path d="M78 272 H950"/><path d="M78 222 H950"/><path d="M78 172 H950"/><path d="M78 122 H950"/>
+      </g>
+      <g class="t-body" font-size="11" text-anchor="end" fill="#9a958d">
+        <text x="70" y="326">$2M</text><text x="70" y="276">$4M</text><text x="70" y="226">$6M</text><text x="70" y="176">$8M</text><text x="70" y="126">$10M</text>
+      </g>
+      <path d="M78 372 H950" stroke="#cabfaf" stroke-width="2"/>
+      <path d="M450 62 V392" stroke="#ded7c9" stroke-width="1.5" stroke-dasharray="6 6"/>
+
+      <!-- PANEL A -->
+      <text class="t-micro" x="270" y="50" text-anchor="middle">Annual downtime cost</text>
+      <rect x="134" y="122" width="112" height="250" rx="6" fill="url(#f5base)"/>
+      <rect x="294" y="222" width="112" height="150" rx="6" fill="url(#f5blue)"/>
+      <text class="t-num" x="190" y="112" text-anchor="middle">$10.0M</text>
+      <text class="t-num" x="350" y="212" text-anchor="middle">$6.0M</text>
+      <path d="M134 122 H414" stroke="#0a8c63" stroke-width="1.5" stroke-dasharray="5 5"/>
+      <path d="M350 128 V216" stroke="#0a8c63" stroke-width="2" marker-start="url(#f5up)" marker-end="url(#f5dn)"/>
+      <rect x="304" y="158" width="92" height="30" rx="8" fill="#eef9f4" stroke="#43af8a" stroke-width="1.5"/>
+      <text x="350" y="178" text-anchor="middle" font-size="14" font-weight="900" fill="#087859">−$4.0M</text>
+      <text class="t-node" x="190" y="394" text-anchor="middle" font-size="13">Baseline</text>
+      <text class="t-body" x="190" y="412" text-anchor="middle" font-size="11.5">annual downtime cost</text>
+      <text class="t-node" x="350" y="394" text-anchor="middle" font-size="13">Residual</text>
+      <text class="t-body" x="350" y="412" text-anchor="middle" font-size="11.5">after 40% illustrative cut</text>
+
+      <!-- PANEL B -->
+      <text class="t-micro" x="720" y="50" text-anchor="middle">Annual value from that reduction</text>
+      <rect x="514" y="272" width="112" height="100" rx="6" fill="url(#f5grn)"/>
+      <rect x="664" y="272" width="112" height="38" rx="6" fill="#e39a25"/>
+      <rect x="814" y="310" width="112" height="62" rx="6" fill="url(#f5net)"/>
+      <g stroke="#b3aa9e" stroke-width="1.5" stroke-dasharray="5 5"><path d="M626 272 H664"/><path d="M776 310 H814"/></g>
+      <text class="t-num" x="570" y="262" text-anchor="middle">$4.0M</text>
+      <text x="720" y="297" text-anchor="middle" font-size="15" font-weight="900" fill="#fff">−$1.5M</text>
+      <text class="t-num" x="870" y="300" text-anchor="middle">$2.5M</text>
+      <text class="t-node" x="570" y="394" text-anchor="middle" font-size="13">Gross avoided loss</text>
+      <text class="t-body" x="570" y="412" text-anchor="middle" font-size="11.5">baseline minus residual</text>
+      <text class="t-node" x="720" y="394" text-anchor="middle" font-size="13">Program cost</text>
+      <text class="t-body" x="720" y="412" text-anchor="middle" font-size="11.5">build, run, and change</text>
+      <text class="t-node" x="870" y="394" text-anchor="middle" font-size="13">Net annual value</text>
+      <text class="t-body" x="870" y="412" text-anchor="middle" font-size="11.5">what the business banks</text>
+
+      <text class="t-body" x="490" y="446" text-anchor="middle" font-size="12">Replace every assumption with the site’s own baseline, expected effect, implementation cost, and confidence range.</text>
+    </svg>
+    </div>
+    <div class="figcap"><strong>Figure 5</strong> &nbsp; An illustrative value case separating residual loss, gross avoided loss, program cost, and net annual value.</div>
+    <div class="so-what"><span style="color:#c4851a">ILLUSTRATIVE</span><br>So what — credible value requires a transparent baseline and explicit implementation cost.</div>
+  </div>
+  <p><strong>Quality intelligence</strong> addresses another major drain. A shared workspace can correlate process parameters, material batches, environmental conditions, equipment states, and historical defect patterns. When a deviation emerges, the system can rank plausible causes and corrective actions with source evidence; qualified engineers retain responsibility for root-cause confirmation and process changes.</p>
+  <p><strong>Operational decision intelligence</strong> is the strategic layer. Plant managers, network operators, and grid controllers make decisions across scheduling, load balancing, resource allocation, and risk. A governed workspace can assemble production plans, equipment health, supply status, energy costs, and safety constraints into a traceable operating picture without assuming that an AI recommendation has control authority.</p>
+  <div class="figure">
+    <div class="figure-title">Intelligence Maturity Progression</div><div class="figure-sub">From reacting to failures, to predicting, prescribing, and — only behind a safety case — acting</div>
+    <div class="dia-wrap">
+    <svg class="dia" viewBox="0 0 980 410" role="img" aria-labelledby="f6t f6d">
+      <title id="f6t">Intelligence maturity progression</title>
+      <desc id="f6d">A four-step staircase rising from reactive repair, through predictive prevention and human-reviewed prescription, to bounded autonomous action shown as gated behind an independent safety and governance case.</desc>
+      <defs>
+        <linearGradient id="f6ar" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#b6bec8"/><stop offset="50%" stop-color="#1676c7"/><stop offset="100%" stop-color="#11a777"/></linearGradient>
+        <filter id="f6sh" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#2d343c" flood-opacity="0.12"/></filter>
+        <marker id="f6tip" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#11a777"/></marker>
+      </defs>
+
+      <text class="t-micro" x="490" y="26" text-anchor="middle">Maturity &amp; decision support increasing</text>
+      <path d="M120 46 H900" stroke="url(#f6ar)" stroke-width="4" stroke-linecap="round" marker-end="url(#f6tip)"/>
+
+      <!-- Step 1 -->
+      <g filter="url(#f6sh)"><path d="M60 250 h212 v110 h-212 z" fill="#fbf7ef" stroke="#647080" stroke-width="2"/></g>
+      <path d="M60 250 h212 v32 h-212 z" fill="#4c555f"/>
+      <text class="t-inv" x="166" y="272" text-anchor="middle" font-size="15" font-weight="800">Reactive</text>
+      <text class="t-node" x="166" y="308" text-anchor="middle" font-size="13.5">Machine fails</text>
+      <text class="t-node" x="166" y="332" text-anchor="middle" font-size="13.5">↓ repair</text>
+
+      <!-- Step 2 -->
+      <g filter="url(#f6sh)"><path d="M292 196 h212 v164 h-212 z" fill="#fbf7ef" stroke="#647080" stroke-width="2"/></g>
+      <path d="M292 196 h212 v32 h-212 z" fill="#147bc9"/>
+      <text class="t-inv" x="398" y="218" text-anchor="middle" font-size="15" font-weight="800">Predictive</text>
+      <text class="t-node" x="398" y="256" text-anchor="middle" font-size="13.5">Predict</text>
+      <text class="t-node" x="398" y="280" text-anchor="middle" font-size="13.5">↓ prevent</text>
+      <text class="t-body" x="398" y="316" text-anchor="middle" font-size="11.5">Selected failure modes,</text>
+      <text class="t-body" x="398" y="332" text-anchor="middle" font-size="11.5">validated per asset</text>
+
+      <!-- Step 3 -->
+      <g filter="url(#f6sh)"><path d="M524 142 h212 v218 h-212 z" fill="#fbf7ef" stroke="#647080" stroke-width="2"/></g>
+      <path d="M524 142 h212 v32 h-212 z" fill="#12a08e"/>
+      <text class="t-inv" x="630" y="164" text-anchor="middle" font-size="15" font-weight="800">Prescriptive</text>
+      <text class="t-node" x="630" y="202" text-anchor="middle" font-size="13.5">Prescribe</text>
+      <text class="t-node" x="630" y="226" text-anchor="middle" font-size="13.5">↓ optimize</text>
+      <text class="t-node" x="630" y="250" text-anchor="middle" font-size="13.5">↓ recommend</text>
+      <text class="t-body" x="630" y="286" text-anchor="middle" font-size="11.5">Human-reviewed</text>
+      <text class="t-body" x="630" y="302" text-anchor="middle" font-size="11.5">optimization; the system</text>
+      <text class="t-body" x="630" y="318" text-anchor="middle" font-size="11.5">advises, people decide</text>
+
+      <!-- Step 4 (gated) -->
+      <g filter="url(#f6sh)"><path d="M756 88 h212 v272 h-212 z" fill="#f2fbf7" stroke="#0a8c63" stroke-width="2.5" stroke-dasharray="9 7"/></g>
+      <path d="M756 88 h212 v32 h-212 z" fill="#0a8c63"/>
+      <text class="t-inv" x="862" y="110" text-anchor="middle" font-size="15" font-weight="800">Autonomous · gated</text>
+      <text class="t-node" x="862" y="150" text-anchor="middle" font-size="13.5">Act within bounds</text>
+      <text class="t-node" x="862" y="174" text-anchor="middle" font-size="13.5">↓ humans hold</text>
+      <text class="t-node" x="862" y="198" text-anchor="middle" font-size="13.5">policy &amp; override</text>
+      <g transform="translate(862,236)"><circle r="19" fill="#fff" stroke="#e39a25" stroke-width="2.5"/><path d="M-7 1 h14 v11 h-14 z" fill="#e39a25"/><path d="M-4 1 v-5 a4 4 0 0 1 8 0 v5" fill="none" stroke="#e39a25" stroke-width="2.5"/></g>
+      <text class="t-body" x="862" y="286" text-anchor="middle" font-size="11.5">Unlocked only by a separate,</text>
+      <text class="t-body" x="862" y="302" text-anchor="middle" font-size="11.5">independently reviewed safety</text>
+      <text class="t-body" x="862" y="318" text-anchor="middle" font-size="11.5">and governance case</text>
+
+      <path d="M40 360 H960" stroke="#cabfaf" stroke-width="2"/>
+      <text class="t-body" x="40" y="390" font-size="12">Lowest value · fire-fighting</text>
+      <text class="t-body" x="960" y="390" text-anchor="end" font-size="12">Highest leverage · highest assurance burden</text>
+    </svg>
+    </div>
+    <div class="figcap"><strong>Figure 6</strong> &nbsp; A maturity path from reactive response through prediction to human-reviewed prescription, with bounded autonomy shown as separately gated. Stages correspond to the maturity model in Section 11.</div>
+    <div class="so-what">So what — action authority remains a separate safety and governance decision.</div>
+  </div>
+  <p>The trajectory matters. <strong>Reactive</strong> operations respond after events occur. <strong>Predictive</strong> operations estimate selected future risks. <strong>Prescriptive</strong> operations recommend responses while weighing production, cost, and risk. Execution authority is a separate governance decision; more automation does not automatically mean more value.</p>
+  <p>A validated <strong>learning loop</strong> can improve recommendations over time. Maintenance outcomes, quality investigations, and operator decisions become useful feedback only when labels are reliable, causal assumptions are reviewed, drift is monitored, and poor recommendations are prevented from reinforcing themselves.</p>
+  <div class="quote">Reactive operations spend money on surprises. Machine IQ spends intelligence on prevention.</div>
+  <div class="figure">
+    <div class="figure-title">Machine IQ Feedback Loop</div><div class="figure-sub">Outcomes inform the next cycle only after validation and an explicit approval gate</div>
+    <div class="dia-wrap">
+    <svg class="dia" viewBox="0 0 980 520" role="img" aria-labelledby="f7t f7d">
+      <title id="f7t">The Machine IQ feedback loop</title>
+      <desc id="f7d">A clockwise cycle of six stages — sense, understand, predict, optimize, act, validate — around a central Machine IQ core, with a human approval gate on the arc before the cycle repeats.</desc>
+      <defs>
+        <radialGradient id="f7core" cx="34%" cy="26%"><stop offset="0%" stop-color="#2fc79a"/><stop offset="100%" stop-color="#0a8c63"/></radialGradient>
+        <filter id="f7sh" x="-40%" y="-40%" width="180%" height="180%"><feDropShadow dx="0" dy="5" stdDeviation="7" flood-color="#2d343c" flood-opacity="0.14"/></filter>
+        <marker id="f7tip" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#2196c9"/></marker>
+        <marker id="f7tipg" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#12a08e"/></marker>
+      </defs>
+
+      <circle cx="490" cy="250" r="165" fill="none" stroke="#eae3d6" stroke-width="28"/>
+      <g fill="none" stroke-width="4" stroke-linecap="round">
+        <path d="M529.9 89.9 A165 165 0 0 1 608.7 135.4" stroke="#2196c9" marker-end="url(#f7tip)"/>
+        <path d="M648.6 204.5 A165 165 0 0 1 648.6 295.5" stroke="#2196c9" marker-end="url(#f7tip)"/>
+        <path d="M608.7 364.6 A165 165 0 0 1 529.9 410.1" stroke="#12a08e" marker-end="url(#f7tipg)"/>
+        <path d="M450.1 410.1 A165 165 0 0 1 371.3 364.6" stroke="#12a08e" marker-end="url(#f7tipg)"/>
+        <path d="M331.4 295.5 A165 165 0 0 1 331.4 204.5" stroke="#12a08e" marker-end="url(#f7tipg)"/>
+        <path d="M371.3 135.4 A165 165 0 0 1 393.0 116.5" stroke="#c9a05a"/>
+        <path d="M422.9 99.3 A165 165 0 0 1 450.1 89.9" stroke="#2196c9" marker-end="url(#f7tip)"/>
+      </g>
+
+      <g filter="url(#f7sh)"><circle cx="490" cy="250" r="82" fill="url(#f7core)"/></g>
+      <text class="t-inv" x="490" y="244" text-anchor="middle" font-size="17" font-weight="800">Machine IQ</text>
+      <text class="t-inv" x="490" y="266" text-anchor="middle" font-size="11.5" opacity=".9">validated learning loop</text>
+
+      <g font-size="13.5" font-weight="700" text-anchor="middle">
+        <g transform="translate(490,85)"><rect x="-70" y="-21" width="140" height="42" rx="21" fill="#fcf8f1" stroke="#8390a0" stroke-width="2"/><text y="5">Sense</text></g>
+        <g transform="translate(633,167)"><rect x="-70" y="-21" width="140" height="42" rx="21" fill="#fcf8f1" stroke="#8390a0" stroke-width="2"/><text y="5">Understand</text></g>
+        <g transform="translate(633,333)"><rect x="-70" y="-21" width="140" height="42" rx="21" fill="#fcf8f1" stroke="#8390a0" stroke-width="2"/><text y="5">Predict</text></g>
+        <g transform="translate(490,415)"><rect x="-70" y="-21" width="140" height="42" rx="21" fill="#f2fbf7" stroke="#43af8a" stroke-width="2"/><text y="5">Optimize</text></g>
+        <g transform="translate(347,333)"><rect x="-70" y="-21" width="140" height="42" rx="21" fill="#f2fbf7" stroke="#43af8a" stroke-width="2"/><text y="5">Act</text></g>
+        <g transform="translate(347,167)"><rect x="-70" y="-21" width="140" height="42" rx="21" fill="#f2fbf7" stroke="#43af8a" stroke-width="2"/><text y="5">Validate</text></g>
+      </g>
+
+      <g transform="translate(407,107)">
+        <circle r="19" fill="#fff7e8" stroke="#e39a25" stroke-width="2.5"/>
+        <path d="M-7 1 h14 v11 h-14 z" fill="#e39a25"/><path d="M-4 1 v-5 a4 4 0 0 1 8 0 v5" fill="none" stroke="#e39a25" stroke-width="2.5"/>
+      </g>
+      <path d="M400 86 L386 56" stroke="#e39a25" stroke-width="1.5" stroke-dasharray="4 4"/>
+      <text class="t-micro" x="380" y="46" text-anchor="middle" fill="#9e6f1f">human approval gate</text>
+
+      <text class="t-body" x="490" y="492" text-anchor="middle" font-size="12.5">Sense → Understand → Predict → Optimize → Act → Validate → repeat <tspan font-weight="800" fill="#9e6f1f">only when approved</tspan></text>
+    </svg>
+    </div>
+    <div class="figcap"><strong>Figure 7</strong> &nbsp; A proposed feedback cycle from sensing through measured outcomes, with the return path gated on human approval.</div>
+    <div class="so-what">So what — feedback creates value only when outcomes are valid, monitored, and safe to learn from.</div>
+  </div>
+</section>
+
+<section id="s9">
+  <div class="section-label">09 — Cross-Industry Use Cases</div>
+  <h2>One reusable operating model. Six industries requiring domain-specific validation.</h2>
+  <div class="in-one-line"><strong>In one line</strong> The same federated architecture adapts to manufacturing, telecom, energy, utilities, mining, and smart infrastructure — because they share one structural problem.</div>
+  <p class="lead">Federated Machine Intelligence is proposed as a reusable industrial operating model, not finished industry-specific software. Every sector still requires its own connectors, semantics, regulations, failure modes, safety case, model validation, and operating evidence. The cards below are target use cases, not claims of achieved PragyaMetrics outcomes.</p>
+  <div class="cards"><div class="card"><h3>Manufacturing</h3><p>Target use case: combine condition signals, maintenance history, and production schedules to improve failure prediction and maintenance planning. Published industry ranges provide hypotheses; the site’s Lighthouse Program establishes the achievable result.</p></div><div class="card"><h3>Telecom</h3><p>Target use case: correlate telemetry, topology, maintenance history, and customer impact to support faster diagnosis and human-approved rerouting decisions.</p></div><div class="card"><h3>Energy</h3><p>Target use case: monitor generation and distribution assets across governed sites, prioritizing degradation risks and supporting dispatch decisions within existing control authority.</p></div><div class="card"><h3>Utilities</h3><p>Target use case: combine SCADA-derived context, AMI, outage management, and weather data to support load and restoration decisions under regulatory and safety constraints.</p></div><div class="card"><h3>Mining</h3><p>Target use case: maintain equipment-health context in remote environments where connectivity is intermittent and local operation must continue safely when links fail.</p></div><div class="card"><h3>Smart Infrastructure</h3><p>Target use case: coordinate approved context across HVAC, energy, occupancy, and maintenance systems to identify efficiency and service-continuity opportunities.</p></div></div>
+  <p>These industries share structural patterns — multiple systems, fragmented context, and costly failures — but not identical solutions. The common substrate may be reusable; the semantics, integrations, risk controls, models, and evidence remain domain-specific.</p>
+  <div class="figure">
+    <div class="figure-title">Cross-Industry Applicability</div><div class="figure-sub">One reusable federated substrate — outcomes validated sector by sector</div>
+    <div class="dia-wrap">
+    <svg class="dia" viewBox="0 0 980 490" role="img" aria-labelledby="f8t f8d">
+      <title id="f8t">Cross-industry applicability</title>
+      <desc id="f8d">A central PragyaMetrics Machine IQ core linked to six candidate industry domains: manufacturing, telecom, energy, utilities, mining, and smart infrastructure.</desc>
+      <defs>
+        <radialGradient id="f8core" cx="34%" cy="26%"><stop offset="0%" stop-color="#2fc79a"/><stop offset="100%" stop-color="#0a8c63"/></radialGradient>
+        <filter id="f8sh" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#2d343c" flood-opacity="0.13"/></filter>
+      </defs>
+
+      <g stroke="#7aa2b6" stroke-width="2.2" stroke-linecap="round">
+        <path d="M490 156 L490 98"/>
+        <path d="M574.6 215.8 L697 181"/>
+        <path d="M574.3 265.2 L697 302"/>
+        <path d="M490 324 L490 382"/>
+        <path d="M405.7 265.2 L283 302"/>
+        <path d="M405.4 215.8 L283 181"/>
+      </g>
+
+      <g filter="url(#f8sh)"><circle cx="490" cy="240" r="84" fill="url(#f8core)"/></g>
+      <text class="t-inv" x="490" y="234" text-anchor="middle" font-size="14.5" font-weight="800">PragyaMetrics</text>
+      <text class="t-inv" x="490" y="256" text-anchor="middle" font-size="14.5" font-weight="800">Machine IQ</text>
+
+      <g text-anchor="middle">
+        <g transform="translate(490,62)"><rect x="-100" y="-36" width="200" height="72" rx="13" fill="#fbf7ef" stroke="#847f78" stroke-width="2"/><text y="-10" font-size="14" font-weight="800">Manufacturing</text><text class="t-body" y="10" font-size="11.5">Fewer unplanned stoppages;</text><text class="t-body" y="26" font-size="11.5">better maintenance planning</text></g>
+        <g transform="translate(798,152)"><rect x="-100" y="-36" width="200" height="72" rx="13" fill="#fbf7ef" stroke="#847f78" stroke-width="2"/><text y="-10" font-size="14" font-weight="800">Telecom</text><text class="t-body" y="10" font-size="11.5">Faster fault diagnosis;</text><text class="t-body" y="26" font-size="11.5">human-approved rerouting</text></g>
+        <g transform="translate(798,332)"><rect x="-100" y="-36" width="200" height="72" rx="13" fill="#fbf7ef" stroke="#847f78" stroke-width="2"/><text y="-10" font-size="14" font-weight="800">Energy</text><text class="t-body" y="10" font-size="11.5">Degradation risk ranked</text><text class="t-body" y="26" font-size="11.5">across governed sites</text></g>
+        <g transform="translate(490,418)"><rect x="-100" y="-36" width="200" height="72" rx="13" fill="#fbf7ef" stroke="#847f78" stroke-width="2"/><text y="-10" font-size="14" font-weight="800">Utilities</text><text class="t-body" y="10" font-size="11.5">Load and restoration calls</text><text class="t-body" y="26" font-size="11.5">under regulatory constraint</text></g>
+        <g transform="translate(182,332)"><rect x="-100" y="-36" width="200" height="72" rx="13" fill="#fbf7ef" stroke="#847f78" stroke-width="2"/><text y="-10" font-size="14" font-weight="800">Mining</text><text class="t-body" y="10" font-size="11.5">Health context that survives</text><text class="t-body" y="26" font-size="11.5">intermittent connectivity</text></g>
+        <g transform="translate(182,152)"><rect x="-100" y="-36" width="200" height="72" rx="13" fill="#fbf7ef" stroke="#847f78" stroke-width="2"/><text y="-10" font-size="14" font-weight="800">Smart Infrastructure</text><text class="t-body" y="10" font-size="11.5">Efficiency and continuity</text><text class="t-body" y="26" font-size="11.5">across building systems</text></g>
+      </g>
+
+      <text class="t-body" x="490" y="478" text-anchor="middle" font-size="12.5">Target use cases, not achieved outcomes — semantics, connectors, controls, and evidence remain domain-specific</text>
+    </svg>
+    </div>
+    <div class="figcap"><strong>Figure 8</strong> &nbsp; Six candidate industry domains for a reusable federated substrate with domain-specific implementation.</div>
+    <div class="so-what">So what — common services may be reused, but every domain requires its own semantics, controls, and evidence.</div>
+  </div>
+  <details><summary>Industry-by-industry: where the intelligence lands</summary>
+    <div class="deeper">
+      <p>The reusable part is the substrate: identity, provenance, policy, the belief store, and the evidence discipline. Everything below is what each sector must supply for itself — and the constraint that most often decides whether a first deployment succeeds.</p>
+      <h5>Manufacturing</h5>
+      <p><strong>Sources:</strong> historian tags, MES production records, CMMS work orders, PLM tolerances, quality inspection results. <strong>First bounded problem:</strong> one high-cost failure mode on one constrained line. <strong>Binding constraint:</strong> maintenance records are usually free text and inconsistently coded, so label quality — not model choice — sets the ceiling on what prediction can achieve.</p>
+      <h5>Telecom</h5>
+      <p><strong>Sources:</strong> element telemetry, topology and inventory, change records, ticket history, customer-impact data. <strong>First bounded problem:</strong> reducing time-to-diagnose on a recurring fault class. <strong>Binding constraint:</strong> topology drifts faster than it is documented; a recommendation built on a stale topology is confidently wrong, so topology freshness must be measured, not assumed.</p>
+      <h5>Energy</h5>
+      <p><strong>Sources:</strong> generation and distribution asset condition, outage history, dispatch schedules, weather. <strong>First bounded problem:</strong> ranking degradation risk across a fleet so inspection effort follows risk. <strong>Binding constraint:</strong> control authority is already allocated and regulated; the system informs dispatch decisions, it does not make them.</p>
+      <h5>Utilities</h5>
+      <p><strong>Sources:</strong> SCADA-derived context, AMI meter data, outage management, crew availability, weather. <strong>First bounded problem:</strong> restoration sequencing support during a storm event. <strong>Binding constraint:</strong> regulatory reporting obligations mean every recommendation that influenced a restoration decision must remain reconstructable long after the event.</p>
+      <h5>Mining</h5>
+      <p><strong>Sources:</strong> mobile-fleet condition monitoring, fixed-plant telemetry, maintenance history, fuel and payload data. <strong>First bounded problem:</strong> haul-truck or crusher availability on one circuit. <strong>Binding constraint:</strong> connectivity is intermittent by nature, so local operation must degrade safely and reconcile cleanly when the link returns — this is the sector where edge-first design is not optional.</p>
+      <h5>Smart infrastructure</h5>
+      <p><strong>Sources:</strong> BMS and HVAC points, energy metering, occupancy, ticketing and maintenance systems. <strong>First bounded problem:</strong> recurring comfort or energy faults across a portfolio of similar buildings. <strong>Binding constraint:</strong> point naming is chaotic across vendors and vintages; normalizing to a common semantic model is most of the work, and it is worth costing honestly up front.</p>
+      <p>A pattern repeats across all six: the hard part is rarely the model. It is the semantics, the label quality, and the authority boundary — which is why the Lighthouse Program spends its first three weeks there.</p>
+    </div>
+  </details>
+</section>
+
+<section id="s10">
+  <div class="section-label">10 — Adoption Realities</div>
+  <h2>Machine IQ is an architecture, not a magic wand. Where it stalls, it stalls for reasons worth naming.</h2>
+  <div class="in-one-line"><strong>In one line</strong> Data readiness, model fitness, OT/IT security, integration, governance, and operator trust are all necessary; none should be assumed away.</div>
+  <p class="lead">Credibility requires candor. McKinsey identifies data quality, missing capabilities, workflow redesign, and change management as recurring barriers to predictive maintenance at scale.<sup><a href="#ref-3">[3]</a></sup> Model performance also remains use-case specific and must be validated against the cost of false positives and false negatives.</p>
+  <div class="cards"><div class="card"><h3>Data readiness</h3><p>Sensor gaps, miscalibration, inconsistent timestamps, and incomplete maintenance records can produce missed detections or false alarms.<sup><a href="#ref-3">[3]</a></sup> Data quality must be monitored continuously, with uncertainty exposed rather than hidden.</p></div><div class="card"><h3>OT/IT and security boundaries</h3><p>Operational technology and IT were built by different teams, in different decades, under different security models. A federated architecture respects that boundary: intelligence runs close to the asset, raw data need not cross the OT/IT line, and the workspace shares context under explicit policy rather than copying sensitive streams into a central lake.</p></div><div class="card"><h3>Governance &amp; trust</h3><p>Autonomy without accountability is unsuitable for consequential industrial decisions. The architecture therefore requires scoped identities, permissions, provenance, logs, approval records, and human authority; these are product requirements to implement and test, not assumed properties.</p></div><div class="card"><h3>People &amp; change</h3><p>The hardest mile is adoption. Technicians trust their own judgment over an opaque alert — rightly, when the tool is opaque. The system earns trust by showing its reasoning and its sources, and by arriving inside existing workflows rather than adding another screen to ignore.</p></div></div>
+  <p>None of this is a reason to wait; it is a reason to start deliberately, on a bounded problem, with honest instrumentation of both the wins and the friction. The enterprises that succeed treat operational intelligence as a capability to build, not a product to install.</p>
+  <p>A white paper that only lists benefits is marketing. The barriers are real — and naming them is how you clear them.</p>
+</section>
+
+<section id="s11">
+  <div class="section-label">11 — The Machine IQ Maturity Model</div>
+  <h2>Every operation sits somewhere on this curve. The value is in knowing where — and what the next rung requires.</h2>
+  <div class="in-one-line"><strong>In one line</strong> Locate your operation on the Reactive → Predictive → Prescriptive → Autonomous ladder, then read one column right to see what advancing takes.</div>
+  <p class="lead">Operational intelligence is not binary. It matures along a spectrum, and each stage demands different data, different governance, and a different relationship between human and machine. Use the model below as a quick self-assessment: find the description that best matches how your operation runs today, then read one column to the right to see what advancing entails.</p>
+  <div class="maturity-grid"><div class="maturity-col"><div class="badge">1</div><h3>Reactive</h3><p>Systems are siloed. Teams respond to failures, defects, and outages after they occur. Reports conflict; decisions wait on manual reconciliation.</p><div class="you-are">You are here if… you fight fires</div></div><div class="maturity-col"><div class="badge">2</div><h3>Predictive</h3><p>Data is connected and contextualized. Models forecast failures, quality risks, and bottlenecks before they happen, giving teams time to plan.</p><div class="you-are">You are here if… you see it coming</div></div><div class="maturity-col"><div class="badge">3</div><h3>Prescriptive</h3><p>The system does not just predict — it recommends the optimal response, weighing production impact, cost, and risk, and drafts the work order.</p><div class="you-are">You are here if… the system advises</div></div><div class="maturity-col"><div class="badge">4</div><h3>Autonomous</h3><p>Within a separately validated safety and governance case, bounded workflows may execute approved actions while humans retain policy, override, and exception authority.</p><div class="you-are">You are here if… bounded actions are independently assured</div></div></div>
+  <p style="font-size:13px;color:#777;font-style:italic">This is a PragyaMetrics self-assessment model, not an industry census. Use it to locate a specific operation from evidence, then advance only when its data, model, workflow, security, and safety gates are met.</p>
+</section>
+
+<section id="s12">
+  <div class="section-label">12 — The Eras Compared</div>
+  <h2>Search IQ, Work IQ, and Machine IQ are not rivals — they are stages in the evolution of enterprise intelligence.</h2>
+  <div class="in-one-line"><strong>In one line</strong> The three eras are complementary stages, not competitors; each solves the problem the previous one was never designed to address.</div>
+  <p class="lead">A fair competitive framing does not dismiss what came before. It recognizes that each generation of intelligence solved a real problem — and that the next generation solves the problem the previous one was not designed to address. Search IQ, Work IQ, and Machine IQ are stages in a progression, not competitors in a zero-sum market.</p>
+  <p><strong>Search IQ</strong> systems — built around retrieval, indexing, and query — remain foundational. Every organization needs to find what it knows. But search does not generate operational understanding. It returns what was already written down.</p>
+  <p><strong>Work IQ</strong> provides permission-aware intelligence over workplace and connected business context, with tools and actions exposed to custom agents through standard interfaces.<sup><a href="#ref-12">[12]</a></sup> It can reach beyond email and documents; its defining center of gravity remains workplace intelligence.</p>
+  <p><strong>Machine IQ</strong>, as proposed here, specializes in industrial semantics and constraints: sensor and historian data, asset identity, intermittent edge operation, strict latency, deterministic safety, control authority, and engineering specifications. The distinction is domain specialization, not a claim that Work IQ is technically incapable of connecting to external systems.</p>
+  <p>PragyaMetrics sees a conceptual parallel between governed workplace context and governed operational context. The global-workspace research discussed earlier is inspiration for this comparison, not evidence that Microsoft Work IQ or PragyaMetrics implements a cognitive-science architecture.<sup><a href="#ref-5">[5]</a></sup></p>
+  <p>Seen side by side, the three labels emphasize different design centers. The heat map below is a <strong>PragyaMetrics conceptual assessment</strong>, not an independent benchmark; the narrative table explains the assumptions behind it.</p>
+  <div class="figure">
+    <div class="figure-title">PragyaMetrics Conceptual Capability Map</div><div class="figure-sub">Author assessment of design emphasis — not an independent benchmark</div>
+    <div class="dia-wrap">
+    <svg class="dia" viewBox="0 0 980 506" role="img" aria-labelledby="f9t f9d">
+      <title id="f9t">Conceptual capability map of the three eras</title>
+      <desc id="f9d">A six-row qualitative comparison of Search IQ, Work IQ and Machine IQ across operational context, prediction, prescription and action, auditability, validated learning, and coverage of the physical operation. Machine IQ is rated high on every row; Search IQ is low on all but auditability.</desc>
+      <defs><filter id="f9sh" x="-20%" y="-40%" width="140%" height="200%"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#2d343c" flood-opacity="0.10"/></filter></defs>
+      <g filter="url(#f9sh)"><rect x="320" y="24" width="190" height="46" rx="11" fill="#4d5661"/></g>
+      <text class="t-inv" x="415" y="54" text-anchor="middle" font-size="15" font-weight="800">Search IQ</text>
+      <g filter="url(#f9sh)"><rect x="524" y="24" width="190" height="46" rx="11" fill="#167bc8"/></g>
+      <text class="t-inv" x="619" y="54" text-anchor="middle" font-size="15" font-weight="800">Work IQ</text>
+      <g filter="url(#f9sh)"><rect x="728" y="24" width="190" height="46" rx="11" fill="#0faa78"/></g>
+      <text class="t-inv" x="823" y="54" text-anchor="middle" font-size="15" font-weight="800">Machine IQ</text>
+      <text class="t-node" x="300" y="119" text-anchor="end" font-size="13.5">Operational context</text>
+      <rect x="320" y="90" width="190" height="48" rx="9" fill="#ece7dd"/>
+      <text x="415" y="112" text-anchor="middle" font-size="13" font-weight="800" fill="#7c776f">Low</text>
+      <g><rect x="392" y="122" width="12" height="6" rx="3" fill="#b9b1a3" opacity="1"/><rect x="409" y="122" width="12" height="6" rx="3" fill="#b9b1a3" opacity="0.28"/><rect x="426" y="122" width="12" height="6" rx="3" fill="#b9b1a3" opacity="0.28"/></g>
+      <rect x="524" y="90" width="190" height="48" rx="9" fill="#8fb3cc"/>
+      <text x="619" y="112" text-anchor="middle" font-size="13" font-weight="800" fill="#123a5a">Medium</text>
+      <g><rect x="596" y="122" width="12" height="6" rx="3" fill="#12314a" opacity="1"/><rect x="613" y="122" width="12" height="6" rx="3" fill="#12314a" opacity="1"/><rect x="630" y="122" width="12" height="6" rx="3" fill="#12314a" opacity="0.28"/></g>
+      <rect x="728" y="90" width="190" height="48" rx="9" fill="#16ad7b"/>
+      <text x="823" y="112" text-anchor="middle" font-size="13" font-weight="800" fill="#063f30">High</text>
+      <g><rect x="800" y="122" width="12" height="6" rx="3" fill="#063f30" opacity="1"/><rect x="817" y="122" width="12" height="6" rx="3" fill="#063f30" opacity="1"/><rect x="834" y="122" width="12" height="6" rx="3" fill="#063f30" opacity="1"/></g>
+      <text class="t-node" x="300" y="175" text-anchor="end" font-size="13.5">Predicts what happens next</text>
+      <rect x="320" y="146" width="190" height="48" rx="9" fill="#ece7dd"/>
+      <text x="415" y="168" text-anchor="middle" font-size="13" font-weight="800" fill="#7c776f">Low</text>
+      <g><rect x="392" y="178" width="12" height="6" rx="3" fill="#b9b1a3" opacity="1"/><rect x="409" y="178" width="12" height="6" rx="3" fill="#b9b1a3" opacity="0.28"/><rect x="426" y="178" width="12" height="6" rx="3" fill="#b9b1a3" opacity="0.28"/></g>
+      <rect x="524" y="146" width="190" height="48" rx="9" fill="#ece7dd"/>
+      <text x="619" y="168" text-anchor="middle" font-size="13" font-weight="800" fill="#7c776f">Low</text>
+      <g><rect x="596" y="178" width="12" height="6" rx="3" fill="#b9b1a3" opacity="1"/><rect x="613" y="178" width="12" height="6" rx="3" fill="#b9b1a3" opacity="0.28"/><rect x="630" y="178" width="12" height="6" rx="3" fill="#b9b1a3" opacity="0.28"/></g>
+      <rect x="728" y="146" width="190" height="48" rx="9" fill="#16ad7b"/>
+      <text x="823" y="168" text-anchor="middle" font-size="13" font-weight="800" fill="#063f30">High</text>
+      <g><rect x="800" y="178" width="12" height="6" rx="3" fill="#063f30" opacity="1"/><rect x="817" y="178" width="12" height="6" rx="3" fill="#063f30" opacity="1"/><rect x="834" y="178" width="12" height="6" rx="3" fill="#063f30" opacity="1"/></g>
+      <text class="t-node" x="300" y="231" text-anchor="end" font-size="13.5">Prescribes &amp; acts</text>
+      <rect x="320" y="202" width="190" height="48" rx="9" fill="#ece7dd"/>
+      <text x="415" y="224" text-anchor="middle" font-size="13" font-weight="800" fill="#7c776f">Low</text>
+      <g><rect x="392" y="234" width="12" height="6" rx="3" fill="#b9b1a3" opacity="1"/><rect x="409" y="234" width="12" height="6" rx="3" fill="#b9b1a3" opacity="0.28"/><rect x="426" y="234" width="12" height="6" rx="3" fill="#b9b1a3" opacity="0.28"/></g>
+      <rect x="524" y="202" width="190" height="48" rx="9" fill="#8fb3cc"/>
+      <text x="619" y="224" text-anchor="middle" font-size="13" font-weight="800" fill="#123a5a">Medium</text>
+      <g><rect x="596" y="234" width="12" height="6" rx="3" fill="#12314a" opacity="1"/><rect x="613" y="234" width="12" height="6" rx="3" fill="#12314a" opacity="1"/><rect x="630" y="234" width="12" height="6" rx="3" fill="#12314a" opacity="0.28"/></g>
+      <rect x="728" y="202" width="190" height="48" rx="9" fill="#16ad7b"/>
+      <text x="823" y="224" text-anchor="middle" font-size="13" font-weight="800" fill="#063f30">High</text>
+      <g><rect x="800" y="234" width="12" height="6" rx="3" fill="#063f30" opacity="1"/><rect x="817" y="234" width="12" height="6" rx="3" fill="#063f30" opacity="1"/><rect x="834" y="234" width="12" height="6" rx="3" fill="#063f30" opacity="1"/></g>
+      <text class="t-node" x="300" y="287" text-anchor="end" font-size="13.5">Auditable &amp; governed</text>
+      <rect x="320" y="258" width="190" height="48" rx="9" fill="#8fb3cc"/>
+      <text x="415" y="280" text-anchor="middle" font-size="13" font-weight="800" fill="#123a5a">Medium</text>
+      <g><rect x="392" y="290" width="12" height="6" rx="3" fill="#12314a" opacity="1"/><rect x="409" y="290" width="12" height="6" rx="3" fill="#12314a" opacity="1"/><rect x="426" y="290" width="12" height="6" rx="3" fill="#12314a" opacity="0.28"/></g>
+      <rect x="524" y="258" width="190" height="48" rx="9" fill="#8fb3cc"/>
+      <text x="619" y="280" text-anchor="middle" font-size="13" font-weight="800" fill="#123a5a">Medium</text>
+      <g><rect x="596" y="290" width="12" height="6" rx="3" fill="#12314a" opacity="1"/><rect x="613" y="290" width="12" height="6" rx="3" fill="#12314a" opacity="1"/><rect x="630" y="290" width="12" height="6" rx="3" fill="#12314a" opacity="0.28"/></g>
+      <rect x="728" y="258" width="190" height="48" rx="9" fill="#16ad7b"/>
+      <text x="823" y="280" text-anchor="middle" font-size="13" font-weight="800" fill="#063f30">High</text>
+      <g><rect x="800" y="290" width="12" height="6" rx="3" fill="#063f30" opacity="1"/><rect x="817" y="290" width="12" height="6" rx="3" fill="#063f30" opacity="1"/><rect x="834" y="290" width="12" height="6" rx="3" fill="#063f30" opacity="1"/></g>
+      <text class="t-node" x="300" y="343" text-anchor="end" font-size="13.5">Validated learning</text>
+      <rect x="320" y="314" width="190" height="48" rx="9" fill="#ece7dd"/>
+      <text x="415" y="336" text-anchor="middle" font-size="13" font-weight="800" fill="#7c776f">Low</text>
+      <g><rect x="392" y="346" width="12" height="6" rx="3" fill="#b9b1a3" opacity="1"/><rect x="409" y="346" width="12" height="6" rx="3" fill="#b9b1a3" opacity="0.28"/><rect x="426" y="346" width="12" height="6" rx="3" fill="#b9b1a3" opacity="0.28"/></g>
+      <rect x="524" y="314" width="190" height="48" rx="9" fill="#8fb3cc"/>
+      <text x="619" y="336" text-anchor="middle" font-size="13" font-weight="800" fill="#123a5a">Medium</text>
+      <g><rect x="596" y="346" width="12" height="6" rx="3" fill="#12314a" opacity="1"/><rect x="613" y="346" width="12" height="6" rx="3" fill="#12314a" opacity="1"/><rect x="630" y="346" width="12" height="6" rx="3" fill="#12314a" opacity="0.28"/></g>
+      <rect x="728" y="314" width="190" height="48" rx="9" fill="#16ad7b"/>
+      <text x="823" y="336" text-anchor="middle" font-size="13" font-weight="800" fill="#063f30">High</text>
+      <g><rect x="800" y="346" width="12" height="6" rx="3" fill="#063f30" opacity="1"/><rect x="817" y="346" width="12" height="6" rx="3" fill="#063f30" opacity="1"/><rect x="834" y="346" width="12" height="6" rx="3" fill="#063f30" opacity="1"/></g>
+      <text class="t-node" x="300" y="399" text-anchor="end" font-size="13.5">Covers the physical operation</text>
+      <rect x="320" y="370" width="190" height="48" rx="9" fill="#ece7dd"/>
+      <text x="415" y="392" text-anchor="middle" font-size="13" font-weight="800" fill="#7c776f">Low</text>
+      <g><rect x="392" y="402" width="12" height="6" rx="3" fill="#b9b1a3" opacity="1"/><rect x="409" y="402" width="12" height="6" rx="3" fill="#b9b1a3" opacity="0.28"/><rect x="426" y="402" width="12" height="6" rx="3" fill="#b9b1a3" opacity="0.28"/></g>
+      <rect x="524" y="370" width="190" height="48" rx="9" fill="#ece7dd"/>
+      <text x="619" y="392" text-anchor="middle" font-size="13" font-weight="800" fill="#7c776f">Low</text>
+      <g><rect x="596" y="402" width="12" height="6" rx="3" fill="#b9b1a3" opacity="1"/><rect x="613" y="402" width="12" height="6" rx="3" fill="#b9b1a3" opacity="0.28"/><rect x="630" y="402" width="12" height="6" rx="3" fill="#b9b1a3" opacity="0.28"/></g>
+      <rect x="728" y="370" width="190" height="48" rx="9" fill="#16ad7b"/>
+      <text x="823" y="392" text-anchor="middle" font-size="13" font-weight="800" fill="#063f30">High</text>
+      <g><rect x="800" y="402" width="12" height="6" rx="3" fill="#063f30" opacity="1"/><rect x="817" y="402" width="12" height="6" rx="3" fill="#063f30" opacity="1"/><rect x="834" y="402" width="12" height="6" rx="3" fill="#063f30" opacity="1"/></g>
+      <path d="M320 434 H918" stroke="#e0d8c9" stroke-width="1"/>
+      <rect x="320" y="452" width="16" height="11" rx="3" fill="#ece7dd" stroke="#cfc6b6" stroke-width="1"/>
+      <text class="t-body" x="344" y="462" font-size="12">Low</text>
+      <rect x="420" y="452" width="16" height="11" rx="3" fill="#8fb3cc" stroke="#cfc6b6" stroke-width="1"/>
+      <text class="t-body" x="444" y="462" font-size="12">Medium</text>
+      <rect x="520" y="452" width="16" height="11" rx="3" fill="#16ad7b" stroke="#cfc6b6" stroke-width="1"/>
+      <text class="t-body" x="544" y="462" font-size="12">High</text>
+      <text class="t-body" x="918" y="490" text-anchor="end" font-size="12" font-style="italic">Qualitative author assessment · pips repeat each level for readers who cannot rely on colour</text>
+    </svg>
+    </div>
+    <div class="figcap"><strong>Figure 9</strong> &nbsp; PragyaMetrics’ conceptual comparison of the three design centers; it is not an independent product benchmark.</div>
+    <div class="so-what">So what — the proposed Machine IQ model emphasizes industrial context, evidence, and governed action.</div>
+  </div>
+  <p class="scroll-cue">Swipe to view the full table</p>
+  <div class="table-wrap" tabindex="0" role="region" aria-label="Comparison of Search IQ, Work IQ and Machine IQ across six dimensions">
+  <table><caption>How the three eras compare across six dimensions. PragyaMetrics assessment, not an independent benchmark.</caption><thead><tr><th scope="col">Dimension</th><th scope="col">Search IQ</th><th scope="col">Work IQ</th><th scope="col">Machine IQ</th></tr></thead><tbody><tr><td>Core question</td><td>How do we find what we know?</td><td>How do we make people more effective in their work?</td><td class="machine-col">How do we make operations intelligent?</td></tr><tr><td>Primary data</td><td>Documents, wikis, indexed repositories, web content</td><td>Microsoft 365 content, connected business systems, tools, workspaces, and agent context</td><td class="machine-col">Sensor streams, historians, SCADA, MES, ERP, PLM, CMMS, IIoT, and engineering specifications</td></tr><tr><td>Where value is created</td><td>At the point of retrieval — finding the right answer faster</td><td>At the point of work — reducing friction, preserving context, amplifying human judgment</td><td class="machine-col">At the point of operation — preventing selected failures and improving decisions through measured, validated feedback</td></tr><tr><td>Time horizon</td><td>Defined by retrieved source coverage</td><td>Defined by connected workplace and business context</td><td class="machine-col">Streaming and historical operational context, plus use-case-specific validated forecasts</td></tr><tr><td>Human’s role</td><td>Asks the question and evaluates the answer</td><td>Collaborates with governed agents and tools</td><td class="machine-col">Owns policy, validates recommendations, approves consequential action, and reviews outcomes</td></tr><tr><td>Business outcome</td><td>Faster access to organizational knowledge</td><td>Higher productivity and better decisions in knowledge work</td><td class="machine-col">Targeted reliability, quality, cost, and decision-support improvements measured against baseline</td></tr></tbody></table>
+  </div>
+</section>
+
+<section id="s13">
+  <div class="section-label">13 — Strategic Vision &amp; Call to Action</div>
+  <h2>The future belongs to enterprises that generate intelligence — not those that search for it.</h2>
+  <div class="in-one-line"><strong>In one line</strong> The enabling technologies are advancing, but operational readiness varies — build the intelligence layer incrementally through a 12-week Machine IQ Lighthouse Program focused on one measurable problem.</div>
+  <p class="lead">Industrial enterprises have invested in sensors, systems, cloud, and edge infrastructure to very different degrees. The opportunity is to connect approved context into a governed intelligence layer where the use case, data quality, safety boundary, and economics justify it. Advantage is demonstrated through measured operational results, not assumed from architecture alone.</p>
+  <p>The path forward is incremental. Begin with a single production line, network segment, or grid zone. Establish the baseline and authority boundary, connect approved systems, and test agents in shadow mode on one costly problem. Expand only when the evidence, operator acceptance, security review, and safety gates support it.</p>
+  <p>PragyaMetrics was founded on a conviction: industrial operations deserve an intelligence architecture as disciplined as the workplace intelligence now emerging for knowledge work. Federated Machine Intelligence is our proposed operating model. Machine IQ is the outcome it is intended to produce. Both claims must be validated through implementation and customer evidence.</p>
+  <p>For CEOs, the question is strategic: <em>Which operational problem has enough value and evidence to justify action?</em> For CTOs and CDOs, it is architectural: <em>Which workloads belong at the edge, on site, or centrally, and what may cross each boundary?</em> For COOs, it is operational: <em>Which recommendation can be tested safely against a measurable baseline?</em></p>
+  <p>Enterprises that answer these questions with evidence can build a durable operational-intelligence capability. The advantage comes from better decisions and execution, not from adopting AI as an end in itself.</p>
+  <div class="quote">Our thesis: the winning enterprise will not be the one with the most data, dashboards, or agents. It will be the one that turns governed operational context into better, measurable decisions. That is the outcome PragyaMetrics calls Machine IQ.</div>
+  <div class="lighthouse"><div class="section-label">Your Next Step</div><h2 style="font-size:31px">Prove Machine IQ in 12 weeks</h2><p>The Machine IQ Lighthouse Program is a fixed-scope, evidence-led engagement for one bounded operational problem. In 12 weeks, the team establishes a defensible baseline, connects approved context safely, validates read-only recommendations with operators, and reaches a documented scale, redesign, or stop decision.</p><div class="phase-grid"><div class="phase"><div class="phase-label">PHASE 1 · WEEKS 1–3</div><h4>Baseline, govern, and connect</h4><p>Select one critical line, network segment, or substation; quantify its cost and performance baseline; name the decision owner; agree read-only, safety, security, and data-governance boundaries; connect approved sources; and expose data-quality gaps.</p></div><div class="phase"><div class="phase-label">PHASE 2 · WEEKS 4–9</div><h4>Build and validate in shadow mode</h4><p>Stand up the minimum Shared Machine Workspace for the selected problem, run governed recommendations alongside current operations without machine writes, and measure precision, recall, lead time, false alarms, provenance completeness, operator acceptance, and projected value.</p></div><div class="phase"><div class="phase-label">PHASE 3 · WEEKS 10–12</div><h4>Measure, decide, and prepare to scale</h4><p>Where acceptance gates are met, embed read-only recommendations into a human-approved workflow, complete security and reliability review, quantify observed impact or a confidence-bounded value case, and issue a scale, redesign, or stop recommendation with the next-stage blueprint.</p></div></div><div class="gates"><h4>Scale only if the evidence clears agreed decision gates</h4><ul><li><strong>Value:</strong> verified baseline, implementation and run costs, measured effect, and confidence range.</li><li><strong>Model:</strong> approved precision, recall, lead time, false-alarm, and missed-event tolerances.</li><li><strong>Assurance:</strong> complete recommendation provenance, least-privilege access, tested rollback, and no unresolved safety or security findings.</li><li><strong>Operations:</strong> named owner, operator acceptance, workflow fit, and a documented scale, redesign, or stop decision.</li></ul></div><div class="contact">Start the conversation: <a href="mailto:hello@pragyametrics.com">hello@pragyametrics.com</a></div></div>
+</section>
+
+<section id="references">
+  <div class="section-label">Research Foundations &amp; References</div>
+  <h2>The paper separates primary evidence, research precedent, and PragyaMetrics’ own proposals.</h2>
+  <div class="in-one-line"><strong>In one line</strong> Quantitative claims link to named sources; conceptual parallels are labeled as inspiration; architecture and outcome claims remain hypotheses until validated in deployment.</div>
+  <p class="lead">PragyaMetrics is a young company; credibility requires transparent evidence and clear limits. Industry statistics below are directional and baseline-dependent. Preprints are identified as such. Product, category, architecture, and cross-industry claims are PragyaMetrics positions, not findings established by the cited research.</p>
+  <p>The evidence base covers five areas: <strong>downtime scale and predictive-maintenance ranges</strong> (refs. 1–4); <strong>workspace research</strong> used as design inspiration (refs. 5–7); <strong>multi-agent and federated-learning precedent</strong>, including known risks (refs. 8–10 and 13); <strong>the actual scope of Microsoft Work IQ</strong> (ref. 12); and <strong>AI and industrial assurance guidance</strong> (refs. 14–15).</p>
+  <div class="ref" id="ref-1"><div class="num">1</div><p><strong>Siemens / Senseye.</strong> <em>The True Cost of Downtime 2024.</em> Estimates almost $1.4 trillion in annual unplanned-downtime cost across the world’s 500 biggest companies, or 11% of revenue. Method: 181 online interviews covering April 2019–March 2023, extrapolated using public company information. Siemens sells predictive-maintenance software, so the estimate should be treated as vendor-sponsored research. <a class="source-link" href="https://assets.new.siemens.com/siemens/assets/api/uuid:1b43afb5-2d07-47f7-9eb7-893fe7d0bc59/TCOD-2024_original.pdf" rel="noopener">Siemens/Senseye, <em>The True Cost of Downtime 2024</em> (PDF)</a>.</p></div>
+  <div class="ref" id="ref-2"><div class="num">2</div><p><strong>Deloitte Analytics Institute.</strong> <em>Predictive Maintenance</em> (position paper). Reports internal-analysis averages of 10–20% higher equipment uptime and availability, 5–10% lower overall maintenance cost, and 20–50% lower maintenance-planning effort; it also repeats larger headline figures that should not be treated as universal outcomes. <a class="source-link" href="https://www.deloitte.com/content/dam/assets-zone2/de/de/docs/about/2024/Deloitte_Predictive-Maintenance_PositionPaper.pdf" rel="noopener">Deloitte, <em>Predictive Maintenance</em> position paper (PDF)</a>.</p></div>
+  <div class="ref" id="ref-3"><div class="num">3</div><p><strong>McKinsey &amp; Company.</strong> “Manufacturing: Analytics unleashes productivity and profitability” reports typical reductions of 30–50% in machine downtime and increases of 20–40% in machine life. “Prediction at scale” explains why suitability must be validated asset by asset and highlights data, sensor, workflow, capability, and adoption constraints. Both are consultancy publications reporting observed ranges rather than a controlled study. <a class="source-link" href="https://www.mckinsey.com/capabilities/operations/our-insights/manufacturing-analytics-unleashes-productivity-and-profitability" rel="noopener">McKinsey, &ldquo;Manufacturing: Analytics unleashes productivity and profitability&rdquo;</a>.</p></div>
+  <div class="ref" id="ref-4"><div class="num">4</div><p><strong>U.S. Department of Energy.</strong> <em>Operations &amp; Maintenance Best Practices Guide, Release 3.0</em>, section 5.4. Reports estimated savings of 8–12% over preventive maintenance alone and opportunities exceeding 30–40% where reliance on reactive maintenance is high. The guide does not specify a universal ROI multiple or return horizon. <a class="source-link" href="https://www.energy.gov/sites/prod/files/2020/04/f74/omguide_complete_w-eo-disclaimer.pdf" rel="noopener">DOE, <em>O&amp;M Best Practices Guide, Release 3.0</em> (PDF)</a>.</p></div>
+  <div class="ref" id="ref-5"><div class="num">5</div><p><strong>Gurnee, W., Lindsey, J., et al. (Anthropic).</strong> <em>Verbalizable Representations Form a Global Workspace in Language Models.</em> Transformer Circuits, 6 July 2026; arXiv preprint posted 16 July 2026. Identifies a small, privileged “J-space” with functional workspace-like properties; it does not establish machine consciousness or validate an industrial architecture. <a class="source-link" href="https://transformer-circuits.pub/2026/workspace/index.html" rel="noopener">Transformer Circuits research article</a>.</p></div>
+  <div class="ref" id="ref-6"><div class="num">6</div><p><strong>Baars, B. J.</strong> “Global workspace theory of consciousness: toward a cognitive neuroscience of human experience.” <em>Progress in Brain Research</em> 150 (2005), 45–53. <a class="source-link" href="https://doi.org/10.1016/S0079-6123(05)50004-9" rel="noopener">doi:10.1016/S0079-6123(05)50004-9</a>. See also <em>A Cognitive Theory of Consciousness</em> (Cambridge University Press, 1988).</p></div>
+  <div class="ref" id="ref-7"><div class="num">7</div><p><strong>Dehaene, S., Kerszberg, M., &amp; Changeux, J.-P.</strong> “A neuronal model of a global workspace in effortful cognitive tasks.” <em>PNAS</em> 95(24) (1998), 14529–14534. <a class="source-link" href="https://doi.org/10.1073/pnas.95.24.14529" rel="noopener">doi:10.1073/pnas.95.24.14529</a>.</p></div>
+  <div class="ref" id="ref-8"><div class="num">8a</div><p><strong>Tran, K.-T., Dao, D., Nguyen, M.-D., Pham, Q.-V., O&rsquo;Sullivan, B., &amp; Nguyen, H. D.</strong> “Multi-Agent Collaboration Mechanisms: A Survey of LLMs,” arXiv:2501.06322 (2025). Preprint. Surveys collaboration patterns and coordination challenges; it does not prove that shared context is automatically auditable or policy-compliant. <a class="source-link" href="https://arxiv.org/abs/2501.06322" rel="noopener">arXiv:2501.06322</a>.</p></div>
+  <div class="ref" id="ref-8b"><div class="num">8b</div><p><strong>Adimulam, A., Gupta, R., &amp; Kumar, S.</strong> “The Orchestration of Multi-Agent Systems: Architectures, Protocols, and Enterprise Adoption,” arXiv:2601.13671 (2026). Preprint. Surveys orchestration architectures and enterprise adoption patterns, including open coordination and governance challenges. <a class="source-link" href="https://arxiv.org/abs/2601.13671" rel="noopener">arXiv:2601.13671</a>.</p></div>
+  <div class="ref" id="ref-9"><div class="num">9</div><p><strong>Dritsas, E. &amp; Trigka, M.</strong> “Federated Learning for IoT: A Comprehensive Survey,” <em>Journal of Sensor and Actuator Networks</em> 14(5), 93 (2025). Surveys local training, model aggregation, privacy motivations, and implementation constraints. <a class="source-link" href="https://doi.org/10.3390/jsan14050093" rel="noopener">doi:10.3390/jsan14050093</a>.</p></div>
+  <div class="ref" id="ref-10"><div class="num">10</div><p><strong>Zhang, T., et al.</strong> “Federated Learning for the Internet of Things,” arXiv:2111.07494 (preprint). Reviews distributed model training for IoT and associated communication, heterogeneity, privacy, and security challenges. <a class="source-link" href="https://arxiv.org/abs/2111.07494" rel="noopener">arXiv:2111.07494</a>.</p></div>
+  <div class="ref" id="ref-11"><div class="num">11</div><p><strong>Prior commercial use of “Machine IQ.”</strong> Bobcat uses the name for a telematics service, and MachineIQ Pty Ltd uses it for industrial-automation and IoT consulting. These examples do not determine trademark availability; independent legal clearance is required. <span class="source-note">Primary sources: Bobcat Machine IQ product pages; MachineIQ Pty Ltd (Australia).</span></p></div>
+  <div class="ref" id="ref-12"><div class="num">12</div><p><strong>Microsoft.</strong> “Work IQ” documentation. Describes permission-aware workplace intelligence with chat, context, tools, and workspaces accessible through A2A, MCP, and REST, preserving Microsoft 365 permissions, compliance, and governance controls. <a class="source-link" href="https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/work-iq/api-overview" rel="noopener">Microsoft Work IQ API documentation</a>.</p></div>
+  <div class="ref" id="ref-13"><div class="num">13</div><p><strong>Zhao, J. C., Bagchi, S., Avestimehr, S., et al.</strong> “The Federation Strikes Back: A Survey of Federated Learning Privacy Attacks, Defenses, Applications, and Policy Landscape.” <em>ACM Computing Surveys</em> (2025). Shows that model updates can expose information and that poisoning, observability, and compliance risks require additional controls. <a class="source-link" href="https://doi.org/10.1145/3724113" rel="noopener">doi:10.1145/3724113</a>.</p></div>
+  <div class="ref" id="ref-14"><div class="num">14</div><p><strong>Tabassi, E. / NIST.</strong> <em>Artificial Intelligence Risk Management Framework (AI RMF 1.0)</em>, NIST AI 100-1 (2023). Organizes AI risk management around Govern, Map, Measure, and Manage. <a class="source-link" href="https://doi.org/10.6028/NIST.AI.100-1" rel="noopener">doi:10.6028/NIST.AI.100-1</a>.</p></div>
+  <div class="ref" id="ref-15"><div class="num">15</div><p><strong>International Electrotechnical Commission.</strong> <em>IEC 62443-3-2:2020 — Security risk assessment for system design.</em> Establishes requirements for defining the system under consideration, partitioning it into zones and conduits, assessing risk, and assigning target security levels. <a class="source-link" href="https://webstore.iec.ch/en/publication/30727" rel="noopener">IEC 62443-3-2:2020 publication page</a>.</p></div>
+  <p class="method-note">Method note: references 1–4 are industry, consultancy, and government sources rather than a meta-analysis; the ranges are directional, use different definitions, and are not guarantees. References 5–10 and 13 establish research precedent and limitations, not PragyaMetrics product performance. Figure 5 is explicitly illustrative. Every reference links to its primary source, by DOI or arXiv identifier where one exists and by publisher URL otherwise; the sole exception is reference 11, where the prior commercial uses of the name are described rather than linked. Vendor and consultancy documents are hosted at URLs that change, so a citation that fails should be located by title. Reference links were checked on 9 August 2026.</p>
+</section>
+</main>
+
+<footer><div class="mark"></div><div class="footer-title">From Work IQ to Machine IQ — <span>Enabling the Future of Operational Intelligence.</span></div><div class="footer-line"></div><p class="footer-copy">PragyaMetrics is developing <strong>Federated Machine Intelligence</strong> — a governed operating model for turning approved industrial context into traceable decisions and bounded actions.</p><div class="copyright">© 2026 PragyaMetrics. All rights reserved. · <em>From Work IQ to Machine IQ · PragyaMetrics Perspective</em> · 2026 · v2.3 · External thought-leadership document prepared for enterprise leadership. · Full sources in the References section.</div></footer>
+</div>
+<script>
+  const btn=document.getElementById('menuBtn'),drawer=document.getElementById('drawer');
+  function setDrawer(open,refocus){
+    drawer.classList.toggle('open',open);
+    btn.setAttribute('aria-expanded',String(open));
+    btn.setAttribute('aria-label',open?'Close section navigation':'Open section navigation');
+    if(!open&&refocus)btn.focus();
+  }
+  btn.addEventListener('click',()=>setDrawer(!drawer.classList.contains('open')));
+  drawer.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>setDrawer(false)));
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&drawer.classList.contains('open'))setDrawer(false,true)});
+  document.addEventListener('click',e=>{
+    if(!drawer.classList.contains('open'))return;
+    if(!drawer.contains(e.target)&&!btn.contains(e.target))setDrawer(false);
+  });
+  addEventListener('scroll',()=>{const h=document.documentElement;const pct=(h.scrollTop/(h.scrollHeight-h.clientHeight))*100;document.getElementById('progress').style.width=pct+'%'});
+</script>
+</body>
+</html>

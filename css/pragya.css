@@ -973,6 +973,78 @@ body.page-pragya .pragya-main .final-cta-contact strong {
   font-weight: 500;
 }
 
+/* —— The Pragya model (Machine IQ capability layers) —— */
+body.page-pragya .pragya-main .model-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+}
+
+body.page-pragya .pragya-main .model-card {
+  background: var(--pm-bg-card);
+  border: 1px solid var(--pm-border);
+  border-top: 3px solid var(--pm-primary);
+  border-radius: var(--pm-radius);
+  padding: 1.75rem 1.5rem;
+  transition: var(--transition);
+}
+
+body.page-pragya .pragya-main .model-card:hover {
+  border-color: var(--pm-border-strong);
+  transform: translateY(-3px);
+}
+
+body.page-pragya .pragya-main .model-card:nth-child(even) {
+  border-top-color: var(--pm-accent);
+}
+
+body.page-pragya .pragya-main .model-tag {
+  font-size: 0.7rem;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--pm-accent);
+  margin-bottom: 10px;
+}
+
+body.page-pragya .pragya-main .model-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--pm-heading);
+  margin-bottom: 10px;
+}
+
+body.page-pragya .pragya-main .model-desc {
+  color: var(--pm-text-muted);
+  font-size: 0.9rem;
+  line-height: 1.65;
+}
+
+body.page-pragya .pragya-main .model-footnote {
+  margin-top: 1.75rem;
+  font-size: 0.85rem;
+  color: var(--pm-text-dim);
+  max-width: 780px;
+}
+
+/* —— Machine IQ positioning line —— */
+body.page-pragya .pragya-main .iq-line {
+  border-left: 3px solid var(--pm-primary);
+  background: rgba(76, 175, 80, 0.06);
+  border-radius: 0 10px 10px 0;
+  padding: 1.1rem 1.35rem;
+  margin: 0 0 1.75rem;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--pm-text);
+  max-width: 860px;
+}
+
+body.page-pragya .pragya-main .iq-line strong {
+  color: var(--pm-accent);
+  font-weight: 600;
+}
+
 /* —— Discovery blocks (homepage / services / blog) —— */
 .product-spotlight {
   background: linear-gradient(135deg, rgba(14, 22, 17, 0.98), rgba(26, 31, 30, 0.98));
@@ -1069,7 +1141,8 @@ body.page-pragya .pragya-main .final-cta-contact strong {
 
   body.page-pragya .pragya-main .stat-grid,
   body.page-pragya .pragya-main .workspace-grid,
-  body.page-pragya .pragya-main .diff-grid {
+  body.page-pragya .pragya-main .diff-grid,
+  body.page-pragya .pragya-main .model-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -1101,7 +1174,8 @@ body.page-pragya .pragya-main .final-cta-contact strong {
   body.page-pragya .pragya-main .workspace-grid,
   body.page-pragya .pragya-main .diff-grid,
   body.page-pragya .pragya-main .ind-grid,
-  body.page-pragya .pragya-main .why-grid {
+  body.page-pragya .pragya-main .why-grid,
+  body.page-pragya .pragya-main .model-grid {
     grid-template-columns: 1fr;
   }
 

@@ -71,6 +71,15 @@
       "html_page": "blogs/ai_safety.html",
       "description": "AI safety is key to building trust in healthcare. Discover how responsible frameworks are reshaping India's healthcare while protecting patients and data.",
       "relevant_blogs": ["P002", "P004", "P006"]
+    },
+    {
+      "id": "P009",
+      "title": "From Work IQ to Machine IQ: Enabling the Future of Operational Intelligence",
+      "category": "Technical Papers",
+      "created_date": "2026-08-09",
+      "html_page": "blogs/Work-IQ-to-Machine-IQ.html",
+      "description": "A PragyaMetrics white paper on Federated Machine Intelligence - a governed operating model for turning approved industrial context into traceable decisions and bounded actions, proved through a 12-week Lighthouse Program.",
+      "relevant_blogs": ["P005", "P007", "P006"]
     }
   ],
   "categories": [
