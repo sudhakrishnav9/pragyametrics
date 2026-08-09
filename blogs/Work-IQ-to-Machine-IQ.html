@@ -33,6 +33,11 @@
     --paper:#f6f1e7; --paper-2:#fbf8f1; --ink:#263043; --navy:#0d2848; --blue:#1676c7;
     --blue-2:#7da8c6; --green:#11a777; --green-dark:#087859; --mint:#e8f5ef; --orange:#e39a25;
     --muted:#6d6f72; --line:#ded7c9; --card:#fbf8f0; --shadow:0 10px 28px rgba(45,52,60,.08);
+    /* Clearance for the fixed site header; everything below it is offset by
+       this. The header is not a fixed height (roughly 74px on mobile, 82px on
+       desktop), so the value here is only a safe no-JS fallback — the script
+       at the end of the page measures the header and overwrites it. */
+    --site-header-h:116px;
   }
   *{box-sizing:border-box}
   html{scroll-behavior:smooth}
@@ -84,24 +89,28 @@
   @media(max-width:560px){body{font-size:16px}.cards,.cards.four,.stat-grid,.phase-grid,.maturity-grid{grid-template-columns:1fr}.hero-stats{padding:18px}.hero-stat{display:block}.hero-stat b{display:block;margin-bottom:10px}.figure{padding:18px}.quote{font-size:21px}.lighthouse{padding:24px}.drawer{left:8px;right:8px;width:auto}.scroll-cue{display:block}}
 
   /* —— Site header integration ——
+     css/style.css and css/header.css style the bare element selectors
+     body, main, header, nav and h1–h6. Those were harmless until this page
+     began loading them for the shared site header, but they also match the
+     paper's own header.hero, <main> and headings — so each leak is undone
+     here. header.hero is the important one: the site rule makes it a row
+     flexbox, which lays the headline, standfirst and hero stats out as three
+     side-by-side columns instead of stacking them.
      The site header is position:fixed, so the paper is offset beneath it and
      its own fixed chrome (progress bar, section-nav) is moved clear of it. */
-  body{padding-top:104px}
-  header.hero{padding-top:34px}
+  body{display:block;min-height:0;padding-top:var(--site-header-h)}
+  main#content{display:block;flex:none;margin:0;padding:0}
+  header.hero{display:block;width:auto;justify-content:normal;align-items:normal;
+              box-shadow:none;top:auto;z-index:auto;padding-top:34px}
+  nav.drawer{gap:normal}
+  footer{width:auto}
+  .hero h1{font-weight:700}
+  h2,h3{font-weight:700}
   body:before{z-index:1001}
   #progress{z-index:1002}
-  .menu-btn{top:120px}
-  .drawer{top:174px;max-height:calc(100vh - 194px)}
-  @media(max-width:992px){
-    body{padding-top:92px}
-    .menu-btn{top:108px}
-    .drawer{top:160px;max-height:calc(100vh - 180px)}
-  }
-  @media(max-width:480px){
-    body{padding-top:84px}
-    .menu-btn{top:98px}
-    .drawer{top:150px;max-height:calc(100vh - 170px)}
-  }
+  .menu-btn{top:calc(var(--site-header-h) + 12px)}
+  .drawer{top:calc(var(--site-header-h) + 66px);
+          max-height:calc(100vh - var(--site-header-h) - 86px)}
 
   @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
 
@@ -1027,6 +1036,20 @@
 <footer><div class="mark"></div><div class="footer-title">From Work IQ to Machine IQ — <span>Enabling the Future of Operational Intelligence.</span></div><div class="footer-line"></div><p class="footer-copy">PragyaMetrics is developing <strong>Federated Machine Intelligence</strong> — a governed operating model for turning approved industrial context into traceable decisions and bounded actions.</p><div class="copyright">© 2026 PragyaMetrics. All rights reserved. · <em>From Work IQ to Machine IQ · PragyaMetrics Perspective</em> · 2026 · v2.3 · External thought-leadership document prepared for enterprise leadership. · Full sources in the References section.</div></footer>
 </div>
 <script>
+  // The site header is fixed, so the paper is offset by its height. That
+  // height is set in CSS for the no-JS case; measure it here so the offset
+  // survives a header that wraps or changes size.
+  (function(){
+    const siteHeader=document.getElementById('header');
+    if(!siteHeader)return;
+    const sync=()=>document.documentElement.style.setProperty(
+      '--site-header-h',Math.round(siteHeader.getBoundingClientRect().height)+8+'px');
+    sync();
+    addEventListener('load',sync);
+    addEventListener('resize',sync);
+    if(window.ResizeObserver)new ResizeObserver(sync).observe(siteHeader);
+  })();
+
   const btn=document.getElementById('menuBtn'),drawer=document.getElementById('drawer');
   function setDrawer(open,refocus){
     drawer.classList.toggle('open',open);
